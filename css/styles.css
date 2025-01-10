@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 18px;
+  text-align: center;
+}
+
+section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+a {
+  color: #ff8676;
+  text-decoration-color: #ff8676;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Doto", serif;
+  font-weight: 100;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
