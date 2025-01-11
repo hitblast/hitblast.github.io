@@ -1,135 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
-[data-theme=dark],
-:root:not([data-theme=light]) {
-  --pico-background-color: #161616;
-  --pico-typography-spacing-vertical: 1.5rem;
-  --pico-form-element-spacing-vertical: 1rem;
-  --pico-form-element-spacing-horizontal: 1.25rem; 
-  --pico-text-underline-offset: 0.5rem;
-  --pico-spacing: 1.3rem;
-  --pico-card-background-color: #0c0c0c;
-  --pico-primary-color : 982347;
-  --pico-font-family: "JetBrains Mono", monospace;
-  --pico-font-size: 1rem;
-  --pico-transition: 0;
+[data-theme="dark"],
+:root:not([data-theme="light"]) {
+    --pico-background-color: #161616;
+    --pico-typography-spacing-vertical: 1.5rem;
+    --pico-form-element-spacing-vertical: 1rem;
+    --pico-form-element-spacing-horizontal: 1.25rem;
+    --pico-text-underline-offset: 0.5rem;
+    --pico-spacing: 1.3rem;
+    --pico-card-background-color: #0c0c0c;
+    --pico-primary-color: 982347;
+    --pico-font-family: "JetBrains Mono", monospace;
+    --pico-font-size: 1rem;
+    --pico-transition: 0;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  min-height: 100vh;
-  color: #757575;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+    color: #757575;
 }
 
 nav {
-  margin-left: 20%;
-  margin-right: 20%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 section {
-  margin-top: 50px;
-  margin-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 a {
-  color: #96bab3;
-  text-decoration-color: #96bab3;
+    color: #96bab3;
+    text-decoration-color: #96bab3;
 }
 a:hover {
-  text-decoration-style: wavy; 
-  opacity: 0.8;
+    text-decoration-style: wavy;
+    opacity: 0.8;
 }
 
 nav a {
-  color: #757575;
-  text-decoration-color: #757575;
+    color: #757575;
+    text-decoration-color: #757575;
 }
 
 nav img {
-  width: 50px;
-  padding-right: 10px;
+    width: 50px;
+    padding-right: 10px;
 }
 
-
-hr { 
-  border: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin: 3rem 0;
+hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 3rem 0;
 }
 
 h1,
 h2,
 h3 {
-  --pico-font-family: "Doto", serif;
-  --pico-font-weight: 300;
-  padding-top: 20px;
-  padding-bottom: 20px;
+    --pico-font-family: "Doto", serif;
+    --pico-font-weight: 300;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 footer {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
-
 
 /* Class-specific definitions */
 .center-card-intro {
-  margin-left: 10px;
-  margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .center-card-intro p {
-  text-align: justify;
+    text-align: justify;
 }
 
 .status {
-  animation: glow 3s infinite;
+    animation: glow 3s infinite;
 }
 
 .animation-shine {
-  mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
-  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.5) 30%, #000 50%, rgba(0,0,0,.5) 70%); 
-  mask-size: 200%;
-  -webkit-mask-size: 200%;
-  animation: shine 3s infinite ease-out;
-  -webkit-animation: shine 3s infinite ease-out;
+    mask-image: linear-gradient(
+        -75deg,
+        rgba(0, 0, 0, 0.3) 30%,
+        #000 50%,
+        rgba(0, 0, 0, 0.6) 70%
+    );
+    -webkit-mask-image: linear-gradient(
+        -75deg,
+        rgba(0, 0, 0, 0.3) 30%,
+        #000 50%,
+        rgba(0, 0, 0, 0.5) 70%
+    );
+    mask-size: 200%;
+    -webkit-mask-size: 200%;
+    animation: shine 3s infinite;
+    -webkit-animation: shine 3s infinite;
 }
-
 
 /* Custom animations */
 @keyframes shine {
-  from {
-    mask-position: 150%;
-    -webkit-mask-position: 150%;
-  }
-  
-  to {
-    mask-position: -50%;
-    -webkit-mask-position: -50%;
-  }
+    from {
+        mask-position: 150%;
+        -webkit-mask-position: 150%;
+    }
+
+    to {
+        mask-position: -50%;
+        -webkit-mask-position: -50%;
+    }
 }
 
 @keyframes glow {
-  0% {
-    opacity: 0.8;
-    text-shadow: none;
-  }
-  50% {
-    opacity: 1;
-    color: #FED373;
-    text-shadow: 0px 0px 30px #FED373;
-  }
-  100% {
-    opacity: 0.8;
-    text-shadow: none;
-  }
+    0% {
+        opacity: 0.8;
+        text-shadow: none;
+    }
+    50% {
+        opacity: 1;
+        color: #fed373;
+        text-shadow: 0px 0px 30px #fed373;
+    }
+    100% {
+        opacity: 0.8;
+        text-shadow: none;
+    }
 }
