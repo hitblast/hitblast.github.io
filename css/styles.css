@@ -1,21 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-:root {
+[data-theme=dark],
+:root:not([data-theme=light]) {
+  --pico-background-color: #161616;
   --pico-typography-spacing-vertical: 1.5rem;
   --pico-form-element-spacing-vertical: 1rem;
   --pico-form-element-spacing-horizontal: 1.25rem; 
+  --pico-text-underline-offset: 0.5rem;
+  --pico-spacing: 1.3rem;
+  --pico-card-background-color: #0c0c0c;
+  --pico-primary-color : 982347;
+  --pico-font-family: "JetBrains Mono", monospace;
+  --pico-font-size: 1rem;
+  --pico-transition: 0.1s ease-out;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
+* {
   box-sizing: border-box;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 18px;
-  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  color: #565656;
+}
+
+nav {
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 section {
@@ -24,15 +43,50 @@ section {
 }
 
 a {
-  color: #ff8676;
-  text-decoration-color: #ff8676;
+  color: #96bab3;
+  text-decoration-color: #96bab3;
+}
+
+nav a {
+  color: #ffffff50;
+  text-decoration-color: #ffffff80;
+}
+
+nav img {
+  width: 50px;
+  padding-right: 10px;
+}
+
+
+hr { 
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 3rem 0;
 }
 
 h1,
 h2,
 h3 {
   --pico-font-family: "Doto", serif;
-  --pico-font-weight: 200;
+  --pico-font-weight: 300;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+footer {
+  margin-bottom: 2rem;
+}
+
+
+/* Class-specific definitions */
+.center-card-intro {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.center-card-intro p {
+  text-align: justify;
+}
+
+.status {
+  text-shadow: 0px 0px 30px #ffffff;
 }

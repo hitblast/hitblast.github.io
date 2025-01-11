@@ -1,22 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
 
-    <link rel="stylesheet" href="css/pico.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/pico.min.css" />
+    <link rel="stylesheet" href="./css/pico.colors.min.css">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
 
     <title>Anindya Shiddhartha</title>
   </head>
+
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <img src="./assets/img/logo.png"><strong>/hɪtˈblæst/</strong>
+          </li>
+          <li><a href="https://github.com/hitblast">github</a></li>
+          <li><a href="https://fosstodon.org/@hitblast">mastodon</a></li>
+          <li><a href="https://www.linkedin.com/in/hitblast/">linkedin</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <main class="container"> 
-      <section id="home"> 
-        <h1>{ Webpage in progress... }</h1>
-        <hr/>
-        <p> This might take a while. Till then, why not <a href="https://github.com/hitblast">check out</a> some of my projects?
-      </section>
+      <center>
+        <section id="top">
+          <h1>{ Status: <strong class="status">Work-in-Progress</strong> }</h1>
+        </section>
+
+        <!-- Summary section -->
+        <section id="summary">
+          <hr/>
+
+          <div class="grid">
+            <div style="text-align: right;">
+              <h3>I code apps.</h3>
+              <p>And, while this line shouldn't be minified like this, I can say that I develop apps which put abstraction sideways and focus on solving the actual problem.</p>
+              <p>Till then, why not have a look at <br><a href="https://github.com/hitblast">some of my projects?</a></p>
+            </div>
+
+            <div class="center-card-intro"> 
+              <h3><strong>Latest project:</strong></h3>
+              <p>Though I currently have exams ongoing in my academic side, I'm engaged in working on various different projects. Some of them are awaiting release, some like <a href="https://github.com/hitblast/trimsec">trimsec</a> have already been released.</p>
+            </div>
+
+            <div style="text-align: left;">
+              <h3>Tech stack:</h3>
+              <ul>
+                <li>Flutter</li>
+                <li>Rust</li>
+                <li>Python (Flask, FastAPI, ...)</li>
+                <li>Docker & Kubernetes</li>
+                <li>GitHub Actions</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </center>
     </main>
+
+    <footer>
+      <hr />
+      <center>
+        Copyright (c) 2024 Anindya Shiddhartha (HitBlast). All rights reserved.
+      </center>
+    </footer>
   </body>
 </html>
