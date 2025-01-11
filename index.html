@@ -51,8 +51,8 @@
                     <br />(also you can accompany your visit here with
                     <a
                         href="https://open.spotify.com/track/2qpOzuQGFqTKNn56w7qShx?si=accdf25ec28a42af"
-                        >this song.</a
-                    >)
+                        >this music</a
+                    >.)
                 </section>
 
                 <!-- Summary section -->
@@ -60,7 +60,7 @@
                     <hr />
 
                     <div class="grid">
-                        <div style="text-align: right">
+                        <div class="grid-item" style="text-align: right">
                             <h3>I code apps.</h3>
                             <p>
                                 And, while this line shouldn't be minified like
@@ -76,7 +76,7 @@
                             </p>
                         </div>
 
-                        <div class="center-card-intro">
+                        <div class="grid-item center-card-intro">
                             <h3>Latest project:</h3>
                             <p>
                                 Though I currently have exams ongoing in my
@@ -90,7 +90,7 @@
                             </p>
                         </div>
 
-                        <div style="text-align: left">
+                        <div class="grid-item" style="text-align: left">
                             <h3>Tech stack:</h3>
                             <ul>
                                 <li>Flutter</li>
@@ -107,19 +107,18 @@
 
         <footer>
             <hr />
-            <center>
+            <div class="container">
                 Copyright (c) 2024 Anindya Shiddhartha (HitBlast). All rights
                 reserved.
-            </center>
+            </div>
         </footer>
 
         <script>
-            ScrollReveal().reveal("header", { delay: 200 });
-            ScrollReveal().reveal("nav", { delay: 400 });
-            ScrollReveal().reveal("main", { delay: 600 });
-            ScrollReveal().reveal("#top", { delay: 800 });
-            ScrollReveal().reveal("#summary", { delay: 1000 });
-            ScrollReveal().reveal("footer", { delay: 1200 });
+            ScrollReveal().reveal("body", { delay: 200 });
+            ScrollReveal().reveal("header", { delay: 300 });
+            ScrollReveal().reveal("#top", { delay: 400 });
+            ScrollReveal().reveal("#summary", { delay: 500 });
+            ScrollReveal().reveal("footer", { delay: 200 });
         </script>
     </body>
 </html>
