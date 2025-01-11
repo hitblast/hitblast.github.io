@@ -13,7 +13,7 @@
   --pico-primary-color : 982347;
   --pico-font-family: "JetBrains Mono", monospace;
   --pico-font-size: 1rem;
-  --pico-transition: 0.1s ease-out;
+  --pico-transition: 0;
 }
 
 html {
@@ -44,7 +44,7 @@ section {
 
 a {
   color: #96bab3;
-  text-decoration-style: dotted; 
+  text-decoration-style: wavy; 
   text-decoration-color: #96bab3;
 }
 
@@ -94,19 +94,11 @@ footer {
 
 .animation-shine {
   mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
-  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%); 
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.5) 30%, #000 50%, rgba(0,0,0,.5) 70%); 
   mask-size: 200%;
   -webkit-mask-size: 200%;
-  animation: shine 2s infinite;
-  -webkit-animation: shine 2s infinite;
-}
-.animation-shine-hover:hover {
-  mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
-  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%); 
-  mask-size: 200%;
-  -webkit-mask-size: 200%;
-  animation: shine 2s infinite;
-  -webkit-animation: shine 2s infinite;
+  animation: shine 3s infinite ease-out;
+  -webkit-animation: shine 3s infinite ease-out;
 }
 
 
