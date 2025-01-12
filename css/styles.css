@@ -13,9 +13,10 @@
     --pico-card-background-color: #0c0c0c;
     --pico-primary-color: 982347;
     --pico-font-family: "JetBrains Mono", monospace;
+    --pico-font-weight: 400;
     --pico-font-size: 1rem;
     --pico-transition: 0;
-    --custom-dim-text: #757575;
+    --dim-text: #757575;
 }
 
 html {
@@ -31,7 +32,6 @@ body {
     padding: 0;
     position: relative;
     min-height: 100vh;
-    color: var(--custom-dim-text);
 }
 
 nav {
@@ -47,16 +47,17 @@ section {
 a {
     color: #6c9b82;
     text-decoration: none;
+    text-shadow: 0px 0px 30px #6c9b82;
 }
 a:hover {
-    text-decoration: underline wavy #6c9b82;
-    opacity: 0.8;
+    text-decoration: underline #6c9b82;
 }
 nav a {
-    color: var(--custom-dim-text);
+    color: var(--dim-text);
+    text-shadow: none;
 }
 nav a:hover {
-    text-decoration: underline wavy var(--custom-dim-text);
+    text-decoration: underline var(--dim-text);
     opacity: 0.8;
 }
 
@@ -81,7 +82,7 @@ h3 {
 }
 
 footer {
-    color: var(--custom-dim-text);
+    color: var(--dim-text);
     text-align: center;
     font-size: 0.9rem;
 }
@@ -90,12 +91,19 @@ footer div {
 }
 
 /* Class-specific definitions */
-.center-card-intro {
+.intro-card-left {
+    text-align: right;
+}
+.intro-card-right {
+    text-align: left;
+}
+.intro-card-center {
     margin-left: 10px;
     margin-right: 10px;
-}
-.center-card-intro p {
     text-align: justify;
+}
+.intro-card-center h3 {
+    text-align: center;
 }
 
 .status {
@@ -147,5 +155,13 @@ footer div {
     100% {
         opacity: 0.8;
         text-shadow: none;
+    }
+}
+
+/* Media queries */
+
+@media (max-width: 600px) {
+    .nav-large-items {
+        display: none;
     }
 }

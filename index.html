@@ -23,14 +23,14 @@
                         >
                     </li>
                 </ul>
-                <ul>
-                    <li><a href="https://github.com/hitblast">github</a></li>
+                <ul class="nav-large-items">
+                    <li><a href="https://github.com/hitblast">GITHUB</a></li>
                     <li>
-                        <a href="https://fosstodon.org/@hitblast">mastodon</a>
+                        <a href="https://fosstodon.org/@hitblast">MASTODON</a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/hitblast/"
-                            >linkedin</a
+                            >LINKEDIN</a
                         >
                     </li>
                 </ul>
@@ -60,44 +60,45 @@
                     <hr />
 
                     <div class="grid">
-                        <div class="grid-item" style="text-align: right">
+                        <div class="intro-card-left">
                             <h3>I code apps.</h3>
-                            <p>
-                                And, while this line shouldn't be minified like
-                                this, I can say that I develop apps which put
-                                abstraction sideways and focus on solving the
-                                actual problem.
-                            </p>
-                            <p>
-                                Why not have a look at <br /><a
-                                    href="https://github.com/hitblast"
-                                    >some of my projects?</a
-                                >
-                            </p>
+                            And, while this line shouldn't be minified like
+                            this, I can say that I develop apps which put
+                            abstraction sideways and focus on solving the actual
+                            problem. <br /><br />Why not have a look at <br /><a
+                                href="https://github.com/hitblast"
+                                >some of my projects?</a
+                            >
                         </div>
 
-                        <div class="grid-item center-card-intro">
+                        <div class="intro-card-center">
                             <h3>Latest project:</h3>
-                            <p>
-                                Though I currently have exams ongoing in my
-                                academic side, I'm engaged in working on various
-                                different projects. Some of them are awaiting
-                                release, some like
-                                <a href="https://github.com/hitblast/trimsec"
-                                    >trimsec</a
-                                >
-                                have already been released.
-                            </p>
+                            Though I currently have exams ongoing in my academic
+                            side, I'm engaged in working on various different
+                            projects. Some of them are awaiting release, some
+                            like
+                            <a href="https://github.com/hitblast/trimsec"
+                                >trimsec</a
+                            >
+                            have already been released.
                         </div>
 
-                        <div class="grid-item" style="text-align: left">
+                        <div class="intro-card-right">
                             <h3>Tech stack:</h3>
                             <ul>
                                 <li>Flutter</li>
                                 <li>Rust</li>
                                 <li>Python (Flask, FastAPI, ...)</li>
                                 <li>Docker & Kubernetes</li>
-                                <li>GitHub Actions</li>
+                                <li>GitHub Actions CI</li>
+                                <li>
+                                    Editors:
+                                    <ul>
+                                        <li>Neovim</li>
+                                        <li>Zed</li>
+                                        <li>VSCode</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -113,12 +114,6 @@
             </div>
         </footer>
 
-        <script>
-            ScrollReveal().reveal("body", { delay: 200 });
-            ScrollReveal().reveal("header", { delay: 300 });
-            ScrollReveal().reveal("#top", { delay: 400 });
-            ScrollReveal().reveal("#summary", { delay: 500 });
-            ScrollReveal().reveal("footer", { delay: 200 });
-        </script>
+        <script src="./js/script.js"></script>
     </body>
 </html>
