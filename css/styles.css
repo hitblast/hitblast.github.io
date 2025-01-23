@@ -10,7 +10,7 @@
     --pico-form-element-spacing-horizontal: 1.25rem;
     --pico-text-underline-offset: 0.5rem;
     --pico-spacing: 1.3rem;
-    --pico-card-background-color: #151515;
+    --pico-card-background-color: var(--pico-background-color);
     --pico-primary-color: 982347;
     --pico-font-family: "JetBrains Mono", monospace;
     --pico-font-weight: 400;
@@ -75,7 +75,6 @@ hr {
 article {
     margin-top: 3rem;
     margin-bottom: 3rem;
-    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
     border-radius: 2rem;
     text-align: center;
     font-style: italic;
@@ -117,8 +116,6 @@ footer div {
 }
 .intro-card-center h3 {
     text-align: center;
-    color: #ffffff;
-    text-shadow: 0px 0px 3rem #ffffff;
 }
 
 .status {
