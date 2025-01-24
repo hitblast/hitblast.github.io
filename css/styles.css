@@ -9,7 +9,7 @@
     --pico-form-element-spacing-vertical: 1rem;
     --pico-form-element-spacing-horizontal: 1.25rem;
     --pico-text-underline-offset: 0.5rem;
-    --pico-spacing: 1.3rem;
+    --pico-spacing: 1.5rem;
     --pico-card-background-color: var(--pico-background-color);
     --pico-primary-color: 982347;
     --pico-font-family: "JetBrains Mono", monospace;
@@ -32,6 +32,31 @@ body {
     padding: 0;
     position: relative;
     min-height: 100vh;
+    --dot-color: #ffffff35;
+    --dot-size: 1.5px;
+    --dot-space: 33px;
+    background:
+        linear-gradient(
+                90deg,
+                var(--pico-background-color)
+                    calc(var(--dot-space) - var(--dot-size)),
+                transparent 1%
+            )
+            center / var(--dot-space) var(--dot-space),
+        linear-gradient(
+                var(--pico-background-color)
+                    calc(var(--dot-space) - var(--dot-size)),
+                transparent 1%
+            )
+            center / var(--dot-space) var(--dot-space),
+        linear-gradient(
+            to bottom,
+            var(--pico-background-color),
+            var(--dot-color) 10%,
+            var(--pico-background-color) 30%,
+            var(--dot-color) 70%,
+            var(--pico-background-color) 100%
+        );
 }
 
 nav {
@@ -116,6 +141,45 @@ footer div {
 }
 .intro-card-center h3 {
     text-align: center;
+}
+.intro-card-center-projects a {
+    color: unset;
+    text-shadow: unset;
+    text-decoration: unset;
+}
+.intro-card-cli-badge {
+    padding: 1rem 1.5rem;
+    border: 1.5px solid #75757530;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.01)
+    );
+    box-shadow: 0px 10px 20px var(--pico-background-color);
+    border-radius: 1rem;
+    backdrop-filter: blur(1.7px);
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.1s ease-in-out;
+    opacity: 0.7;
+}
+.intro-card-cli-badge:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    box-shadow: 0px 20px 20px #0c0c0c60;
+    opacity: 1;
+}
+.project-name {
+    text-align: left;
+}
+.project-uses {
+    text-align: right;
+    color: var(--dim-text);
+}
+.project-uses i {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
 }
 
 .status {
