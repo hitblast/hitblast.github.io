@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
+/* Pico CSS-specific customizations */
 [data-theme="dark"],
 :root:not([data-theme="light"]) {
     --pico-color: #a3a3a3;
@@ -16,6 +17,13 @@
     --pico-font-weight: 400;
     --pico-font-size: 1rem;
     --pico-transition: 0;
+}
+
+/* Root variables */
+:root {
+    --dot-color: #ffffff35;
+    --dot-size: 1.5px;
+    --dot-space: 33px;
     --dim-text: #757575;
 }
 
@@ -32,9 +40,6 @@ body {
     padding: 0;
     position: relative;
     min-height: 100vh;
-    --dot-color: #ffffff35;
-    --dot-size: 1.5px;
-    --dot-space: 33px;
     background:
         linear-gradient(
                 90deg,
@@ -122,12 +127,17 @@ footer {
     color: var(--dim-text);
     text-align: center;
     font-size: 0.9rem;
+    opacity: 0.5;
 }
 footer div {
     padding-bottom: 2%;
 }
 
 /* Class-specific definitions */
+.nav-top-responsive {
+    display: none;
+}
+
 .intro-card-left {
     text-align: right;
 }
@@ -162,6 +172,9 @@ footer div {
     display: flex;
     justify-content: space-between;
     transition: 0.1s ease-in-out;
+    font-family: "Doto", serif;
+    font-size: 1rem;
+    font-weight: 800;
     opacity: 0.7;
 }
 .intro-card-cli-badge:hover {
@@ -236,8 +249,23 @@ footer div {
 
 /* Media queries */
 @media (max-width: 600px) {
-    .nav-large-items {
+    :root {
+        --dot-space: 50px;
+        --dot-size: 2px;
+    }
+
+    nav {
         display: none;
+    }
+
+    .nav-top-responsive {
+        display: block;
+        text-align: center;
+        padding: 1rem;
+    }
+    .nav-top-responsive img {
+        width: 50px;
+        margin-right: 10px;
     }
 
     .intro-card-left,
