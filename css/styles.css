@@ -14,7 +14,7 @@
     --pico-card-background-color: var(--pico-background-color);
     --pico-primary-color: 982347;
     --pico-font-family: "JetBrains Mono", monospace;
-    --pico-font-weight: 400;
+    --pico-font-weight: 200;
     --pico-font-size: 1rem;
     --pico-transition: 0;
 }
@@ -76,19 +76,20 @@ section {
 
 a {
     color: #6c9b82;
+    font-weight: 500;
     text-decoration: none;
     text-shadow: 0px 0px 30px #6c9b82;
 }
 a:hover {
-    text-decoration: 2.3px underline #6c9b82;
+    text-decoration: 1.5px underline #6c9b82;
 }
 nav a {
     color: var(--dim-text);
     text-shadow: none;
 }
 nav a:hover {
-    text-decoration: 2.3px underline var(--dim-text);
-    opacity: 0.8;
+    text-decoration: 1.5px underline var(--dim-text);
+    opacity: 0.9;
 }
 
 nav img {
@@ -157,7 +158,7 @@ footer div {
     text-shadow: unset;
     text-decoration: unset;
 }
-.intro-card-cli-badge {
+.intro-card-project-badge {
     padding: 1rem 1.5rem;
     border: 1.5px solid #75757530;
     background: linear-gradient(
@@ -176,21 +177,23 @@ footer div {
     font-size: 1rem;
     font-weight: 800;
     opacity: 0.7;
+    text-align: center;
 }
-.intro-card-cli-badge:hover {
+.intro-card-project-badge:hover {
     transform: translateY(-5px);
     cursor: pointer;
     box-shadow: 0px 20px 20px #0c0c0c60;
+    color: #f3f3f3;
+    text-shadow: 0px 0px 30px #f3f3f3;
     opacity: 1;
 }
-.project-name {
+.intro-card-project-name {
     text-align: left;
 }
-.project-uses {
+.intro-card-project-uses {
     text-align: right;
-    color: var(--dim-text);
 }
-.project-uses i {
+.intro-card-project-uses i {
     font-size: 1.3rem;
     margin-right: 0.5rem;
 }
@@ -251,7 +254,6 @@ footer div {
 @media (max-width: 600px) {
     :root {
         --dot-space: 50px;
-        --dot-size: 2px;
     }
 
     nav {
