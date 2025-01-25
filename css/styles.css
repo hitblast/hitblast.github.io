@@ -250,13 +250,13 @@ footer div {
     }
 }
 
+/* Media queries */
 @media (max-width: 1024px) and (min-width: 768px) {
     .intro-card-project-uses i {
         display: none;
     }
 }
 
-/* Media queries */
 @media (max-width: 600px) {
     :root {
         --dot-space: 50px;
