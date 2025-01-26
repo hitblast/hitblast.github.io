@@ -66,6 +66,7 @@ body {
         );
     animation: dotmovement 3.2s ease-in-out infinite;
     -webkit-animation: dotmovement 3.2s ease-in-out infinite;
+    will-change: transform;
 }
 
 nav {
@@ -187,6 +188,7 @@ footer div {
     font-weight: 800;
     opacity: 0.7;
     text-align: center;
+    will-change: transform;
 }
 .intro-card-project-badge:hover {
     transform: translateY(-5px);
@@ -196,6 +198,7 @@ footer div {
     color: #f3f3f3;
     text-shadow: 0px 0px 30px #f3f3f3;
     opacity: 1;
+    will-change: transform;
 }
 .intro-card-project-badge i {
     font-size: 1rem;
@@ -210,6 +213,7 @@ footer div {
 .status {
     animation: glow 3.2s infinite;
     -webkit-animation: glow 3.2s infinite;
+    will-change: opacity, text-shadow;
 }
 
 .animation-shine {
@@ -229,6 +233,9 @@ footer div {
     -webkit-mask-size: 200%;
     animation: shine 3.2s infinite;
     -webkit-animation: shine 3.2s infinite;
+    will-change:
+        mask-position,
+        -webkit-mask-position;
 }
 
 /* Custom animations */
@@ -323,6 +330,7 @@ footer div {
         transition: 0.1s ease-out;
         -webkit-transition: 0.1s ease-out;
         opacity: 0.7;
+        will-change: transform;
     }
     .nav-responsive i:hover {
         transform: translateY(-6px);
@@ -332,6 +340,7 @@ footer div {
         color: #f3f3f3;
         text-shadow: 0px 0px 25px #f3f3f380;
         opacity: 1;
+        will-change: transform;
     }
 
     .disabled-hr {
