@@ -138,6 +138,9 @@ footer div {
 .nav-top-responsive {
     display: none;
 }
+.disabled-hr {
+    display: none; /* ironic class name ngl */
+}
 
 .intro-card-left {
     text-align: right;
@@ -249,7 +252,6 @@ footer div {
         text-shadow: none;
     }
 }
-
 /* Media queries */
 @media (max-width: 1024px) and (min-width: 768px) {
     .intro-card-project-uses i {
@@ -257,7 +259,7 @@ footer div {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     :root {
         --dot-space: 50px;
     }
@@ -274,6 +276,10 @@ footer div {
     .nav-top-responsive img {
         width: 50px;
         margin-right: 10px;
+    }
+
+    .disabled-hr {
+        display: block;
     }
 
     .intro-card-left,
