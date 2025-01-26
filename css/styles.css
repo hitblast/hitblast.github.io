@@ -21,7 +21,7 @@
 
 /* Root variables */
 :root {
-    --dot-color: #ffffff35;
+    --dot-color: #ffffff40;
     --dot-size: 1.5px;
     --dot-space: 33px;
     --dim-text: #757575;
@@ -267,6 +267,7 @@ footer div {
 @media (max-width: 768px) {
     :root {
         --dot-space: 50px;
+        --dot-size: 2px;
     }
 
     nav {
