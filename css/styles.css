@@ -284,7 +284,12 @@ footer div {
 
 @media (max-width: 768px) {
     :root {
-        --dot-space: 50px;
+        --dot-space: 45px;
+        --dot-size: 1.7px;
+    }
+
+    body {
+        animation: none;
     }
 
     nav {
