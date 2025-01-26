@@ -195,15 +195,14 @@ footer div {
     text-shadow: 0px 0px 30px #f3f3f3;
     opacity: 1;
 }
+.intro-card-project-badge i {
+    font-size: 1rem;
+}
 .intro-card-project-name {
     text-align: left;
 }
 .intro-card-project-uses {
     text-align: right;
-}
-.intro-card-project-uses i {
-    font-size: 1.3rem;
-    margin-right: 0.5rem;
 }
 
 .status {
@@ -260,7 +259,7 @@ footer div {
 }
 /* Media queries */
 @media (max-width: 1024px) and (min-width: 768px) {
-    .intro-card-project-uses i {
+    .intro-card-project-badge i {
         display: none;
     }
 }
