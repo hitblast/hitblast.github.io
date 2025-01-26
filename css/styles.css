@@ -135,7 +135,7 @@ footer div {
 }
 
 /* Class-specific definitions */
-.nav-top-responsive {
+.nav-responsive {
     display: none;
 }
 .disabled-hr {
@@ -268,14 +268,45 @@ footer div {
         display: none;
     }
 
-    .nav-top-responsive {
+    .nav-responsive {
         display: block;
         text-align: center;
         padding: 1rem;
+        margin-top: 1rem;
     }
-    .nav-top-responsive img {
+    .nav-responsive a {
+        color: unset;
+        text-shadow: unset;
+        text-decoration: unset;
+    }
+    .nav-responsive img {
         width: 50px;
         margin-right: 10px;
+    }
+    .nav-responsive i {
+        padding: 2rem;
+        font-size: 2rem;
+        border: 1.5px solid #75757530;
+        text-decoration: none;
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.01)
+        );
+        box-shadow: 0px 10px 20px var(--pico-background-color);
+        border-radius: 1rem;
+        backdrop-filter: blur(1.7px);
+        ze: 2rem;
+        transition: 0.1s ease-in-out;
+        opacity: 0.7;
+    }
+    .nav-responsive i:hover {
+        transform: translateY(-5px);
+        cursor: pointer;
+        box-shadow: 0px 20px 20px #0c0c0c60;
+        color: #f3f3f3;
+        text-shadow: 0px 0px 30px #f3f3f3;
+        opacity: 1;
     }
 
     .disabled-hr {
