@@ -296,16 +296,15 @@ footer div {
         box-shadow: 0px 10px 20px var(--pico-background-color);
         border-radius: 1rem;
         backdrop-filter: blur(1.7px);
-        ze: 2rem;
-        transition: 0.1s ease-in-out;
+        transition: 0.1s ease-out;
         opacity: 0.7;
     }
     .nav-responsive i:hover {
-        transform: translateY(-5px);
+        transform: translateY(-6px);
         cursor: pointer;
         box-shadow: 0px 20px 20px #0c0c0c60;
         color: #f3f3f3;
-        text-shadow: 0px 0px 30px #f3f3f3;
+        text-shadow: 0px 0px 25px #f3f3f380;
         opacity: 1;
     }
 
