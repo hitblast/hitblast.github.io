@@ -21,7 +21,7 @@
 
 /* Root variables */
 :root {
-    --dot-color: #414141;
+    --dot-color: #454545;
     --dot-size: 1.5px;
     --dot-space: 33px;
     --dim-text: #757575;
@@ -60,9 +60,10 @@ body {
             to bottom,
             var(--pico-background-color),
             var(--dot-color) 10%,
-            var(--pico-background-color) 30%,
-            var(--dot-color) 70%,
-            var(--pico-background-color) 100%
+            var(--pico-background-color) 25%,
+            var(--pico-background-color) 40%,
+            var(--dot-color) 60%,
+            var(--pico-background-color) 90%
         );
     animation: dotmovement 3.2s ease-in-out infinite;
     -webkit-animation: dotmovement 3.2s ease-in-out infinite;
