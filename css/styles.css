@@ -21,10 +21,11 @@
 
 /* Root variables */
 :root {
-    --dot-color: #454545;
-    --dot-size: 1.5px;
-    --dot-space: 33px;
+    --dot-color: #ffffff50;
+    --dot-size: 1px;
+    --dot-space: 20px;
     --dim-text: #757575;
+    --halo-green: #6c9b82;
 }
 
 html {
@@ -60,10 +61,7 @@ body {
             to bottom,
             var(--pico-background-color),
             var(--dot-color) 10%,
-            var(--pico-background-color) 25%,
-            var(--pico-background-color) 40%,
-            var(--dot-color) 60%,
-            var(--pico-background-color) 90%
+            var(--pico-background-color) 25%
         );
     animation: dotmovement 3.2s ease-in-out infinite;
     -webkit-animation: dotmovement 3.2s ease-in-out infinite;
@@ -124,7 +122,7 @@ h1,
 h2,
 h3 {
     --pico-font-family: "Doto", serif;
-    --pico-font-weight: 300;
+    --pico-font-weight: 400;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -140,6 +138,10 @@ footer div {
 }
 
 /* Class-specific definitions */
+.header {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
 .nav-responsive {
     display: none;
 }
@@ -208,23 +210,18 @@ footer div {
     text-align: right;
 }
 
-.status {
-    animation: glow 3.2s infinite;
-    -webkit-animation: glow 3.2s infinite;
-}
-
 .animation-shine {
     mask-image: linear-gradient(
         -75deg,
-        rgba(0, 0, 0, 0.3) 30%,
+        rgba(0, 0, 0, 0.6) 70%,
         #000 50%,
-        rgba(0, 0, 0, 0.6) 70%
+        rgba(0, 0, 0, 1) 70%
     );
     -webkit-mask-image: linear-gradient(
         -75deg,
-        rgba(0, 0, 0, 0.3) 30%,
+        rgba(0, 0, 0, 0.6) 70%,
         #000 50%,
-        rgba(0, 0, 0, 0.5) 70%
+        rgba(0, 0, 0, 1) 70%
     );
     mask-size: 200%;
     -webkit-mask-size: 200%;
@@ -242,22 +239,6 @@ footer div {
     to {
         mask-position: -50%;
         -webkit-mask-position: -50%;
-    }
-}
-
-@keyframes glow {
-    0% {
-        opacity: 0.8;
-        text-shadow: none;
-    }
-    50% {
-        opacity: 1;
-        color: #fed373;
-        text-shadow: 0px 0px 30px #fed373;
-    }
-    100% {
-        opacity: 0.8;
-        text-shadow: none;
     }
 }
 
