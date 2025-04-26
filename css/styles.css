@@ -145,9 +145,6 @@ footer div {
 .nav-responsive {
     display: none;
 }
-.disabled-hr {
-    display: none; /* ironic class name ngl */
-}
 
 .intro-card-left {
     text-align: right;
@@ -271,10 +268,19 @@ footer div {
     }
 
     body {
+        background: none;
         animation: none;
     }
 
     nav {
+        display: none;
+    }
+
+    h3 {
+        margin-top: 50px; 
+    }
+
+    hr {
         display: none;
     }
 
@@ -319,10 +325,6 @@ footer div {
         color: #f3f3f3;
         text-shadow: 0px 0px 25px #f3f3f380;
         opacity: 1;
-    }
-
-    .disabled-hr {
-        display: block;
     }
 
     .intro-card-left,
