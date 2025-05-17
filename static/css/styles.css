@@ -202,6 +202,10 @@ article {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    nav {
+        font-size: 1.1rem;
+    }
+
     .portfolio-projects {
         grid-template-columns: 1fr;
     }
