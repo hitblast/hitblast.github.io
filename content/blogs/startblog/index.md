@@ -1,7 +1,7 @@
 +++
 title = "Shifting Blogs: Dev.to -> My Personal Blog"
 date = 2025-05-17
-description = "A brief look at my take of blogging as a proper method of journaling, the technical parts and some story to back it up."
+description = "A brief look at why I made this website, my take on blogging as a method of journaling, the technical parts and some story to back it up."
 authors = ["hitblast"]
 
 [taxonomies]
