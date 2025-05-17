@@ -10,9 +10,9 @@
     --pico-blockquote-border-color: #7b7b7b;
     --pico-blockquote-footer-color: var(--pico-blockquote-border-color);
     --pico-text-underline-offset: 0.5rem;
-    --pico-typography-spacing-vertical: 1rem;
+    --pico-typography-spacing-vertical: 2rem;
     --pico-form-element-spacing-vertical: 1rem;
-    --pico-spacing: 1rem;
+    --pico-spacing: 3rem;
     --pico-form-element-spacing-horizontal: 1.25rem;
     --pico-box-shadow: 0 20px 2rem rgba(0, 0, 0, 0.1);
     --pico-font-family: "Space Mono", monospace;
@@ -150,7 +150,6 @@ article {
 }
 
 .blog-post:hover {
-    transform: translateX(10px);
     cursor: pointer;
 }
 
@@ -173,7 +172,7 @@ article {
 .blog-display {
     width: 90%;
     max-width: 800px;
-    text-align: left;
+    margin: 0 auto;
 }
 
 .blog-display-title {
@@ -190,7 +189,6 @@ article {
 }
 
 .blog-display-content {
-    text-align: left;
     line-height: 1.6;
 }
 
