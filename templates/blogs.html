@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block pagetitle %}
+<title>Anindya Shiddhartha | Blog</title>
+{% endblock pagetitle %} {% block content %}
+<div class="container">
+    <h1 class="center">Blog</h1>
+    <hr />
+
+    {% if paginator.pages|length == 0 %}
+    <p class="center">No blog posts yet. Check back soon!</p>
+    {% else %} {% for page in paginator.pages %}
+    <div class="blog-post">
+        <div class="blog-post-left">
+            <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+        </div>
+        <div class="blog-post-right">
+            <i class="fa-solid fa-calendar"></i> {{ page.date | date(format="%b
+            %d, %Y") }} {% if page.authors %}
+            <i class="fa-solid fa-user"></i>
+            {{ page.authors[0] }} {% endif %}
+        </div>
+        <p>{{ page.description }}</p>
+    </div>
+    {% endfor %} {% endif %}
+
+    <div class="pagination">
+        {% if paginator.previous %}
+        <a href="{{ paginator.previous }}" class="button">&laquo; Previous</a>
+        {% endif %}
+
+        <span
+            >Page {{ paginator.current_index }} of {{ paginator.number_pagers
+            }}</span
+        >
+
+        {% if paginator.next %}
+        <a href="{{ paginator.next }}" class="button">Next &raquo;</a>
+        {% endif %}
+    </div>
+
+    <div class="center" style="margin-top: 2rem">
+        <a href="/" class="button">Back to Home</a>
+    </div>
+</div>
+{% endblock content %}

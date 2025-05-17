@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for page in term.pages %}
+    <a href="{{ page.permalink | safe }}">{{ page.title }}</a> on {{ page.date | date(format="%b %d, %Y") }} <br/>
+    <!-- {# COMMENT: find all attributes from https://www.getzola.org/documentation/content/page/ #} -->
+{% endfor %}
+{% endblock content %}

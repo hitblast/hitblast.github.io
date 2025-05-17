@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* Root modifiers (for Pico CSS especially) */
+:root {
+    --pico-color: #333333;
+    --pico-primary: rgb(69, 100, 137);
+    --pico-primary-border: var(--pico-primary);
+    --pico-border-radius: 0.5rem;
+    --pico-background-color: rgb(249, 249, 249);
+    --pico-blockquote-border-color: #7b7b7b;
+    --pico-blockquote-footer-color: var(--pico-blockquote-border-color);
+    --pico-text-underline-offset: 0.5rem;
+    --pico-typography-spacing-vertical: 1rem;
+    --pico-form-element-spacing-vertical: 1rem;
+    --pico-spacing: 1rem;
+    --pico-form-element-spacing-horizontal: 1.25rem;
+    --pico-box-shadow: 0 20px 2rem rgba(0, 0, 0, 0.1);
+    --pico-font-family: "Space Mono", monospace;
+    --font-size-base: 0.85rem;
+    --font-size-small: 0.75rem;
+    --font-size-large: 1rem;
+}
+
+/* Element styling */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Space Mono", monospace;
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 6rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Space Mono", Courier, monospace;
+    margin-bottom: 1rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+article {
+    --pico-card-background-color: var(--pico-background-color);
+    box-shadow: none;
+    margin-top: 30px;
+    padding: 2rem;
+    border-left: 3px solid var(--pico-primary);
+}
+
+/* Utility classes */
+.center {
+    text-align: center;
+}
+
+.faded {
+    opacity: 0.7;
+}
+
+.portfolio-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: var(--pico-border-radius);
+}
+
+.portfolio-bio {
+    margin-bottom: 2rem;
+}
+
+.portfolio-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: var(--pico-border-radius);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--pico-primary);
+}
+
+.blog-preview {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.blog-preview:last-child {
+    border-bottom: none;
+}
+
+.blog-preview h3 {
+    margin-top: 0;
+}
+
+.blog-preview-meta {
+    font-size: var(--font-size-small);
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    opacity: 0.5;
+    font-size: var(--font-size-small);
+}
+
+/* Blog post-specific styling */
+.blog-post {
+    padding: 2rem;
+    text-align: left;
+}
+
+.blog-post:hover {
+    transform: translateX(10px);
+    cursor: pointer;
+}
+
+.blog-post-left {
+    display: block;
+    font-size: var(--font-size-large);
+    margin-bottom: 0.5rem;
+}
+
+.blog-post-left:hover {
+    color: #333;
+}
+
+.blog-post-right {
+    opacity: 0.5;
+    font-size: var(--font-size-small);
+}
+
+/* Blog display-specific styling */
+.blog-display {
+    width: 90%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.blog-display-title {
+    text-align: center;
+    margin-top: 1rem;
+    border: 1px solid var(--pico-primary);
+    padding: 2rem;
+    padding-bottom: 1rem;
+}
+
+.blog-display-footer {
+    font-size: var(--font-size-small);
+    opacity: 0.5;
+}
+
+.blog-display-content {
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .portfolio-projects {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-post {
+        padding: 1rem 0;
+    }
+
+    article {
+        padding: 1.5rem;
+    }
+}

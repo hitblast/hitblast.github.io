@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {% block pagetitle %}
+        <title>Anindya Shiddhartha (HitBlast)</title>
+        {% endblock pagetitle %}
+
+        <!-- CSS -->
+        <link
+            rel="stylesheet"
+            href="{{ get_url(path='css/pico.min.css', trailing_slash=false, cachebust=true) | safe }}"
+        />
+
+        <link
+            rel="stylesheet"
+            href="{{ get_url(path='css/styles.css', trailing_slash=false, cachebust=true) | safe }}"
+        />
+
+        <!-- Scripts -->
+        <script
+            src="https://kit.fontawesome.com/4f5ece0701.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <header class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/"><small>[home]</small></a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://fosstodon.org/@hitblast"
+                            target="_blank"
+                            ><small>[mastodon]</small></a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://linkedin.com/in/hitblast"
+                            target="_blank"
+                            ><small>[linkedin]</small></a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/hitblast" target="_blank"
+                            ><small>[github]</small></a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/hitblast" target="_blank"
+                            ><small>[cv]</small></a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        {% block content %} {% endblock content %}
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 HitBlast. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

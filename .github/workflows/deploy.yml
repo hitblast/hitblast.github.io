@@ -1,0 +1,41 @@
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: "website"
+  cancel-in-progress: true
+
+name: Build and deploy GH Pages
+jobs:
+  build:
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Setup Zola
+        uses: jaxxstorm/action-install-gh-release@v1.12.0
+        with:
+          repo: getzola/zola
+          tag: v0.20.0
+      - name: Build site
+        run: zola build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./public"
+      - name: Deploy to GitHub pages
+        id: deployment
+        uses: actions/deploy-pages@v4

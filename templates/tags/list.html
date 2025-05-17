@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if terms %}
+<br>
+<center>
+{% for term in terms %}
+	<a href="{{ term.permalink | safe }}"><span class="tag-item">{{ term.name }} ({{ term.pages | length}})</span></a>
+{%endfor%}
+</center>
+{%endif%}
+{% endblock content %}

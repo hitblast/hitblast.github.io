@@ -1,0 +1,113 @@
+{% extends "base.html" %} {% block content %}
+<main class="container">
+    <section id="blep">
+        <center>
+            <img src="{{ get_url(path='images/blep.png') }}" width="200px" />
+        </center>
+    </section>
+
+    <section id="blog">
+        {% set blogs = get_section(path="blogs/_index.md") %} {% set pages =
+        blogs.pages %} {% if pages | length == 0 %}
+        <p>No blog posts yet. Check back soon!</p>
+        {% else %} {% for page in pages | slice(end=3) %}
+        <div class="blog-post">
+            <div class="blog-post-left">
+                <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+            </div>
+            <div class="blog-post-right">
+                <i class="fa-solid fa-calendar"></i> {{ page.date |
+                date(format="%b %d, %Y") }} {% if page.authors %}
+                <i class="fa-solid fa-user"></i>
+                {{ page.authors[0] }} {% endif %}
+            </div>
+            <p>{{ page.description }}</p>
+        </div>
+        {% endfor %}
+
+        <div class="center">
+            <a href="{{ get_url(path='@/blogs/_index.md') }}" class="button"
+                >View All Posts >>></a
+            >
+        </div>
+        {% endif %}
+    </section>
+
+    <section id="intro">
+        <hr />
+        >>> welcome! <br />
+        >>> this website is still in development.
+        <br />
+        >>> !cmd <u>cls 2 && intro() > stdout</u><br />
+        <br />
+        <br />
+        >>> I'm Anindya, and I'm guessing your first thought after entering this
+        site was "why is this isn't in dark mode?", well, research says that a
+        light theme with a dark text foreground improves cognitive processing as
+        a whole. <br />
+        >>> !cmd <u>cls 1 && actual_intro() > stdout</u> <br />
+        <br />
+        >>> Oh well, that being aside, I'd not jump into a rather boring session
+        of "Myself", there are links above which portray exactly that. If you
+        are getting the rhythm of navigating through here so far, consider
+        reading a few of the posts above! It'll get you started with what I
+        skipped just now.
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+        <h3 class="center faded">Featured Projects</h3>
+        <br />
+        <div class="portfolio-projects">
+            <div class="project-card">
+                <h4>cutler</h4>
+                <p>
+                    🍺 cutler is a powerful, declarative settings manager CLI
+                    for your Mac. Inspired by the Nix Package Manager.
+                </p>
+                <p class="faded">Technologies: Rust</p>
+                <a href="https://hitblast.github.io/cutler/" class="button"
+                    >View Project</a
+                >
+            </div>
+
+            <div class="project-card">
+                <h4>avro.py</h4>
+                <p>
+                    A modern Pythonic implementation of the popular Bengali
+                    phonetic-typing software Avro Phonetic.
+                </p>
+                <p class="faded">Technologies: Python</p>
+                <a href="https://github.com/hitblast/avro.py" class="button"
+                    >View Project</a
+                >
+            </div>
+
+            <div class="project-card">
+                <h4>Alter</h4>
+                <p>
+                    Alter is a minimal macOS app which can be used to customize
+                    your app icons with ease.
+                </p>
+                <p class="faded">Technologies: Flutter, Dart, Swift</p>
+                <a href="https://hitblast.github.io/Alter/" class="button"
+                    >View Project</a
+                >
+            </div>
+
+            <div class="project-card">
+                <h4>IgKnite</h4>
+                <p>
+                    Unified, swiss-grade moderation & music bot for Discord.
+                    Includes async I/O and a stable core.
+                </p>
+                <p class="faded">
+                    Technologies: discord.py, asyncio, ffmpeg, Docker
+                </p>
+                <a href="https://hitblast.github.io/Alter/" class="button"
+                    >View Project</a
+                >
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock content %}
