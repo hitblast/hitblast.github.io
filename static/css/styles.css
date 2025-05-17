@@ -2,15 +2,12 @@
 
 /* Root modifiers (for Pico CSS especially) */
 :root {
-    --pico-color: #333333;
-    --pico-primary: rgb(69, 100, 137);
-    --pico-primary-border: var(--pico-primary);
     --pico-border-radius: 0.5rem;
     --pico-background-color: rgb(249, 249, 249);
-    --pico-blockquote-border-color: #7b7b7b;
     --pico-blockquote-footer-color: var(--pico-blockquote-border-color);
     --pico-text-underline-offset: 0.5rem;
     --pico-typography-spacing-vertical: 2rem;
+    --pico-transition: 0;
     --pico-form-element-spacing-vertical: 1rem;
     --pico-spacing: 3rem;
     --pico-form-element-spacing-horizontal: 1.25rem;
@@ -21,7 +18,7 @@
     --font-size-large: 1rem;
 }
 
-/* Element styling */
+/* Global Element Styling */
 html {
     scroll-behavior: smooth;
 }
@@ -54,6 +51,7 @@ h4,
 h5,
 h6 {
     font-family: "Space Mono", Courier, monospace;
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 
@@ -66,10 +64,9 @@ article {
     box-shadow: none;
     margin-top: 30px;
     padding: 2rem;
-    border-left: 3px solid var(--pico-primary);
 }
 
-/* Utility classes */
+/* Utility Classes */
 .center {
     text-align: center;
 }
@@ -78,6 +75,12 @@ article {
     opacity: 0.7;
 }
 
+.warn-highlight {
+    color: #ffffff;
+    background-color: rgb(191, 99, 95);
+}
+
+/* Portfolio Specific Styling */
 .portfolio-section {
     margin-top: 3rem;
     padding: 2rem;
@@ -106,6 +109,7 @@ article {
     border-color: var(--pico-primary);
 }
 
+/* Blog Preview Styling */
 .blog-preview {
     margin-bottom: 2rem;
     padding: 1.5rem;
@@ -126,6 +130,7 @@ article {
     margin-bottom: 0.5rem;
 }
 
+/* Pagination and Footer */
 .pagination {
     display: flex;
     justify-content: center;
@@ -143,7 +148,7 @@ article {
     font-size: var(--font-size-small);
 }
 
-/* Blog post-specific styling */
+/* Blog Post Specific Styling */
 .blog-post {
     padding: 2rem;
     text-align: left;
@@ -168,7 +173,7 @@ article {
     font-size: var(--font-size-small);
 }
 
-/* Blog display-specific styling */
+/* Blog Display Specific Styling */
 .blog-display {
     width: 90%;
     margin: 0 auto;
@@ -191,7 +196,7 @@ article {
     line-height: 1.6;
 }
 
-/* Media queries */
+/* Media Queries */
 @media (max-width: 768px) {
     .portfolio-projects {
         grid-template-columns: 1fr;
