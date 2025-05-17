@@ -171,7 +171,6 @@ article {
 /* Blog display-specific styling */
 .blog-display {
     width: 90%;
-    max-width: 800px;
     margin: 0 auto;
 }
 
