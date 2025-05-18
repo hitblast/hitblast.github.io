@@ -63,7 +63,7 @@ Still to this day, I'm struggling to balance my will and mind to keep a good mom
 
 ### Recreating this domain
 
-[hitblast.github.io] has been my go-to personal domain from GitHub Pages for well over four years now. I'm used to constantly modifying it to my needs. I have been thinking about repurposing it as a personal x blog page in order to facilitate the need of a blog page.
+"hitblast.github.io" has been my go-to personal domain from GitHub Pages for well over four years now. I'm used to constantly modifying it to my needs. I have been thinking about repurposing it as a personal x blog page in order to facilitate the need of a blog page.
 
 This would come with some challenges, though:
 
