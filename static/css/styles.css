@@ -6,7 +6,7 @@
     --pico-background-color: rgb(249, 249, 249);
     --pico-blockquote-footer-color: var(--pico-blockquote-border-color);
     --pico-text-underline-offset: 0.5rem;
-    --pico-typography-spacing-vertical: 2rem;
+    --pico-typography-spacing-vertical: 1.5rem;
     --pico-transition: 0;
     --pico-form-element-spacing-vertical: 1rem;
     --pico-spacing: 2rem;
@@ -40,6 +40,10 @@ body {
     position: relative;
     min-height: 100vh;
     padding-bottom: 6rem;
+}
+
+code {
+    font-family: monospace;
 }
 
 hr {
@@ -77,6 +81,10 @@ article {
 
 .faded {
     opacity: 0.7;
+}
+
+.name:hover {
+    cursor: pointer;
 }
 
 .section-title {
@@ -251,5 +259,12 @@ article {
 
     article {
         padding: 1.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav li {
+        margin: -0.5rem;
     }
 }

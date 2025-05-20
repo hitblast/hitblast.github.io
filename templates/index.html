@@ -2,12 +2,23 @@
 <main class="container">
     <section id="blep">
         <center>
-            "snaccs? :3"<img
-                src="{{ get_url(path='images/blep.gif') }}"
-                width="150px"
-            />
+            <span id="random-message"></span
+            ><img src="{{ get_url(path='images/blep.gif') }}" width="150px" />
         </center>
     </section>
+    <script>
+        (function () {
+            const messages = [
+                "snaccs? :3",
+                "mie ^w^",
+                "*ominous stare*",
+                "*mlem mlem*",
+                ":D",
+            ];
+            document.getElementById("random-message").textContent =
+                messages[Math.floor(Math.random() * messages.length)];
+        })();
+    </script>
 
     <section id="blog">
         {% set blogs = get_section(path="blogs/_index.md") %} {% set pages =
