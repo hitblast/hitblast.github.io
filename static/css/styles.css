@@ -113,7 +113,7 @@ article {
 .stack-items {
     display: grid;
     grid-auto-flow: column;
-    gap: 2rem;
+    gap: 1.7rem;
     justify-content: center;
     align-items: center;
 }
@@ -122,10 +122,6 @@ article {
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     border-radius: var(--pico-border-radius);
-}
-
-.stack-item:hover {
-    cursor: pointer;
 }
 
 .stack-item i {
@@ -149,6 +145,7 @@ article {
 .stack-item:hover,
 .project-card:hover {
     transform: translateY(-5px);
+    cursor: grab;
     border-color: var(--pico-primary);
 }
 

@@ -27,7 +27,9 @@
         {% else %} {% for page in pages | slice(end=3) %}
         <div class="blog-post">
             <div class="blog-post-left">
-                <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+                <a href="{{ page.permalink | safe }}" data-tooltip="(view post)"
+                    >{{ page.title }}</a
+                >
             </div>
             <div class="blog-post-right">
                 <i class="fa-solid fa-calendar"></i> {{ page.date |
@@ -103,7 +105,9 @@
                     🍺 cutler is a powerful, declarative settings manager CLI
                     for your Mac. Inspired by the Nix Package Manager.
                 </p>
-                <p class="faded">Technologies: Rust</p>
+                <p class="faded">
+                    Technologies: <span class="warn-highlight">Rust</span>
+                </p>
                 <a
                     href="https://hitblast.github.io/cutler/"
                     data-tooltip="(redirects to website)"
@@ -115,8 +119,10 @@
             <div class="project-card">
                 <h4>avro.py</h4>
                 <p>
-                    A modern Pythonic implementation of the popular Bengali
-                    phonetic-typing software Avro Phonetic.
+                    A modern
+                    <span class="pretty-highlight">Pythonic</span>
+                    implementation of the popular Bengali phonetic-typing
+                    software Avro Phonetic.
                 </p>
                 <p class="faded">Technologies: Python</p>
                 <a
@@ -130,8 +136,9 @@
             <div class="project-card">
                 <h4>Alter</h4>
                 <p>
-                    Alter is a minimal macOS app which can be used to customize
-                    your app icons with ease.
+                    Alter is a minimal
+                    <span class="pretty-highlight">macOS app</span> which can be
+                    used to customize your app icons with ease.
                 </p>
                 <p class="faded">Technologies: Flutter, Dart, Swift</p>
                 <a
