@@ -2,7 +2,10 @@
 <main class="container">
     <section id="blep">
         <center>
-            <img src="{{ get_url(path='images/blep.gif') }}" width="150px" />
+            "snaccs? :3"<img
+                src="{{ get_url(path='images/blep.gif') }}"
+                width="150px"
+            />
         </center>
     </section>
 
@@ -37,31 +40,48 @@
         <hr />
         >>> welcome! <br />
         >>>
-        <span class="warn-highlight"
-            >the website is still under development</span
-        >
+        <span class="warn-highlight">the website is a forever-project</span>
         <br />
         >>> !cmd <u>cls 2 && intro() > stdout</u><br />
         <br />
         <br />
-        >>> I'm Anindya, and I'm guessing your first thought after entering this
-        site was "why is this isn't in dark mode?", well, research says that a
-        light theme with a dark text foreground improves cognitive processing as
-        a whole. <br />
-        >>> !cmd <u>cls 1 && actual_intro() > stdout</u> <br />
-        <br />
-        >>> Oh well, that being aside, I'd not jump into a rather boring session
-        of "Myself", there are links above which portray exactly that. If you
-        are getting the rhythm of navigating through here so far, consider
-        reading a few of the posts above! It'll get you started with what I
-        skipped just now.
+        >>> I'm Anindya, and welcome to my tiny site :3 <br />
+        >>> I've been programming for
+        <span class="pretty-highlight">almost 7 years</span>, and I
+        <span class="pretty-highlight">specialize</span>
+        in creating & maintaining developer toolchains, as well as application
+        development.
     </section>
 
-    <section id="portfolio" class="portfolio-section">
+    <section id="stack" class="faded-section">
+        <h3 class="section-title"><i class="fa-solid fa-box"></i> stack</h3>
+        <p>
+            I'm proficient in a number of technologies, and although I keep
+            experimenting with new tech to see what fits best with my workflow,
+            here's a rough idea:
+        </p>
+        <div class="stack-items">
+            <div class="stack-item"><i class="fa-brands fa-rust"></i></div>
+            <div class="stack-item"><i class="fa-brands fa-python"></i></div>
+            <div class="stack-item"><i class="fa-brands fa-flutter"></i></div>
+            <div class="stack-item"><i class="fa-brands fa-swift"></i></div>
+            <div class="stack-item"><i class="fa-brands fa-git"></i></div>
+        </div>
+    </section>
+
+    <section id="config">
         <h3 class="center faded">
-            <i class="fa-solid fa-star-of-life"></i> featured
+            <i class="fa-solid fa-wrench"></i> config repo
         </h3>
-        <br />
+        <p class="center">
+            <code> $ git clone https://github.com/hitblast/dotfiles.git </code>
+        </p>
+    </section>
+
+    <section id="portfolio" class="faded-section">
+        <h3 class="section-title">
+            <i class="fa-solid fa-star-of-life"></i> featured projects
+        </h3>
         <div class="portfolio-projects">
             <div class="project-card">
                 <h4>cutler</h4>
@@ -115,22 +135,11 @@
         </div>
     </section>
 
-    <section id="config">
-        <h3 class="center faded">
-            <i class="fa-solid fa-wrench"></i> config repo
-        </h3>
-        <p class="center">
-            <code> $ git clone https://github.com/hitblast/dotfiles.git </code>
-        </p>
-    </section>
-
     <section id="homebrew-tap">
         <h3 class="center faded">
-            <i class="fa-solid fa-cube"></i> homebrew tap
+            <i class="fa-solid fa-cube"></i> homebrew tap (macOS)
         </h3>
-        <p class="center">
-            <code> $ brew tap hitblast/tap </code>
-        </p>
+        <p class="center"><code> $ brew tap hitblast/tap </code></p>
     </section>
 </main>
 {% endblock content %}
