@@ -90,7 +90,9 @@
             <i class="fa-solid fa-wrench"></i> config repo
         </h3>
         <p class="center">
-            <code> $ git clone https://github.com/hitblast/dotfiles.git </code>
+            <code class="copyable">
+                $ git clone https://github.com/hitblast/dotfiles.git
+            </code>
         </p>
     </section>
 
@@ -172,7 +174,25 @@
         <h3 class="center faded">
             <i class="fa-solid fa-cube"></i> homebrew tap (macOS)
         </h3>
-        <p class="center"><code> $ brew tap hitblast/tap </code></p>
+        <div class="center">
+            <code class="copyable"> $ brew tap hitblast/tap </code>
+        </div>
     </section>
+
+    <script>
+        document.querySelectorAll("code.copyable").forEach((code) => {
+            // Save the original text in a data attribute for later restoration.
+            const original = code.innerText.trim();
+
+            code.addEventListener("click", () => {
+                // Copy the original text to the clipboard.
+                navigator.clipboard.writeText(original.replace("$ ", ""));
+                code.innerText = "copied to clipboard!";
+                setTimeout(() => {
+                    code.innerText = original;
+                }, 2000);
+            });
+        });
+    </script>
 </main>
 {% endblock content %}

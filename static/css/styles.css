@@ -45,6 +45,9 @@ body {
 code {
     font-family: monospace;
 }
+code.copyable {
+    cursor: pointer;
+}
 
 hr {
     border: 0;
