@@ -29,7 +29,10 @@
         {% endfor %}
 
         <div class="center">
-            <a href="{{ get_url(path='@/blogs/_index.md') }}" class="button"
+            <a
+                href="{{ get_url(path='@/blogs/_index.md') }}"
+                data-tooltip="(visit blog page)"
+                class="button"
                 >View All Posts >>></a
             >
         </div>
