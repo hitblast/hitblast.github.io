@@ -77,6 +77,12 @@ article {
     padding: 2rem;
 }
 
+/* Utility IDs */
+
+#blep-image:hover {
+    cursor: grab;
+}
+
 /* Utility Classes */
 .center {
     text-align: center;
