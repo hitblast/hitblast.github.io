@@ -3,7 +3,11 @@
     <section id="blep">
         <center>
             <span id="random-message"></span
-                        ><img id="blep-image" src="{{ get_url(path='images/blep.gif') }}" width="150px" />
+            ><img
+                id="blep-image"
+                src="{{ get_url(path='images/blep.gif') }}"
+                width="150px"
+            />
         </center>
     </section>
     <script>
@@ -18,14 +22,21 @@
             document.getElementById("random-message").textContent =
                 messages[Math.floor(Math.random() * messages.length)];
         })();
-        document.getElementById("blep-image").addEventListener("click", function() {
-            var img = this;
-            var originalSrc = img.src;
-            img.src = "{{ get_url(path='images/blep_happy.gif') }}";
-            setTimeout(function() {
-                img.src = originalSrc;
-            }, 2000);
-        });
+
+        (function () {
+            const img = document.getElementById("blep-image");
+            let clickable = true;
+            img.addEventListener("click", function () {
+                if (!clickable) return;
+                clickable = false;
+                var originalSrc = img.src;
+                img.src = "{{ get_url(path='images/blep_happy.gif') }}";
+                setTimeout(function () {
+                    img.src = originalSrc;
+                    clickable = true;
+                }, 2000);
+            });
+        })();
     </script>
 
     <section id="blog">
