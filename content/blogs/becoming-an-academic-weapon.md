@@ -17,8 +17,8 @@ while forgetting how to stop procrastination and the minimal-effort mindset from
 us fully.
 
 I've been no stranger to this as well. I was one of the developers who tested [GitHub Copilot](https://github.com/features/copilot)
-back when it was based on the [GPT-3](https://en.wikipedia.org/wiki/GPT-3) model. It was good times; I was
-Almost 4 years ago, when I was testing my latest Discord bot's capabilities. I kept adding new
+back when it was based on the [GPT-3](https://en.wikipedia.org/wiki/GPT-3) model. It was good times; It was
+almost 4 years ago, when I was testing my latest Discord bot's capabilities. I kept adding new
 features everyday, when suddenly the new chat completion felt like a new "boom" in the tech industry. Well, indeed
 it was one. The current reasoning models which I'm using on my IDE (namely [GPT 4o](https://openai.com/index/hello-gpt-4o/) for automating mundane tasks and [o4](https://openai.com/index/introducing-o3-and-o4-mini/) for tasks which involve better reasoning)
 have gotten significantly stronger. The Chinese counterpart [DeepSeek R1](https://github.com/deepseek-ai/DeepSeek-R1) has also shown the west that it's not alone in terms
