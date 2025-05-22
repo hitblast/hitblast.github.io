@@ -133,7 +133,8 @@ article {
     border-radius: var(--pico-border-radius);
 }
 
-.stack-item i {
+.stack-item i,
+.stack-item span {
     font-size: 30px;
     opacity: 0.7;
 }
@@ -156,9 +157,8 @@ article {
     transform: translateY(-8px);
     cursor: grab;
     background-color: rgb(242, 242, 242);
-    color: #222222;
-    box-shadow: 0 8px 0 #222222;
-    border: 1px solid #222222;
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Blog Preview Styling */
