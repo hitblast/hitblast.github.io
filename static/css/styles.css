@@ -77,6 +77,10 @@ article {
     padding: 2rem;
 }
 
+dialog article h4 {
+    margin-top: 1rem;
+}
+
 /* Utility IDs */
 
 #blep-image:hover {

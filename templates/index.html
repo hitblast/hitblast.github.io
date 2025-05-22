@@ -113,7 +113,7 @@
         </h3>
         <p class="center">
             <code class="copyable">
-                $ git clone https://github.com/hitblast/dotfiles.git
+                git clone https://github.com/hitblast/dotfiles.git
             </code>
         </p>
     </section>
@@ -138,6 +138,33 @@
                     class="button"
                     >View Project</a
                 >
+                <dialog>
+                    <article>
+                        <header>
+                            <button
+                                class="close-dialog"
+                                aria-label="Close"
+                                rel="prev"
+                            ></button>
+                            <p>
+                                <strong>Quick-install cutler CLI</strong>
+                            </p>
+                        </header>
+                        <p>
+                            cutler is one of my favorite hobby projects with
+                            14k+ downloads as of now. You can be one of them by
+                            simply typing one of these commands on your Mac:
+                        </p>
+                        <h4>homebrew</h4>
+                        <code class="copyable">
+                            brew install hitblast/tap/cutler
+                        </code>
+                        <h4>cargo</h4>
+                        <code class="copyable"> cargo install cutler </code>
+                        <h4>mise-en-place</h4>
+                        <code class="copyable"> mise use -g cargo:cutler </code>
+                    </article>
+                </dialog>
             </div>
 
             <div class="project-card">
@@ -155,6 +182,34 @@
                     class="button"
                     >View Project</a
                 >
+                <dialog>
+                    <article>
+                        <header>
+                            <button
+                                class="close-dialog"
+                                aria-label="Close"
+                                rel="prev"
+                            ></button>
+                            <p>
+                                <strong>About avro.py</strong>
+                            </p>
+                        </header>
+                        <p>
+                            avro.py is my largest Python library project yet,
+                            spreading across
+                            <a
+                                href="https://pepy.tech/projects/avro-py?timeRange=threeMonths&category=version&includeCIDownloads=true&granularity=daily&viewType=line&versions=2025.5.13%2C2025.3.7%2C2025.3.6"
+                                >180k+ developers</a
+                            >
+                            who are currently transliterating their texts using
+                            this tool! You can also install it using:
+                        </p>
+                        <h4>pip</h4>
+                        <code class="copyable"> pip install avro.py </code>
+                        <h4>uv (add to project)</h4>
+                        <code class="copyable">uv add avro.py</code>
+                    </article>
+                </dialog>
             </div>
 
             <div class="project-card">
@@ -192,12 +247,33 @@
         </div>
     </section>
 
+    <script>
+        document.querySelectorAll("dialog").forEach((dialog) => {
+            const container = dialog.parentElement;
+            if (container) {
+                container.addEventListener("click", function (e) {
+                    // prevent clicks on the button or link from triggering the dialog.
+                    if (e.target.closest("a") || e.target.closest("button"))
+                        return;
+                    dialog.showModal();
+                });
+            }
+            const closeBtn = dialog.querySelector(".close-dialog");
+            if (closeBtn) {
+                closeBtn.addEventListener("click", function (e) {
+                    dialog.close();
+                    e.stopPropagation();
+                });
+            }
+        });
+    </script>
+
     <section id="homebrew-tap">
         <h3 class="center faded">
             <i class="fa-solid fa-cube"></i> homebrew tap (macOS)
         </h3>
         <div class="center">
-            <code class="copyable"> $ brew tap hitblast/tap </code>
+            <code class="copyable"> brew tap hitblast/tap </code>
         </div>
     </section>
 
@@ -205,13 +281,18 @@
         document.querySelectorAll("code.copyable").forEach((code) => {
             // Save the original text in a data attribute for later restoration.
             const original = code.innerText.trim();
-
+            code.dataset.original = original;
+            code.innerHTML =
+                '<i class="fa-regular fa-clipboard"></i> ' + code.innerHTML;
             code.addEventListener("click", () => {
-                // Copy the original text to the clipboard.
-                navigator.clipboard.writeText(original.replace("$ ", ""));
-                code.innerText = "copied to clipboard!";
+                // Copy the original text (without the prepended icon) to the clipboard.
+                navigator.clipboard.writeText(code.dataset.original);
+                code.innerHTML =
+                    '<i class="fa-regular fa-clipboard"></i> copied to clipboard!';
                 setTimeout(() => {
-                    code.innerText = original;
+                    code.innerHTML =
+                        '<i class="fa-regular fa-clipboard"></i> ' +
+                        code.dataset.original;
                 }, 2000);
             });
         });
