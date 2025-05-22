@@ -153,9 +153,12 @@ article {
 
 .stack-item:hover,
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     cursor: grab;
-    border-color: var(--pico-primary);
+    background-color: rgb(242, 242, 242);
+    color: #222222;
+    box-shadow: 0 8px 0 #222222;
+    border: 1px solid #222222;
 }
 
 /* Blog Preview Styling */
