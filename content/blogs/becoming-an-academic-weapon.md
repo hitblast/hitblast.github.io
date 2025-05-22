@@ -1,6 +1,6 @@
 +++
 title = "The General Rule-of-Thumb to Be an Academic Weapon"
-date = 2025-05-17
+date = 2025-05-23
 description = "This is me elaborating on my personal takeaways on the vast ocean of How-To's for becoming an academic weapon, and how to actually try and become one."
 authors = ["hitblast"]
 
@@ -10,11 +10,11 @@ tags = ["education", "tricks"]
 
 ### Looking a little back..
 
-Life hasn't always been about studying, but rather "learning". It's a continuous process 
+Life hasn't always been about studying, but rather "learning". It's a continuous process
 that fundamentally builds what we are today. As GenAI progresses even further, we are
-getting more detached with the basic principles of how to "learn" as a whole, all the 
+getting more detached with the basic principles of how to "learn" as a whole, all the
 while forgetting how to stop procrastination and the minimal-effort mindset from engulfing
-us fully. 
+us fully.
 
 I've been no stranger to this as well. I was one of the developers who tested [GitHub Copilot](https://github.com/features/copilot)
 back when it was based on the [GPT-3](https://en.wikipedia.org/wiki/GPT-3) model. It was good times; I was
@@ -58,7 +58,7 @@ Recognize the pattern here?
 
 I hope you do.
 
-Well, the pattern might not seem as much from a birds eye view but when you look into it, you might see a vicious cycle of 
+Well, the pattern might not seem as much from a birds eye view but when you look into it, you might see a vicious cycle of
 basically "training the students to be imitators or telling them they're doomed" type of sorcery. Students aren't taught anything on this country to succeed for their careers during their first 20 years of their life.
 And by the time they cross 20, they're eventually overwhelmed by the utter realization that the knowledge they've been
 chasing all along doesn't match their core principles in the workforce.
@@ -76,7 +76,7 @@ finish their task at hand here.
 A month ago, I was absolutely overthrown by motivational content by countless content creators from all around Bangladesh
 who are trying their best to promote a product tailored to our batch.
 
-Countless instructors... telling students how they've been wrong about their decisions which they haven't been in complete 
+Countless instructors... telling students how they've been wrong about their decisions which they haven't been in complete
 control of... in the very first seconds of their videos...
 
 Now hopefully you get the cruel pattern I mentioned earlier.
@@ -89,7 +89,7 @@ The effect induced two other bodily reactions to the overflow of content over a 
 - A mismanaged course of action to fulfill the gap, which ***dangerously*** reduced their motivation to study at all.
 
 Our brains run their reward system on a chemical called dopamine. It's the fundamental law of nature that we receive
-something in return for the hard work we do. However, speaking from experience, this dopamine has become as common as 
+something in return for the hard work we do. However, speaking from experience, this dopamine has become as common as
 a vitamin supplement in today's world.
 
 Students find studying hard. It's the reality.
@@ -109,7 +109,7 @@ It's more about the "how".
 
 The first course of action for a student I see as a student myself, is to cut off ed-tech content which spirals you into
 [imposter syndrome](https://www.verywellmind.com/imposter-syndrome-and-social-anxiety-disorder-4156469). You might think that
-you're not as far into your curriculum as you previously might've estimated, but if you jot down the topics which you're 
+you're not as far into your curriculum as you previously might've estimated, but if you jot down the topics which you're
 extremely skilled at, you'll see that the list you once thought was large, became much smaller in size.
 
 Comparison is the pillar of failure.
@@ -177,7 +177,7 @@ Once the fifteen minutes are over, you must be back on the table. You can even t
 break time. And when you're indeed back on the table, repeat the same strategy we discussed for the first session.
 
 If you sleep for 7 hours a day, and even take longer, more mindful breaks after bigger chunks of these sessions, if you manage
-to spread out the sessions evenly, you'll actually get more than 10 hours of studying per day. I had tried this method for a 
+to spread out the sessions evenly, you'll actually get more than 10 hours of studying per day. I had tried this method for a
 couple of consecutive days and it got me 6 hours to 8 hours in average per day (procrastination added).
 
 #### 4. Being a minimal-effort person, with strategy
@@ -213,7 +213,7 @@ A point such as this one doesn't require much elaboration so moving on...
 #### 5. Finally...
 
 You've already seen that I haven't really named the sections in this blog entry like most other typical articles. I've found that,
-using these headlines, most people skip over the core understanding a writer wants to share through their writings. They just 
+using these headlines, most people skip over the core understanding a writer wants to share through their writings. They just
 scroll through the entire page scanning for headlines and quit. Unironically (or ironically), this is one of the excuses students
 take to skim through the material they're supposed to study without proper evaluation in their mind.
 
@@ -235,5 +235,3 @@ over the years. But, I think I've finally striked a balance between guilt-free l
 I hope this article may turn into a good resource for you :3
 
 Well, not the article, really, but you, yourself.
-
-
