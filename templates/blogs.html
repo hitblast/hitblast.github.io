@@ -10,7 +10,9 @@
     {% else %} {% for page in paginator.pages %}
     <div class="blog-post">
         <div class="blog-post-left">
-            <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+            <a data-tooltip="(view post)" href="{{ page.permalink | safe }}"
+                >{{ page.title }}</a
+            >
         </div>
         <div class="blog-post-right">
             <i class="fa-solid fa-calendar"></i> {{ page.date | date(format="%b
