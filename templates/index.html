@@ -66,11 +66,12 @@
         {% endfor %}
 
         <div class="center">
+            Care to read more?
             <a
                 href="{{ get_url(path='@/blogs/_index.md') }}"
                 data-tooltip="(visit blog page)"
                 class="button"
-                >View All Posts >>></a
+                >View all >>></a
             >
         </div>
         {% endif %}
@@ -91,15 +92,18 @@
         <span class="pretty-highlight">specialize</span>
         in creating & maintaining developer toolchains, as well as application
         development.
+        <br />
+        >>> !cmd <u>cls 2 && show_tech_stack() > stdout</u><br />
+        <br /><br />
+        >>> I'm proficient in a number of technologies, and although I keep
+        experimenting with new tech to see what fits best with my workflow,
+        here's a <span class="warn-highlight">rough idea</span>:
     </section>
 
-    <section id="stack" class="faded-section">
-        <h3 class="section-title"><i class="fa-solid fa-box"></i> stack</h3>
-        <p>
-            I'm proficient in a number of technologies, and although I keep
-            experimenting with new tech to see what fits best with my workflow,
-            here's a rough idea:
-        </p>
+    <section id="stack">
+        <h3 class="center faded">
+            stack <i class="fa-solid fa-turn-down"></i>
+        </h3>
         <div class="stack-items">
             <div class="stack-item"><i class="fa-brands fa-rust"></i></div>
             <div class="stack-item"><i class="fa-brands fa-python"></i></div>
