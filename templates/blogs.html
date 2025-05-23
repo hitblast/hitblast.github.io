@@ -10,15 +10,14 @@
     {% else %} {% for page in paginator.pages %}
     <div class="blog-post">
         <div class="blog-post-left">
+            <strong>#</strong>
             <a data-tooltip="(view post)" href="{{ page.permalink | safe }}"
                 >{{ page.title }}</a
             >
         </div>
         <div class="blog-post-right">
-            <i class="fa-solid fa-calendar"></i> {{ page.date | date(format="%b
-            %d, %Y") }} {% if page.authors %}
-            <i class="fa-solid fa-user"></i>
-            {{ page.authors[0] }} {% endif %}
+            Posted on {{ page.date | date(format="%b %d, %Y") }} {% if
+            page.authors %} {% endif %}
         </div>
         <p>{{ page.description }}</p>
     </div>
