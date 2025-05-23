@@ -51,6 +51,7 @@
         {% else %} {% for page in pages | slice(end=3) %}
         <div class="blog-post">
             <div class="blog-post-left">
+                <strong>#</strong>
                 <a href="{{ page.permalink | safe }}" data-tooltip="(view post)"
                     >{{ page.title }}</a
                 >

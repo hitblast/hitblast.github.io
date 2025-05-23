@@ -30,7 +30,11 @@
         <header class="container">
             <nav>
                 <ul>
-                    <li class="name">{ Anindya Shiddhartha }</li>
+                    <li class="name">
+                        <i id="theme-toggle" class="fa-solid fa-moon"></i>
+                        anindya
+                        <strong>shiddhartha</strong>
+                    </li>
                 </ul>
                 <ul>
                     <li>
@@ -90,5 +94,30 @@
                 </p>
             </div>
         </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const themeToggle = document.getElementById("theme-toggle");
+                themeToggle.addEventListener("click", function () {
+                    const currentTheme =
+                        document.documentElement.getAttribute("data-theme");
+                    if (currentTheme === "light") {
+                        document.documentElement.setAttribute(
+                            "data-theme",
+                            "dark",
+                        );
+                        themeToggle.classList.remove("fa-moon");
+                        themeToggle.classList.add("fa-sun");
+                    } else {
+                        document.documentElement.setAttribute(
+                            "data-theme",
+                            "light",
+                        );
+                        themeToggle.classList.remove("fa-sun");
+                        themeToggle.classList.add("fa-moon");
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
