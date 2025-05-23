@@ -3,7 +3,7 @@
 /* Root modifiers (for Pico CSS especially) */
 :root {
     --pico-border-radius: 0.5rem;
-    --pico-background-color: rgb(249, 249, 249);
+    --pico-background-color: rgb(241, 237, 231);
     --pico-blockquote-footer-color: var(--pico-blockquote-border-color);
     --pico-text-underline-offset: 0.5rem;
     --pico-typography-spacing-vertical: 1.5rem;
