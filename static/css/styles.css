@@ -302,6 +302,7 @@ section {
 dialog {
     background-color: transparent;
     cursor: default;
+    overflow: hidden;
 }
 dialog a {
     cursor: pointer;
