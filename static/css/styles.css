@@ -504,6 +504,10 @@ dialog article h4 {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
     .stack-items {
         grid-template-columns: repeat(3, 1fr);
         grid-auto-flow: row;
