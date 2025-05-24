@@ -299,10 +299,14 @@ section {
 }
 
 dialog {
+    background-color: transparent;
     cursor: default;
 }
 dialog a {
     cursor: pointer;
+}
+dialog article header {
+    background-color: var(--pico-background-color);
 }
 
 dialog article h4 {
