@@ -192,7 +192,8 @@
     --pico-button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     --pico-table-border-color: var(--pico-muted-border-color);
     --pico-table-row-stripped-background-color: rgba(255, 255, 255, 0.05);
-    --pico-code-background-color: #2e2e38;
+    --pico-code-background-color: #222;
+    --pico-code-color: var(--pico-color);
     --pico-code-kbd-background-color: var(--pico-color);
     --pico-code-kbd-color: var(--pico-background-color);
     --pico-form-element-background-color: #2a2a35;
@@ -319,10 +320,6 @@ dialog article h4 {
     cursor: grab;
 }
 
-#theme-toggle {
-    cursor: pointer;
-}
-
 /* Utility Classes */
 .center {
     text-align: center;
@@ -330,6 +327,12 @@ dialog article h4 {
 
 .faded {
     opacity: 0.7;
+}
+
+.faded-section {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: var(--pico-border-radius);
 }
 
 .mobile-nav {
@@ -365,12 +368,6 @@ dialog article h4 {
 :host([data-theme="dark"]) .pretty-highlight {
     color: #111;
     background-color: var(--pico-color);
-}
-
-.faded-section {
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: var(--pico-border-radius);
 }
 
 /* Stacks Specific Styling */

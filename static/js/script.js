@@ -1,21 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // ---- Theme Toggle Code ----
-  const themeToggle = document.getElementById("theme-toggle");
-  if (themeToggle) {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) {
-      document.documentElement.setAttribute("data-theme", storedTheme);
-      themeToggle.innerText = storedTheme === "dark" ? "[OwO]" : "[^w^]";
-    }
-    themeToggle.addEventListener("click", function () {
-      const currentTheme = document.documentElement.getAttribute("data-theme");
-      let newTheme = currentTheme === "light" ? "dark" : "light";
-      document.documentElement.setAttribute("data-theme", newTheme);
-      localStorage.setItem("theme", newTheme);
-      themeToggle.innerText = newTheme === "dark" ? "[OwO]" : "[^w^]";
-    });
+  // ---- Auto theme based on system preference ----
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+      document.documentElement.setAttribute('data-theme', 'light');
   }
-
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      const newColorScheme = e.matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', newColorScheme);
+  });
   // ---- Random Message for Blep Section ----
   (function () {
     const messages = [
