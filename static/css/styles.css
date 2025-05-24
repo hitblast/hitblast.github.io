@@ -549,6 +549,10 @@ dialog article h4 {
         grid-template-columns: 1fr;
     }
 
+    .blog-display {
+        width: 95%;
+    }
+
     .blog-post {
         padding: 1rem 0;
     }
