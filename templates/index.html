@@ -10,40 +10,6 @@
             />
         </center>
     </section>
-    <script>
-        (function () {
-            const messages = [
-                "snaccs? :3",
-                "mie ^w^",
-                "mieeeeeeeee :3",
-                "agoumeowwwww ^w^",
-                "pats? :<",
-                "no pats? :<",
-                "*scratches* :D",
-                "*mlem mlem*",
-                "*^w^*",
-                ":D",
-            ];
-            document.getElementById("random-message").textContent =
-                messages[Math.floor(Math.random() * messages.length)];
-        })();
-
-        (function () {
-            const img = document.getElementById("blep-image");
-            let clickable = true;
-            img.addEventListener("click", function () {
-                if (!clickable) return;
-                clickable = false;
-                var originalSrc = img.src;
-                img.src = "{{ get_url(path='images/blep_happy.gif') }}";
-                setTimeout(function () {
-                    img.src = originalSrc;
-                    clickable = true;
-                }, 2000);
-            });
-        })();
-    </script>
-
     <section id="blog">
         {% set blogs = get_section(path="blogs/_index.md") %} {% set pages =
         blogs.pages %} {% if pages | length == 0 %}
@@ -312,27 +278,6 @@
         </div>
     </section>
 
-    <script>
-        document.querySelectorAll("dialog").forEach((dialog) => {
-            const container = dialog.parentElement;
-            if (container) {
-                container.addEventListener("click", function (e) {
-                    // prevent clicks on the button or link from triggering the dialog.
-                    if (e.target.closest("a") || e.target.closest("button"))
-                        return;
-                    dialog.showModal();
-                });
-            }
-            const closeBtn = dialog.querySelector(".close-dialog");
-            if (closeBtn) {
-                closeBtn.addEventListener("click", function (e) {
-                    dialog.close();
-                    e.stopPropagation();
-                });
-            }
-        });
-    </script>
-
     <section id="homebrew-tap">
         <h3 class="center faded">
             <i class="fa-solid fa-cube"></i> homebrew tap (macOS)
@@ -341,26 +286,5 @@
             <code class="copyable"> brew tap hitblast/tap </code>
         </div>
     </section>
-
-    <script>
-        document.querySelectorAll("code.copyable").forEach((code) => {
-            // Save the original text in a data attribute for later restoration.
-            const original = code.innerText.trim();
-            code.dataset.original = original;
-            code.innerHTML =
-                '<i class="fa-regular fa-clipboard"></i> ' + code.innerHTML;
-            code.addEventListener("click", () => {
-                // Copy the original text (without the prepended icon) to the clipboard.
-                navigator.clipboard.writeText(code.dataset.original);
-                code.innerHTML =
-                    '<i class="fa-regular fa-clipboard"></i> copied to clipboard!';
-                setTimeout(() => {
-                    code.innerHTML =
-                        '<i class="fa-regular fa-clipboard"></i> ' +
-                        code.dataset.original;
-                }, 2000);
-            });
-        });
-    </script>
 </main>
 {% endblock content %}
