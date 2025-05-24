@@ -319,6 +319,10 @@ dialog article h4 {
     cursor: grab;
 }
 
+#theme-toggle {
+    cursor: pointer;
+}
+
 /* Utility Classes */
 .center {
     text-align: center;
@@ -328,8 +332,8 @@ dialog article h4 {
     opacity: 0.7;
 }
 
-#theme-toggle {
-    cursor: pointer;
+.mobile-nav {
+    display: none;
 }
 
 .section-title {
@@ -504,8 +508,11 @@ dialog article h4 {
 
 /* Media Queries */
 @media (max-width: 768px) {
-    nav {
+    .desktop-nav {
         display: none;
+    }
+    .mobile-nav {
+        display: initial;
     }
 
     .stack-items {
