@@ -351,16 +351,12 @@ dialog article h4 {
 /* Adjust highlight styling on dark theme */
 [data-theme="dark"] .warn-highlight,
 :root[data-theme="dark"] .warn-highlight,
-:host([data-theme="dark"]) .warn-highlight {
-    color: #111;
-    background-color: #d9534f;
-}
-
+:host([data-theme="dark"]) .warn-highlight,
 [data-theme="dark"] .pretty-highlight,
 :root[data-theme="dark"] .pretty-highlight,
 :host([data-theme="dark"]) .pretty-highlight {
     color: #111;
-    background-color: #5cb85c;
+    background-color: #d63333;
 }
 
 .faded-section {
