@@ -1,17 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
   // ---- Auto theme based on system preference ----
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.setAttribute('data-theme', 'dark');
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    document.documentElement.setAttribute("data-theme", "dark");
   } else {
-      document.documentElement.setAttribute('data-theme', 'light');
+    document.documentElement.setAttribute("data-theme", "light");
   }
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-      const newColorScheme = e.matches ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', newColorScheme);
-  });
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      const newColorScheme = e.matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", newColorScheme);
+    });
+
   // ---- Random Message for Blep Section ----
   (function () {
-    if(document.documentElement.getAttribute('data-theme') === 'dark') return;
     const messages = [
       "snaccs? :3",
       "mie ^w^",
@@ -35,10 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   (function () {
     const img = document.getElementById("blep-image");
     if (!img) return;
-    if(document.documentElement.getAttribute('data-theme') === 'dark') {
-      img.src = "images/shadowblep.png";
-      return;
-    }
+
     let clickable = true;
     // Use the data-happy-src attribute for the happy image URL
     const happySrc = img.getAttribute("data-happy-src");
