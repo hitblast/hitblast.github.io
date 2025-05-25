@@ -14,7 +14,7 @@ Well, fish is indeed a good shell (I'm not foreshadowing at all, totally... mayb
 this entry, I'm still using fish on my Mac.
 
 I've been an avid bash user for over 5 years now, and
-although I switched to `zsh` during my first transitional period into macOS, the urge to write automated
+although I switched to zsh during my first transitional period into macOS, the urge to write automated
 scripts for solving other tasks and doing mundane tasks really brought me back to bash.
 
 However, as many people jump in to oxidize their toolchain and generally every set of software they use,
@@ -294,7 +294,7 @@ commands everywhere, which I essentially do. I use shell commands *everywhere*, 
 And, typing in such speeds only makes the command appear as flickers on your screen. This alone renders my use case for fish virtually "useless",
 except when I really need to see some documentation for a command without typing `man <command>` or `brew help <command>`, though I prefer the latter more.
 
-Also, since fish is not POSIX-compliant, I can't run shell scripts which derive from `zsh` or bash. It would also probably
+Also, since fish is not POSIX-compliant, I can't run shell scripts which derive from zsh or bash. It would also probably
 result in me losing my muscle memory in bash over time, which would result in a major con for me since I write a lot of
 CI/CD pipeline code for deploying my applications.
 
