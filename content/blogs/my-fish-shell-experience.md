@@ -1,7 +1,7 @@
 +++
 title = "My fish shell experience - and why I might not need it."
 date = 2025-05-25
-description = "My experience with setting up fish from the ground-up, annotating the differences and why fish can (or not) be a good choice for you."
+description = "My experience with setting up fish from the ground-up, annotating the differences and whether fish can (or not) be a good choice for you."
 authors = ["hitblast"]
 
 [taxonomies]
