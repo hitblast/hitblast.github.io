@@ -276,7 +276,6 @@ finally use it like I use bash!
 
 I've noticed a couple of major pros after using the fish shell for quite a while:
 
-- It's significantly faster initialization time. For some reason, even with `cutler status --prompt` which takes a few seconds to be processed, fish delivers in terms of performance with flying colors.
 - The Vim keybindings are more precise. In bash, I would struggle with doing edits to my commands in `NORMAL` mode. This doesn't happen on fish, and I can easily perform the required edits without messing up my texts.
 - The default prompt is customizable in an intuitive way, so my need for [starship](https://starship.rs) was essentially gone (though I am still using it).
 - **Plugins.** I'm yet to try these but I'm seeing positive reviews everywhere.
