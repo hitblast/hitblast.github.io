@@ -10,16 +10,16 @@ tags = ["command-line", "experiences", "fish-shell"]
 
 ### The title seems misleading, right?
 
-Well, fish is indeed a good shell (I'm not foreshadowing at all, totally... maybe?) for those who prefer
-easily-typed shell scripting and modern features like on-the-fly autocompletion and more. And, at the time of writing
-this entry, I'm still using fish as my main shell on my Mac. I've been an avid bash user for over 5 years now, and
+Well, fish is indeed a good shell (I'm not foreshadowing at all, totally... maybe?) for those who prefer scripting in a simple language, and some modern features like on-the-fly autocompletion and more. And, at the time of writing
+this entry, I'm still using fish on my Mac.
+
+I've been an avid bash user for over 5 years now, and
 although I switched to `zsh` during my first transitional period while learning macOS, the urge to write automated
 scripts for solving other tasks and doing mundane tasks really brought me back to bash.
 
-However, as many people are trying to oxidize their toolchains, apps and generally every set of software they use,
-I decided to give some oxidized tools a try as well (by "oxidized" I'm referring to apps/tools written in Rust).
-
-And.. the trend isn't really new! I've been using Rust-based tools for quite a while, including:
+However, as many people jump in to oxidize their toolchain and generally every set of software they use,
+I decided to give some oxidized tools a try as well (by "oxidized" I'm referring to apps/tools written in Rust). And, the trend isn't really new!
+I've been using Rust-based tools for quite a while, including:
 
 - [zoxide](https://github.com/ajeetdsouza/zoxide) - a replacement for `cd`
 - [eza](https://github.com/eza-community/eza) - a replacement for `ls`
@@ -274,7 +274,7 @@ finally use it like I use bash!
 
 ### The lovely things about fish
 
-I've noticed a couple of major pros after using the fish shell for quite a while:
+I've noticed a couple of major pros:
 
 - The Vim keybindings are more precise. In bash, I would struggle with doing edits to my commands in `NORMAL` mode. This doesn't happen on fish, and I can easily perform the required edits without messing up my texts.
 - The default prompt is customizable in an intuitive way, so my need for [starship](https://starship.rs) was essentially gone (though I am still using it).
@@ -286,27 +286,25 @@ For the hipsters out there, fish can actually be an excellent choice for manipul
 
 Okay so, remember how I mentioned my typing speed early on in this entry, well..
 
-Typing around 130-150wpm alone obsoletes the need for an autocompletion setup, assuming you have a muscle memory for typing
+Typing around 130-150wpm obsoletes the need for an autocompletion setup, assuming you have a muscle memory for typing
 commands everywhere, which I essentially do. I use shell commands *everywhere*, from self-hosting services on cloud to
 `ssh`-ing into other devices. And after years of typing commands, autocompletion is a feature which has essentially been
 "wiped out" of my memory. Why need an autocomplete if your brain does it for you?
 
-And, typing in such speeds only makes the command appear as flickers on your screen.
-
-This feature alone renders my use case for fish virtually "useless", except when I really need to see some documentation
-for a command without typing `man <command>` or `brew help <command>`, though I prefer the latter more.
+And, typing in such speeds only makes the command appear as flickers on your screen. This alone renders my use case for fish virtually "useless",
+except when I really need to see some documentation for a command without typing `man <command>` or `brew help <command>`, though I prefer the latter more.
 
 Also, since fish is not POSIX-compliant, I can't run shell scripts which derive from `zsh` or bash. It would also probably
 result in me losing my muscle memory in bash over time, which would result in a major con for me since I write a lot of
 CI/CD pipeline code for deploying my applications.
 
-fish is also, for the most part, **slower than bash** altogether. Though it uses Rust, bash uses C as its primary source
+Finally, fish, for the most part, **slower than bash**. This might come as a surprise, but bash uses C as its primary source
 language and can often deliver the fastest, no-bloat terminal experience. However, since we spend most of our time inside
 terminal applications and not shells, this can or can't be a factor which you might consider when choosing between them.
 
 ### Verdict
 
-fish can be a really useful shell depending on your personal scope of use. I personally find bash "enough" for what
+Depending on your personal scope of usage, fish can be a really great alternative to bash. I personally find bash "enough" for the things
 I do - run code, do light data manipulation and just generally enjoy the terminal side of things. It may be different for
 other people, but at the end of the day, it's your "personal preference" which makes you choose the perfect combination of
-workflows.
+workflows to go with.
