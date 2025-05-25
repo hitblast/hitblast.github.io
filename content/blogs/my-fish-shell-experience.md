@@ -300,7 +300,7 @@ CI/CD pipeline code for deploying my applications.
 
 Finally, fish, for the most part, **is slower than bash**. This might come as a surprise, but bash uses C as its primary source
 language and can often deliver the fastest, no-bloat terminal experience. However, since we spend most of our time inside
-terminal applications and not shells, this can or can't be a factor which you might consider when choosing between them.
+terminal applications and not shells, it should not be that big of a deal.
 
 ### Verdict
 
