@@ -5,16 +5,42 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Open Graph -->
-        <meta property="og:title" content="{% if page.title %}{{ page.title }} | HitBlast{% else %}Anindya Shiddhartha (HitBlast){% endif %}" />
-        <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Personal blog and portfolio of Anindya Shiddhartha{% endif %}" />
-        <meta property="og:type" content="{% if page.template == \"blog-display.html\" %}article{% else %}website{% endif %}" />
-        <meta property="og:url" content="{{ config.base_url }}{{ page.permalink | safe }}" />
-        <meta property="og:image" content="{{ get_url(path='images/shadowblep.png', trailing_slash=false, cachebust=true) }}" />
-
+        <!-- HTML Meta Tags -->
         {% block pagetitle %}
         <title>Anindya Shiddhartha (HitBlast)</title>
         {% endblock pagetitle %}
+
+        <meta
+            name="description"
+            content="My personal website and blog. No strings attached."
+        />
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://hitblast.github.io" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Anindya Shiddhartha (HitBlast)" />
+        <meta
+            property="og:description"
+            content="My personal website and blog. No strings attached."
+        />
+        <meta
+            property="og:image"
+            content="{{ get_url(path='images/ghostblep.png') }}"
+        />
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="hitblast.github.io" />
+        <meta property="twitter:url" content="https://hitblast.github.io" />
+        <meta name="twitter:title" content="Anindya Shiddhartha (HitBlast)" />
+        <meta
+            name="twitter:description"
+            content="My personal website and blog. No strings attached."
+        />
+        <meta
+            name="twitter:image"
+            content="{{ get_url(path='images/ghostblep.png') }}"
+        />
 
         <!-- CSS -->
         <link
