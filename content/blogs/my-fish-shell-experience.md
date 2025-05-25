@@ -284,7 +284,7 @@ For the hipsters out there, fish can actually be an excellent choice for manipul
 
 ### And... the cons...
 
-Okay so, remember how I mentioned my typing speed early on in this entry, well..
+Okay so, remember how I mentioned my typing speed early on in this entry? Well..
 
 Typing around 130-150wpm obsoletes the need for an autocompletion setup, assuming you have a muscle memory for typing
 commands, which I essentially do. I use shell commands *everywhere*, from self-hosting services on cloud to
@@ -298,7 +298,7 @@ Also, since fish is not POSIX-compliant, I can't run shell scripts which derive 
 result in me losing my muscle memory in bash over time, which would result in a major con for me since I write a lot of
 CI/CD pipeline code for deploying my applications.
 
-Finally, fish, for the most part, **slower than bash**. This might come as a surprise, but bash uses C as its primary source
+Finally, fish, for the most part, **is slower than bash**. This might come as a surprise, but bash uses C as its primary source
 language and can often deliver the fastest, no-bloat terminal experience. However, since we spend most of our time inside
 terminal applications and not shells, this can or can't be a factor which you might consider when choosing between them.
 
