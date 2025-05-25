@@ -39,7 +39,7 @@ However... does it deliver in the terminal?
 ### For most tools, I'd say... yes!
 
 Rust's speed along with its concurrency features, if coupled with `tokio` for async, or `rayon` for multithreading, can
-lead to major performance bumps which can also be seen in literal desktop apps! The edge CLIs deliver over desktop apps is
+lead to major performance bumps which can also be seen in literal desktop apps too! The edge CLIs deliver over desktop apps is
 that, it's just a lot more fun (and significantly faster) in terms of I/O and general throughput if you're a terminal
 fanboy.
 
@@ -62,9 +62,9 @@ to put a config file?"**
 I honestly got surprised with the out-of-the-box experience of fish. It automatically sets up autocompletion. Though,
 I ran into a few difficulties at first:
 
-- My **typing speed** wasn't really synchronizing with the completions (a crucial detail we'll get back to later on).
+- My **typing speed** wasn't really syncing with the completions (a crucial detail we'll get back to later on).
 -  I still needed to setup vim keybindings with fish later on since I'm used to having `h j k l` for moving around.
-- The commands showed up in commands, *but they didn't work.*
+- All of the commands showed up perfectly during auto-suggestions, *but they didn't work.*
 
 ### Solving the configuration crisis
 
