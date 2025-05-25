@@ -287,7 +287,7 @@ For the hipsters out there, fish can actually be an excellent choice for manipul
 Okay so, remember how I mentioned my typing speed early on in this entry, well..
 
 Typing around 130-150wpm obsoletes the need for an autocompletion setup, assuming you have a muscle memory for typing
-commands everywhere, which I essentially do. I use shell commands *everywhere*, from self-hosting services on cloud to
+commands, which I essentially do. I use shell commands *everywhere*, from self-hosting services on cloud to
 `ssh`-ing into other devices. And after years of typing commands, autocompletion is a feature which has essentially been
 "wiped out" of my memory. Why need an autocomplete if your brain does it for you?
 
