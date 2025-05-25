@@ -14,7 +14,7 @@ Well, fish is indeed a good shell (I'm not foreshadowing at all, totally... mayb
 this entry, I'm still using fish on my Mac.
 
 I've been an avid bash user for over 5 years now, and
-although I switched to `zsh` during my first transitional period while learning macOS, the urge to write automated
+although I switched to `zsh` during my first transitional period into macOS, the urge to write automated
 scripts for solving other tasks and doing mundane tasks really brought me back to bash.
 
 However, as many people jump in to oxidize their toolchain and generally every set of software they use,
