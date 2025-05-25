@@ -1,5 +1,5 @@
 +++
-title = "The General Rule-of-Thumb to Be an Academic Weapon"
+title = "The general rule-of-thumb to become an academic weapon"
 date = 2025-05-23
 description = "This is me elaborating on my personal takeaways on the vast ocean of How-To's for becoming an academic weapon, and how to actually try and become one."
 authors = ["hitblast"]

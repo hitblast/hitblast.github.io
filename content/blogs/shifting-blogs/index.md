@@ -1,5 +1,5 @@
 +++
-title = "Shifting Blogs: Dev.to -> My Personal Blog"
+title = "Shifting from dev.to to my personal blog"
 date = 2025-05-17
 description = "A brief look at why I made this website, my take on blogging as a method of journaling, the technical parts and some story to back it up."
 authors = ["hitblast"]
