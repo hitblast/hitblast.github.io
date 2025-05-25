@@ -301,6 +301,10 @@ Also, since fish is not POSIX-compliant, I can't run shell scripts which derive 
 result in me losing my muscle memory in bash over time, which would result in a major con for me since I write a lot of
 CI/CD pipeline code for deploying my applications.
 
+fish is also, for the most part, **slower than bash** altogether. Though it uses Rust, bash uses C as its primary source
+language and can often deliver the fastest, no-bloat terminal experience. However, since we spend most of our time inside
+terminal applications and not shells, this can or can't be a factor which you might consider when choosing between them.
+
 ### Verdict
 
 fish can be a really useful shell depending on your personal scope of use. I personally find bash "enough" for what
