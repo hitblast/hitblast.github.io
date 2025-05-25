@@ -1,6 +1,11 @@
-{% extends "base.html" %} {% block pagetitle %}
-<title>{{ page.title }} | HitBlast</title>
-{% endblock pagetitle %} {% block content %}
+{% extends "base.html" %}
+{% block pagetitle %}
+  <title>{{ page.title }}</title>
+  <meta property="og:title" content="{{ page.title }} | HitBlast's Blog">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta name="description" content="{{ page.description }}">
+{% endblock pagetitle %}
+{% block content %}
 <div class="container">
     <div class="blog-display">
         <a href="/blogs">&laquo; Back to all posts</a>
@@ -9,9 +14,7 @@
             <p>{{ page.description }}</p>
             <p class="blog-display-footer">
                 <i class="fa-solid fa-calendar"></i>
-                Published: {{ page.date | date(format="%b %d, %Y") }} {% if
-                page.authors %} | <i class="fa-solid fa-user"></i> Author: {{
-                page.authors[0] }} {% endif %}
+                Published: {{ page.date | date(format="%b %d, %Y") }} {% if page.authors %} | <i class="fa-solid fa-user"></i> Author: {{ page.authors[0] }} {% endif %}
             </p>
         </div>
         <hr />
