@@ -5,7 +5,7 @@ description = "This is me elaborating on my personal takeaways on the vast ocean
 authors = ["hitblast"]
 
 [taxonomies]
-tags = ["education", "tricks"]
+tags = ["educational", "experiences"]
 +++
 
 ### Looking a little back..
