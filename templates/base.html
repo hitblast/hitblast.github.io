@@ -5,6 +5,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- Open Graph -->
+        <meta property="og:title" content="{% if page.title %}{{ page.title }} | HitBlast{% else %}Anindya Shiddhartha (HitBlast){% endif %}" />
+        <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Personal blog and portfolio of Anindya Shiddhartha{% endif %}" />
+        <meta property="og:type" content="{% if page.template == \"blog-display.html\" %}article{% else %}website{% endif %}" />
+        <meta property="og:url" content="{{ config.base_url }}{{ page.permalink | safe }}" />
+        <meta property="og:image" content="{{ get_url(path='images/shadowblep.png', trailing_slash=false, cachebust=true) }}" />
+
         {% block pagetitle %}
         <title>Anindya Shiddhartha (HitBlast)</title>
         {% endblock pagetitle %}
