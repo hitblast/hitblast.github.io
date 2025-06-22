@@ -54,7 +54,8 @@
     --pico-contrast-hover-underline: var(--pico-secondary-hover);
     --pico-contrast-focus: rgba(93, 107, 137, 0.25);
     --pico-contrast-inverse: #fff;
-    --pico-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(129, 145, 181, 0.01698),
+    --pico-box-shadow:
+        0.0145rem 0.029rem 0.174rem rgba(129, 145, 181, 0.01698),
         0.0335rem 0.067rem 0.402rem rgba(129, 145, 181, 0.024),
         0.0625rem 0.125rem 0.75rem rgba(129, 145, 181, 0.03),
         0.1125rem 0.225rem 1.35rem rgba(129, 145, 181, 0.036),
@@ -170,7 +171,8 @@
     --pico-contrast-hover-underline: var(--pico-secondary-hover);
     --pico-contrast-focus: rgba(93, 107, 137, 0.5);
     --pico-contrast-inverse: #23272a;
-    --pico-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.3),
+    --pico-box-shadow:
+        0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.3),
         0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.4),
         0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.5),
         0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.6),
@@ -399,7 +401,7 @@ dialog article h4 {
 /* Projects Specific Styling */
 .portfolio-projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 

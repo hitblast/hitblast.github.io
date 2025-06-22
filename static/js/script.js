@@ -20,15 +20,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const messages = [
       "snaccs? :3",
       "mie ^w^",
-      "mieeeeeeeee :3",
-      "agoumeowwwww ^w^",
+      "mieeeee :3",
+      "agomeoww ^w^",
       "pats? :<",
-      "no pats? :<",
       "*scratches* :D",
       "*mlem mlem*",
       "*^w^*",
       ":D",
     ];
+
     const randomMsgElem = document.getElementById("random-message");
     if (randomMsgElem) {
       randomMsgElem.textContent =
