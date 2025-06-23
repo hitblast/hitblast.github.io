@@ -1,19 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // ---- Auto theme based on system preference ----
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    document.documentElement.setAttribute("data-theme", "dark");
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-  }
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      const newColorScheme = e.matches ? "dark" : "light";
-      document.documentElement.setAttribute("data-theme", newColorScheme);
-    });
+  // ---- Set dark mode as default theme ----
+  document.documentElement.setAttribute("data-theme", "dark");
 
   // ---- Random Message for Blep Section ----
   (function () {

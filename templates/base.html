@@ -63,18 +63,17 @@
         <header class="container">
             <nav>
                 <ul>
-                    <li class="name">anindya shiddhartha</li>
+                    <li class="name">
+                        <a
+                            href="{{ get_url(path='/') }}"
+                            data-tooltip="(go to home)"
+                            data-placement="bottom"
+                            >anindya shiddhartha</a
+                        >
+                    </li>
                 </ul>
 
                 <ul class="desktop-nav">
-                    <li>
-                        <a
-                            href="{{ get_url(path='/') }}"
-                            data-tooltip="(starter page)"
-                            data-placement="bottom"
-                            ><small>[home]</small></a
-                        >
-                    </li>
                     <li>
                         <a
                             href="{{ get_url(path='@/blogs/_index.md') }}"
@@ -121,11 +120,6 @@
                 </ul>
 
                 <ul class="mobile-nav">
-                    <li>
-                        <a href="{{ get_url(path='/') }}"
-                            ><small>[hom]</small></a
-                        >
-                    </li>
                     <li>
                         <a href="{{ get_url(path='@/blogs/_index.md') }}"
                             ><small>[blg]</small></a
