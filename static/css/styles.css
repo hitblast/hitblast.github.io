@@ -2,6 +2,7 @@
 
 /* Root modifiers (for Pico CSS especially) */
 :root {
+    color-scheme: dark;
     --pico-border-radius: 0.5rem;
     --pico-text-underline-offset: 0.5rem;
     --pico-typography-spacing-vertical: 1.5rem;
@@ -13,8 +14,6 @@
     --font-size-base: 0.85rem;
     --font-size-small: 0.75rem;
     --font-size-large: 1rem;
-
-    color-scheme: dark;
     --pico-background-color: rgb(18, 18, 18);
     --pico-color: #d1d1d1;
     --pico-text-selection-color: rgba(201, 37, 37, 0.5);
