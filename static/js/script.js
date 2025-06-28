@@ -65,9 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // ---- Rainbow Sparkle Icons ----
   document.querySelectorAll(".rainbow").forEach((element) => {
     const sparkleIcon = document.createElement("i");
-    sparkleIcon.className = "fa-solid fa-sparkles";
+    sparkleIcon.className = "fa-solid fa-wand-magic-sparkles rainbow";
     sparkleIcon.style.marginLeft = "0.5rem";
-    sparkleIcon.style.color = "var(--pico-primary)";
     element.appendChild(sparkleIcon);
   });
 
