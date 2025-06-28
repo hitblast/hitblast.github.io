@@ -11,6 +11,7 @@
             />
         </center>
     </section>
+
     <section id="blog">
         {% set blogs = get_section(path="blogs/_index.md") %} {% set pages =
         blogs.pages %} {% if pages | length == 0 %}
@@ -279,6 +280,18 @@
         <div class="center">
             <code class="copyable">brew tap hitblast/tap</code>
         </div>
+    </section>
+
+    <section id="boop">
+        <center>
+            <span id="random-message"></span>
+            <img
+                id="boop-image"
+                src="{{ get_url(path='images/boop.gif') }}"
+                data-happy-src="{{ get_url(path='images/boop.gif') }}"
+                width="150px"
+            />
+        </center>
     </section>
 </main>
 {% endblock content %}

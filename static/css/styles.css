@@ -403,9 +403,14 @@ a:hover {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    body {
+        width: 90%;
+    }
+
     .desktop-nav {
         display: none;
     }
+
     .mobile-nav {
         display: initial;
     }
