@@ -184,7 +184,7 @@ code.copyable {
 
 hr {
     border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.8);
     margin: 2rem 0;
 }
 
@@ -258,6 +258,23 @@ dialog article h4 {
 .pretty-highlight {
     color: #111;
     background-color: var(--pico-color);
+}
+
+.rainbow {
+    background: linear-gradient(
+        135deg,
+        #ffb3ba 0%,
+        #ffdfba 20%,
+        #ffffba 40%,
+        #baffc9 60%,
+        #bae1ff 80%,
+        #e0baff 100%,
+        #ffb3ba 120%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 /* Stacks Specific Styling */

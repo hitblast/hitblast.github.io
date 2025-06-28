@@ -62,6 +62,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // ---- Rainbow Sparkle Icons ----
+  document.querySelectorAll(".rainbow").forEach((element) => {
+    const sparkleIcon = document.createElement("i");
+    sparkleIcon.className = "fa-solid fa-sparkles";
+    sparkleIcon.style.marginLeft = "0.5rem";
+    sparkleIcon.style.color = "var(--pico-primary)";
+    element.appendChild(sparkleIcon);
+  });
+
   // ---- Dialog Open/Close Code ----
   document.querySelectorAll("dialog").forEach((dialog) => {
     const container = dialog.parentElement;
