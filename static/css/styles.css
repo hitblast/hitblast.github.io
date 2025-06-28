@@ -13,11 +13,7 @@
     --font-size-base: 0.85rem;
     --font-size-small: 0.75rem;
     --font-size-large: 1rem;
-}
 
-[data-theme="dark"],
-:root[data-theme="dark"],
-:host([data-theme="dark"]) {
     color-scheme: dark;
     --pico-background-color: rgb(18, 18, 18);
     --pico-color: #d1d1d1;
@@ -256,26 +252,11 @@ dialog article h4 {
 }
 
 .warn-highlight {
-    color: #ffffff;
-    background-color: rgb(191, 99, 95);
-}
-
-.pretty-highlight {
-    color: #fff;
-    background-color: darkseagreen;
-}
-
-/* Adjust highlight styling on dark theme */
-[data-theme="dark"] .warn-highlight,
-:root[data-theme="dark"] .warn-highlight,
-:host([data-theme="dark"]) .warn-highlight {
     color: #111;
     background-color: #d63333;
 }
 
-[data-theme="dark"] .pretty-highlight,
-:root[data-theme="dark"] .pretty-highlight,
-:host([data-theme="dark"]) .pretty-highlight {
+.pretty-highlight {
     color: #111;
     background-color: var(--pico-color);
 }
@@ -291,7 +272,7 @@ dialog article h4 {
 }
 
 .stack-item {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid #000;
     padding: 1.5rem;
     border-radius: var(--pico-border-radius);
 }
@@ -313,7 +294,7 @@ dialog article h4 {
 }
 
 .project-card {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid #000;
     padding: 1.5rem;
     border-radius: var(--pico-border-radius);
 }
@@ -322,30 +303,11 @@ dialog article h4 {
     cursor: pointer;
 }
 
-/* Some combined styling for project-card and stack-item (dark mode only) */
-
-[data-theme="dark"] .project-card,
-:root[data-theme="dark"] .project-card,
-:host([data-theme="dark"]) .project-card,
-[data-theme="dark"] .stack-item,
-:root[data-theme="dark"] .stack-item,
-:host([data-theme="dark"]) .stack-item {
-    border: 1px solid #000;
-}
 .stack-item:hover,
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-[data-theme="dark"] .project-card:hover,
-:root[data-theme="dark"] .project-card:hover,
-:host([data-theme="dark"]) .project-card:hover,
-[data-theme="dark"] .stack-item:hover,
-:root[data-theme="dark"] .stack-item:hover,
-:host([data-theme="dark"]) .stack-item:hover {
     box-shadow: 0 8px 0 #000;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Pagination and Footer */
