@@ -172,7 +172,8 @@ body {
     font-family: "Space Mono", monospace;
     font-size: var(--font-size-base);
     line-height: 1.5;
-    margin: 0;
+    width: 80%;
+    margin: 0 auto;
     padding: 0;
     position: relative;
     min-height: 100vh;
@@ -382,6 +383,10 @@ dialog article h4 {
     font-size: var(--font-size-large);
     margin-bottom: 0.5rem;
 }
+.blog-post-left strong {
+    font-size: 1.3rem;
+    font-style: italic;
+}
 
 .blog-post-left:hover {
     color: #333;
@@ -394,7 +399,7 @@ dialog article h4 {
 
 /* Blog Display Specific Styling */
 .blog-display {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 
