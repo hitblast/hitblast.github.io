@@ -1,12 +1,27 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block pagetitle %}
+<title>Tags | HitBlast's Blog</title>
+<meta property="og:title" content="Tags | HitBlast's Blog" />
+<meta
+    property="og:description"
+    content="Blog tags - redirecting to blog page"
+/>
+<meta name="description" content="Blog tags - redirecting to blog page" />
+<meta
+    http-equiv="refresh"
+    content="0; url={{ get_url(path='@/blogs/_index.md') }}"
+/>
+{% endblock pagetitle %} {% block content %}
+<div class="container">
+    <div class="center">
+        <h1>Redirecting to Blog...</h1>
+        <p>Tags are now integrated directly into the blog posts.</p>
+        <a href="{{ get_url(path='@/blogs/_index.md') }}" class="button"
+            >Go to Blog</a
+        >
+    </div>
+</div>
 
-{% block content %}
-{% if terms %}
-<br>
-<center>
-{% for term in terms %}
-	<a href="{{ term.permalink | safe }}"><span class="tag-item">{{ term.name }} ({{ term.pages | length}})</span></a>
-{%endfor%}
-</center>
-{%endif%}
+<script>
+    window.location.href = "{{ get_url(path='@/blogs/_index.md') }}";
+</script>
 {% endblock content %}

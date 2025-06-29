@@ -1,11 +1,17 @@
 {% extends "base.html" %} {% block pagetitle %}
-<title>HitBlast's Blog</title>
-  <meta property="og:title" content="HitBlast's Blog">
-  <meta property="og:description" content="Blog entries related to programming, culture, life and more.">
-  <meta name="description" content="Blog entries related to programming, culture, life and more.">
+<title>HitBlast's Blog</title>
+<meta property="og:title" content="HitBlast's Blog" />
+<meta
+    property="og:description"
+    content="Blog entries related to programming, culture, life and more."
+/>
+<meta
+    name="description"
+    content="Blog entries related to programming, culture, life and more."
+/>
 {% endblock pagetitle %} {% block content %}
 <div class="container">
-    <h1 class="center">blog</h1>
+    <h2 class="center">epicenter of thoughts</h2>
     <hr />
 
     {% if paginator.pages|length == 0 %}
@@ -20,9 +26,17 @@
         </div>
         <div class="blog-post-right">
             Posted on {{ page.date | date(format="%b %d, %Y") }} {% if
-            page.authors %} {% endif %}
+            page.authors %} by {{ page.authors[0] }} {% endif %}
         </div>
         <p>{{ page.description }}</p>
+        {% if page.taxonomies.tags %}
+        <div class="blog-post-tags">
+            <i class="fa-solid fa-tags"></i>
+            {% for tag in page.taxonomies.tags %}
+            <a href="{{ get_url(path='tags/' ~ tag) }}" class="tag">{{ tag }}</a
+            >{% if not loop.last %} {% endif %} {% endfor %}
+        </div>
+        {% endif %}
     </div>
     {% endfor %} {% endif %}
 

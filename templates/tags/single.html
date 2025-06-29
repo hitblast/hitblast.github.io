@@ -1,8 +1,48 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block pagetitle %}
+<title>{{ term.name | title }} Tag | HitBlast's Blog</title>
+<meta
+    property="og:title"
+    content="{{ term.name | title }} Tag | HitBlast's Blog"
+/>
+<meta
+    property="og:description"
+    content="Blog posts tagged with {{ term.name }}"
+/>
+<meta name="description" content="Blog posts tagged with {{ term.name }}" />
+{% endblock pagetitle %} {% block content %}
+<div class="container">
+    <a href="{{ get_url(path='@/blogs/_index.md') }}"
+        >&laquo; Back to all posts</a
+    >
+    <br /><br />
 
-{% block content %}
-{% for page in term.pages %}
-    <a href="{{ page.permalink | safe }}">{{ page.title }}</a> on {{ page.date | date(format="%b %d, %Y") }} <br/>
-    <!-- {# COMMENT: find all attributes from https://www.getzola.org/documentation/content/page/ #} -->
-{% endfor %}
+    <h2><i class="fa-solid fa-tag"></i> {{ term.name }}</h2>
+    <hr />
+
+    {% if term.pages | length == 0 %}
+    <p class="center">No blog posts found with this tag.</p>
+    {% else %} {% for page in term.pages %}
+    <div class="blog-post">
+        <div class="blog-post-left">
+            <strong>#</strong>
+            <a data-tooltip="(view post)" href="{{ page.permalink | safe }}"
+                >{{ page.title }}</a
+            >
+        </div>
+        <div class="blog-post-right">
+            Posted on {{ page.date | date(format="%b %d, %Y") }} {% if
+            page.authors %} by {{ page.authors[0] }} {% endif %}
+        </div>
+        <p>{{ page.description }}</p>
+        {% if page.taxonomies.tags %}
+        <div class="blog-post-tags">
+            <i class="fa-solid fa-tags"></i>
+            {% for tag in page.taxonomies.tags %}
+            <a href="{{ get_url(path='tags/' ~ tag) }}" class="tag">{{ tag }}</a
+            >{% if not loop.last %}, {% endif %} {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %} {% endif %}
+</div>
 {% endblock content %}

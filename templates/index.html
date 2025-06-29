@@ -26,9 +26,18 @@
             </div>
             <div class="blog-post-right">
                 Posted on {{ page.date | date(format="%b %d, %Y") }} {% if
-                page.authors %} {% endif %}
+                page.authors %} by {{ page.authors[0] }} {% endif %}
             </div>
             <p>{{ page.description }}</p>
+            {% if page.taxonomies.tags %}
+            <div class="blog-post-tags">
+                <i class="fa-solid fa-tags"></i>
+                {% for tag in page.taxonomies.tags %}
+                <a href="{{ get_url(path='tags/' ~ tag) }}" class="tag"
+                    >{{ tag }}</a
+                >{% if not loop.last %} {% endif %} {% endfor %}
+            </div>
+            {% endif %}
         </div>
         {% endfor %}
 
