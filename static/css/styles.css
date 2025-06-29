@@ -278,7 +278,7 @@ a:hover {
 }
 
 /* Stacks Specific Styling */
-.featured-items {
+.stack-items {
     margin-top: 1rem;
     display: grid;
     grid-auto-flow: column;
@@ -287,18 +287,18 @@ a:hover {
     align-items: center;
 }
 
-.featured-item {
+.stack-item {
     border: 3px solid #000;
     background-color: #0f0f0f;
     padding: 1.5rem;
     border-radius: var(--pico-border-radius);
 }
-.featured-item:hover {
+.stack-item:hover {
     cursor: grab;
 }
 
-.featured-item i,
-.featured-item span {
+.stack-item i,
+.stack-item span {
     font-size: 30px;
     opacity: 0.7;
 }
