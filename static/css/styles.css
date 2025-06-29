@@ -220,7 +220,7 @@ a:hover {
 .faded-section {
     padding: 2rem;
     background-color: #0f0f0f;
-    border-radius: var(--pico-border-radius);
+    border-radius: 0px;
 }
 
 .mobile-nav {
