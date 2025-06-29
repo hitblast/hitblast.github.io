@@ -294,7 +294,8 @@ a:hover {
 }
 
 .stack-item {
-    border: 1px solid #000;
+    border: 3px solid #000;
+    background-color: #0f0f0f;
     padding: 1.5rem;
     border-radius: var(--pico-border-radius);
 }
