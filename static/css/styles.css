@@ -219,7 +219,7 @@ a:hover {
 
 .faded-section {
     padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #0f0f0f;
     border-radius: var(--pico-border-radius);
 }
 
@@ -310,15 +310,18 @@ a:hover {
 
 /* Projects Specific Styling */
 .portfolio-projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
+    align-items: flex-start;
 }
 
 .project-card {
-    border: 1px solid #000;
+    border: 3px solid #000;
     padding: 1.5rem;
     border-radius: var(--pico-border-radius);
+    flex: 1 1 calc(50% - 0.75rem);
+    min-width: 300px;
 }
 
 .project-card:hover {
@@ -329,7 +332,6 @@ a:hover {
 .project-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 0 #000;
-    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Pagination and Footer */
@@ -424,7 +426,12 @@ a:hover {
     }
 
     .portfolio-projects {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .project-card {
+        flex: 1 1 100%;
+        min-width: auto;
     }
 
     .blog-display {
