@@ -1,7 +1,7 @@
 +++
-title = "macOS 26 \"Tahoe\" and talking about all its new quirks"
+title = "My macOS 26 \"Tahoe\" experience: discussing design quirks"
 date = 2025-06-30
-description = "In this entry, I've described my thoughts on how the new design actually refines the core principles of macOS' interactivity."
+description = "In this entry, I've described my thoughts on how the new design actually refines the core principles of macOS' hardware-software interactivity and more."
 authors = ["hitblast"]
 
 [taxonomies]
