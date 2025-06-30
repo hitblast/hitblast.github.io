@@ -393,6 +393,10 @@ a:hover {
         width: 100%;
     }
 
+    .blog-post {
+        padding: 0.7rem 0;
+    }
+
     article {
         padding: 1.5rem;
     }
