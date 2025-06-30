@@ -361,7 +361,7 @@ a:hover {
 /* Media Queries */
 @media (max-width: 768px) {
     body {
-        width: 90%;
+        width: 97%;
     }
 
     .desktop-nav {
