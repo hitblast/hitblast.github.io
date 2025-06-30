@@ -202,7 +202,6 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
-
 .stack-item {
     border: 3px solid #000;
     background-color: #0f0f0f;
@@ -240,7 +239,7 @@ a:hover {
 /* Some combined CSS */
 .stack-item:hover,
 .project-card:hover {
-    transform: translate(-2px, -8px);
+    transform: translateY(-8px);
 }
 
 .stack-item:hover::after,
@@ -251,18 +250,26 @@ a:hover {
     right: 0;
     bottom: -10px;
     height: 10px;
-    background: repeating-linear-gradient(
-        60deg,
-        transparent,
-        transparent 5px,
-        black 5px,
-        black 10px
-    );
+    background:
+        repeating-linear-gradient(
+            60deg,
+            transparent,
+            transparent 5px,
+            black 5px,
+            black 10px
+        ),
+        repeating-linear-gradient(
+            120deg,
+            transparent,
+            transparent 5px,
+            black 5px,
+            black 10px
+        );
+    background-blend-mode: multiply;
     border: none;
     border-bottom-left: 3px solid black;
     border-bottom-right: 3px solid black;
 }
-
 /* Pagination and Footer */
 .pagination {
     display: flex;
