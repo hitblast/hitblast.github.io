@@ -1,8 +1,27 @@
 {% extends "base.html" %} {% block pagetitle %}
 <title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}" />
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="{{ current_url | safe }}" />
+<meta property="og:type" content="article" />
 <meta property="og:title" content="{{ page.title }} | HitBlast's Blog" />
 <meta property="og:description" content="{{ page.description }}" />
-<meta name="description" content="{{ page.description }}" />
+<meta
+    property="og:image"
+    content="{{ get_url(path='images/metablep.png', trailing_slash=false) }}"
+/>
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain" content="hitblast.github.io" />
+<meta property="twitter:url" content="{{ current_url | safe }}" />
+<meta name="twitter:title" content="{{ page.title }} | HitBlast's Blog" />
+<meta name="twitter:description" content="{{ page.description }}" />
+<meta
+    name="twitter:image"
+    content="{{ get_url(path='images/metablep.png', trailing_slash=false) }}"
+/>
 {% endblock pagetitle %} {% block content %}
 <div class="container">
     <div class="blog-display">
