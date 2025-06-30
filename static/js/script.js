@@ -91,10 +91,24 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".glitched").forEach((el) => {
     window.observeInView(el, addGlitchEffect);
   });
+
   // ---- RandomGlitch Effect for .randomly-glitched Elements ----
   function addRandomGlitchEffect(el) {
-    const chars =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:',.<>/?";
+    // const chars =
+    //   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:',.<>/?";
+
+    // Define character sets by type
+    const alphaChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    const numChars = "0123456789";
+    const symbolChars = "!@#$%^&*()_+-=[]{}|;:',.<>/?";
+
+    function getCharSetForType(ch) {
+      if (/[A-Za-z]/.test(ch)) return alphaChars;
+      if (/[0-9]/.test(ch)) return numChars;
+      if (symbolChars.includes(ch)) return symbolChars;
+      return ""; // fallback: no glitch for unknown types
+    }
+
     if (el.dataset.randomglitching) return; // Prevent double-glitching
     el.dataset.randomglitching = "true";
     const original = el.textContent;
@@ -103,13 +117,17 @@ document.addEventListener("DOMContentLoaded", function () {
     let interval = null;
     let revertTimeouts = [];
 
-    function render(cursorIndex = null, cursorChar = null) {
+    function render(cursorIndex = null, cursorChar = null, cursorBg = null) {
       let out = "";
       for (let i = 0; i < current.length; i++) {
         if (/\s/.test(original[i])) {
           out += original[i];
         } else if (i === cursorIndex && cursorChar !== null) {
-          out += `<span style="color: #0c0c0c; background: #d63333;">${cursorChar}</span>`;
+          let style = "color: #0c0c0c; background: #d63333;";
+          if (cursorBg) {
+            style = "color: #0c0c0c; background: " + cursorBg + ";";
+          }
+          out += `<span style="${style}">${cursorChar}</span>`;
         } else if (glitchedIndices.has(i)) {
           out += `<span style="color: #0c0c0c; background: #d63333;">${current[i]}</span>`;
         } else {
@@ -120,30 +138,51 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Helper: stutter the cursor at a given index, then call cb(finalChar)
+    // For stutter-out, pass options.cursorWhiteBeforeRemove = true
     function stutterCursor(idx, targetChar, cb, options = {}) {
-      // options: {stutterCount, stutterDelay, finalDelay}
+      // options: {stutterCount, stutterDelay, finalDelay, cursorWhiteBeforeRemove}
       const stutterCount =
         options.stutterCount || 3 + Math.floor(Math.random() * 2); // 3-4
       const stutterDelay = options.stutterDelay || 40;
       const finalDelay = options.finalDelay || 120;
+      const cursorWhiteBeforeRemove = !!options.cursorWhiteBeforeRemove;
       let count = 0;
 
       function doStutter() {
         if (count < stutterCount) {
           // Show a random char as cursor
+          const charSet = getCharSetForType(original[idx]);
           let randChar;
-          do {
-            randChar = chars[Math.floor(Math.random() * chars.length)];
-          } while (randChar === original[idx]);
+          if (charSet.length === 0) {
+            randChar = original[idx];
+          } else {
+            do {
+              randChar = charSet[Math.floor(Math.random() * charSet.length)];
+            } while (randChar === original[idx]);
+          }
           render(idx, randChar);
           count++;
           setTimeout(doStutter, stutterDelay);
         } else {
           // Show the targetChar as cursor for a bit longer
-          render(idx, targetChar);
-          setTimeout(() => {
-            cb(targetChar);
-          }, finalDelay);
+          if (cursorWhiteBeforeRemove) {
+            // Show with normal glitch bg for a short time, then white bg, then remove
+            render(idx, targetChar);
+            setTimeout(
+              () => {
+                render(idx, targetChar, "#fff");
+                setTimeout(() => {
+                  cb(targetChar);
+                }, 90); // white bg for 90ms
+              },
+              Math.max(40, finalDelay - 90),
+            );
+          } else {
+            render(idx, targetChar);
+            setTimeout(() => {
+              cb(targetChar);
+            }, finalDelay);
+          }
         }
       }
       doStutter();
@@ -193,19 +232,27 @@ document.addEventListener("DOMContentLoaded", function () {
               stutterCount: 2 + Math.floor(Math.random() * 2),
               stutterDelay: 40,
               finalDelay: 90,
+              cursorWhiteBeforeRemove: true,
             },
           );
         }
         stutterOutNext();
         return;
       }
+
       // Pick a random index to glitch
       const idx = candidates[Math.floor(Math.random() * candidates.length)];
       // Pick a random char different from the original
+      const charSet = getCharSetForType(original[idx]);
       let randChar;
-      do {
-        randChar = chars[Math.floor(Math.random() * chars.length)];
-      } while (randChar === original[idx]);
+      if (charSet.length === 0) {
+        randChar = original[idx];
+      } else {
+        do {
+          randChar = charSet[Math.floor(Math.random() * charSet.length)];
+        } while (randChar === original[idx]);
+      }
+
       // Show the cursor effect with stutter-in
       stutterCursor(
         idx,
@@ -229,6 +276,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   stutterCount: 2 + Math.floor(Math.random() * 2),
                   stutterDelay: 40,
                   finalDelay: 90,
+                  cursorWhiteBeforeRemove: true,
                 },
               );
             },
