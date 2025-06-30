@@ -331,7 +331,7 @@ a:hover {
     cursor: pointer;
 }
 
-.featured-item:hover,
+.stack-item:hover,
 .project-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 0 #000;
@@ -443,11 +443,11 @@ a:hover {
         display: initial;
     }
 
-    .featured-items {
+    .stack-items {
         grid-template-columns: repeat(3, 1fr);
         grid-auto-flow: row;
     }
-    .featured-item {
+    .stack-item {
         text-align: center;
     }
 
