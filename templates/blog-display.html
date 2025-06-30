@@ -13,8 +13,7 @@
             <p class="blog-display-footer">
                 <i class="fa-solid fa-calendar"></i>
                 Published: {{ page.date | date(format="%b %d, %Y") }} {% if
-                page.authors %} | <i class="fa-solid fa-user"></i> Author: {{
-                page.authors[0] }} {% endif %} {% if page.taxonomies.tags %}
+                page.taxonomies.tags %}
                 <br />
                 <i class="fa-solid fa-tags"></i> Tags: {% for tag in
                 page.taxonomies.tags %}

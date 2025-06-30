@@ -1,8 +1,7 @@
 +++
-title = "My macOS 26 \"Tahoe\" experience: discussing design quirks"
+title = "My macOS 26 \"Tahoe\" experience: discussing design quirks & more"
 date = 2025-06-30
-description = "In this entry, I've described my thoughts on how the new design actually refines the core principles of macOS' hardware-software interactivity and more."
-authors = ["hitblast"]
+description = "In this entry, I've elaborated on my thoughts on how \"Liquid Glass\" actually refines the core principles of the hardware-software interactivity on the Macintosh."
 
 [taxonomies]
 tags = ["operating-systems", "experiences", "macos"]
@@ -10,13 +9,13 @@ tags = ["operating-systems", "experiences", "macos"]
 
 So, in a bold move driven by sheer boredom and the urge to try new things, I've decided to install the macOS 26 Tahoe Developer Beta.
 
-This might sound like a little bit of a "downgrade" to my workflow, since, we all know Apple ships incomplete features which often glitch out a lot, and my development pipeline could've been affected by it. Even I was skeptical of the user experience at first, seeing all the controversy surrounding the "Liquid Glass" refresh macOS has gotten recently. And, to be honest, I think this is all *partially* true?
+This might sound like a little bit of a "downgrade" to my workflow. We all know Apple ships incomplete features which often glitch out a lot, and my development pipeline could've been affected by it. Even I was skeptical of the user experience at first, seeing all the controversy surrounding the "Liquid Glass" refresh macOS has gotten recently. And, to be honest, I think this is all *partially* true?
 
-However, I actually like a couple of things. I still have a lot to say about the design, so I will talk about that during the end. So, back to the point:
+However, I actually like a couple of things. I still have a lot to say about the design, so I will talk about that during the end.
 
-I, have installed a developer beta version of macOS.
+So, back to the point:
 
-macOS 26.
+**I, have installed the latest developer beta version of macOS.**
 
 To put a summary at first: It is a design refresh attempt from Apple which, in their wordings, tries to "redefine" what human interactivity with hardware and software looks like.
 
@@ -30,7 +29,7 @@ A "lot" of things got upgraded. Which includes:
 
 ### First thoughts
 
-Now, taking into account that even the lowest-end M1 chip still keeps pace with 2025 hardware, I think Apple can truly get some juice out of it by levelling up the UX. As a matter of fact, I'm still using my almost-4-year-old MacBook Air, and I hit the save button, which also runs `cargo check`, probably like every twenty seconds whilw writing code. And, it still doesn't put pressure on the RAM.
+Now, taking into account that even the lowest-end M1 chip still keeps pace with 2025 hardware, I think Apple can truly get some juice out of it by levelling up the UX. As a matter of fact, I'm still using my almost-4-year-old MacBook Air. I hit the save button, which also runs `cargo check`, probably like every twenty seconds while writing code. And, it still doesn't put pressure on the RAM.
 
 So, how well does it perform on Tahoe?
 
@@ -38,7 +37,7 @@ Performance-wise, **I see no major pitfalls at all**, if any.
 
 If not for the support expiration which will probably happen after two-three years, I don't see the oldest Mac-based Apple Silicon having any issues with macOS Tahoe. However, I did see some hiccups when the animations started rendering. Maybe this was partially due to me not rebooting and not clearing off the cache from the older version.
 
-On Sequoia, I was using a utility named [OnyX](https://www.titanium-software.fr/en/onyx.html) to do maintenance work on my Mac, but since it doesn't support macOS Tahoe *yet*, I'm out of luck here. But, to sum up for the most part, it's the second day of writing, and everything is running as-is, possibly even better than my previous, "stable" Sequoia installation.
+On Sequoia, I was using a utility named [OnyX](https://www.titanium-software.fr/en/onyx.html) to do maintenance work on my Mac. Since it doesn't support macOS Tahoe *yet*, I'm out of luck here. But, to sum up for the most part, it's the second day of writing, and everything is running as-is, possibly even better than my previous, "stable" Sequoia installation.
 
 ### Spotlight Search
 
@@ -52,7 +51,7 @@ The UI is refreshed. New features like Actions and Quick Keys are all great cont
 
 Firstly, **the Quick Keys feel more janky than they're supposed to.** A way to instant-launch a shortcut without even opening Spotlight could be a great addition. Currently, the keys only help as aliases, which does not help much since typing the entire command "partially" does not benefit my latency over just using a short alias for it.
 
-Secondly, there are still some issues with the user interface. Like [the removal of Launchpad](https://www.macobserver.com/news/apple-removes-launchpad-in-macos-26-tahoe-and-users-arent-happy/) has resulted in Spotlight having all the "spotlight" when it comes to having a visual on the applications. But, opening Spotlight with the same four-finger pinch gesture as Launchpad results in a rather "stretched" window:
+Secondly, there are still some issues with the user interface. For example, [the removal of Launchpad](https://www.macobserver.com/news/apple-removes-launchpad-in-macos-26-tahoe-and-users-arent-happy/) has resulted in Spotlight having all the "spotlight" when it comes to having a visual on the applications. But, opening Spotlight with the same four-finger pinch gesture as Launchpad results in a rather "stretched" window:
 
 <center>
 <img src="spotlight-thicc.png" width="500px">
@@ -65,7 +64,7 @@ However, performance-wise, I think Spotlight has gotten ***better?*** By better,
 
 ### Control Center & others
 
-I love how the Control Center has been redesigned with Liquid Glass. During WWDC, most YouTube channels and critiques highlighted the minor light refractions as a design flaw. After facing a huge amount of backlash, I think Apple has finally listened, and now we have a pretty cute design:
+I love how the Control Center has been redesigned with Liquid Glass. During WWDC, most YouTube channels and critiques highlighted the minor light refractions as a design flaw. After facing a huge amount of backlash, I think Apple has finally listened. Now we have a pretty cute design:
 
 <center>
 <img src="control-center.png" width="500px">
@@ -109,3 +108,5 @@ As of today, I've still not used a significant amount (if any) of Apple Intellig
 ### Conclusion
 
 Nice update, overall, I'll have to say. Though, taking in for account the fact that it's still in its primitive stages, makes me feel like Apple can make a ton of more adjustments before it's actually worthy of a proper design-to-performance review.
+
+Thanks for tuning into another *totally not minimally sized* blog entry!
