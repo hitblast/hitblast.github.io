@@ -170,23 +170,6 @@ a:hover {
     background-color: var(--pico-color);
 }
 
-.rainbow {
-    background: linear-gradient(
-        135deg,
-        #ffb3ba 0%,
-        #ffdfba 20%,
-        #ffffba 40%,
-        #baffc9 60%,
-        #bae1ff 80%,
-        #e0baff 100%,
-        #ffb3ba 120%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-}
-
 /* Top-Name Styling */
 .name a {
     color: inherit;
@@ -226,11 +209,6 @@ a:hover {
     padding: 1.5rem;
     border-radius: var(--pico-border-radius);
 }
-.stack-item:hover {
-    cursor: pointer;
-    transform: translateY(-8px);
-    box-shadow: 0 8px 0 #000;
-}
 
 .stack-item i,
 .stack-item span {
@@ -248,6 +226,7 @@ a:hover {
 
 .project-card {
     border: 3px solid #000;
+    background-color: #0f0f0f;
     padding: 1.5rem;
     border-radius: var(--pico-border-radius);
     flex: 1 1 calc(50% - 0.75rem);
@@ -258,10 +237,30 @@ a:hover {
     cursor: pointer;
 }
 
+/* Some combined CSS */
 .stack-item:hover,
 .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 0 #000;
+    transform: translate(-2px, -8px);
+}
+
+.stack-item:hover::after,
+.project-card:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 10px;
+    background: repeating-linear-gradient(
+        60deg,
+        transparent,
+        transparent 5px,
+        black 5px,
+        black 10px
+    );
+    border: none;
+    border-bottom-left: 3px solid black;
+    border-bottom-right: 3px solid black;
 }
 
 /* Pagination and Footer */

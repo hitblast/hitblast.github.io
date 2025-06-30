@@ -134,14 +134,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ---- Rainbow Sparkle Icons ----
-  document.querySelectorAll(".rainbow").forEach((element) => {
-    const sparkleIcon = document.createElement("i");
-    sparkleIcon.className = "fa-solid fa-wand-magic-sparkles rainbow";
-    sparkleIcon.style.marginLeft = "0.5rem";
-    element.appendChild(sparkleIcon);
-  });
-
   // ---- Dialog Open/Close Code ----
   document.querySelectorAll("dialog").forEach((dialog) => {
     const container = dialog.parentElement;
