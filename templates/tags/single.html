@@ -39,7 +39,7 @@
             <i class="fa-solid fa-tags"></i>
             {% for tag in page.taxonomies.tags %}
             <a href="{{ get_url(path='tags/' ~ tag) }}" class="tag">{{ tag }}</a
-            >{% if not loop.last %}, {% endif %} {% endfor %}
+            >{% if not loop.last %} {% endif %} {% endfor %}
         </div>
         {% endif %}
     </div>

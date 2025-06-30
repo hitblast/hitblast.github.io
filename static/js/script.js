@@ -2,6 +2,78 @@ document.addEventListener("DOMContentLoaded", function () {
   // ---- Set dark mode as default theme ----
   document.documentElement.setAttribute("data-theme", "dark");
 
+  // ---- Glitch Effect for .glitched Elements ----
+  function addGlitchEffect(el) {
+    const chars =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:',.<>/?";
+    if (el.dataset.glitching) return; // Prevent double-glitching
+    el.dataset.glitching = "true";
+    const original = el.textContent;
+    let obfuscated = Array.from(original);
+
+    // Obfuscate all non-space characters
+    for (let i = 0; i < original.length; i++) {
+      if (original[i] === " " || original[i] === "\n") {
+        obfuscated[i] = original[i];
+      } else {
+        let randChar;
+        do {
+          randChar = chars[Math.floor(Math.random() * chars.length)];
+        } while (randChar === original[i]);
+        obfuscated[i] =
+          `<span style="color: #0c0c0c; background: #d63333;">${randChar}</span>`;
+      }
+    }
+    el.innerHTML = obfuscated.join("");
+
+    // Reveal characters slowly from end to start
+    let revealIndex = original.length - 1;
+    function revealNext() {
+      if (revealIndex < 0) {
+        el.textContent = original;
+        delete el.dataset.glitching;
+        return;
+      }
+      // Replace the obfuscated character at revealIndex with the original
+      let current = [];
+      for (let i = 0; i < original.length; i++) {
+        if (i > revealIndex) {
+          current[i] = original[i];
+        } else if (original[i] === " " || original[i] === "\n") {
+          current[i] = original[i];
+        } else {
+          let randChar;
+          do {
+            randChar = chars[Math.floor(Math.random() * chars.length)];
+          } while (randChar === original[i]);
+          current[i] =
+            `<span style="color: #0c0c0c; background: #d63333;">${randChar}</span>`;
+        }
+      }
+      el.innerHTML = current.join("");
+      revealIndex--;
+      setTimeout(revealNext, 50);
+    }
+    setTimeout(revealNext, 200);
+  }
+
+  // Use IntersectionObserver to trigger glitch effect only when in view
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          addGlitchEffect(entry.target);
+          obs.unobserve(entry.target); // Only trigger once per element
+        }
+      });
+    },
+    { threshold: 0.1 },
+  );
+
+  document.querySelectorAll(".glitched").forEach((el) => {
+    observer.observe(el);
+  });
+
   // ---- Random Message for Blep Section ----
   (function () {
     const messages = [
