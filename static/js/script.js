@@ -91,19 +91,20 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".glitched").forEach((el) => {
     window.observeInView(el, addGlitchEffect);
   });
-
   // ---- RandomGlitch Effect for .randomly-glitched Elements ----
   function addRandomGlitchEffect(el) {
     // const chars =
     //   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:',.<>/?";
 
-    // Define character sets by type
-    const alphaChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    // Define character sets by type and case
+    const upperAlphaChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowerAlphaChars = "abcdefghijklmnopqrstuvwxyz";
     const numChars = "0123456789";
-    const symbolChars = "!@#$%^&*()_+-=[]{}|;:',.<>/?";
+    const symbolChars = "!@#$%^&*()_+-=[]{}|;:\"',.<>/?";
 
     function getCharSetForType(ch) {
-      if (/[A-Za-z]/.test(ch)) return alphaChars;
+      if (/[A-Z]/.test(ch)) return upperAlphaChars;
+      if (/[a-z]/.test(ch)) return lowerAlphaChars;
       if (/[0-9]/.test(ch)) return numChars;
       if (symbolChars.includes(ch)) return symbolChars;
       return ""; // fallback: no glitch for unknown types

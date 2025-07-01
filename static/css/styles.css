@@ -118,8 +118,18 @@ dialog {
     cursor: default;
     overflow: hidden;
 }
+dialog article {
+    background: repeating-linear-gradient(
+        45deg,
+        var(--pico-background-color),
+        var(--pico-background-color) 20px,
+        #0c0c0c 20px,
+        #0c0c0c 40px
+    );
+    box-shadow: 0 0 30px rgba(0, 0, 0, 1);
+}
 dialog article header {
-    background-color: var(--pico-background-color);
+    background-color: transparent;
 }
 dialog article h4 {
     margin-top: 1rem;
