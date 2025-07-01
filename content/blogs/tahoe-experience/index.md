@@ -97,7 +97,9 @@ They've really thought about the human interactivity with the software they're a
 
 And by "thought", I mean they've silently managed to create a design language that is both pleasurable to use and addictive. For those who have an obsession towards new designs and blueprints, I think you might have gotten what I'm trying to mention here. If you can couple this new version with enough tweaks of your own, it becomes *physically* harder to resist.
 
-Remember when Steve Jobs announced the first iPhone and everyone was locked-into skeuomorphism and thought Android's plane icons weren't attractive? Looks like Apple is trying to reshape their product line with the exact same principle. Since the new design does not have any hardware performance penalties (rather they have "improvements"), it's a great opportunity for a refresh.
+The window corners are slightly more rounded, there are effects for both launching and exiting apps, and the overall streamlined design now feels like it's "made" to interact with in various different ways.
+
+Remember when Steve Jobs announced the first iPhone and everyone was locked-into skeuomorphism and thought Android's plane icons weren't attractive? Looks like Apple is trying to reshape their product line with the exact same principle. Since the new design does not have any hardware performance penalties (rather they have "improvements"), it's a great opportunity for a refresh of this scale.
 
 And to me, personally, it feels like Big Sur all over again.
 
