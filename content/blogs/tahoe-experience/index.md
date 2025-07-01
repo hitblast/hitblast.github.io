@@ -1,7 +1,7 @@
 +++
 title = "My macOS 26 \"Tahoe\" experience: discussing design quirks & more"
 date = 2025-06-30
-description = "In this entry, I've elaborated on my thoughts on how \"Liquid Glass\" actually refines the core principles of the hardware-software interactivity on the Macintosh."
+description = "In this entry, I've elaborated on some of my tiny thoughts regarding Apple's design refresh, while also reviewing some of the new features on macOS Tahoe."
 
 [taxonomies]
 tags = ["operating-systems", "experiences", "macos"]
