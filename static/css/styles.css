@@ -11,9 +11,9 @@
     --pico-spacing: 2rem;
     --pico-form-element-spacing-horizontal: 1.25rem;
     --pico-font-family: "Space Mono", monospace;
-    --font-size-base: 0.85rem;
-    --font-size-small: 0.75rem;
-    --font-size-large: 1rem;
+    --font-size-base: 0.8rem;
+    --font-size-small: 0.7rem;
+    --font-size-large: 0.95rem;
     --pico-background-color: rgb(18, 18, 18);
     --pico-color: #d1d1d1;
     --pico-text-selection-color: rgba(201, 37, 37, 0.5);
@@ -75,7 +75,7 @@ body {
     font-family: "Space Mono", monospace;
     font-size: var(--font-size-base);
     line-height: 1.5;
-    width: 80%;
+    width: 64%;
     margin: 0 auto;
     padding: 0;
     position: relative;
@@ -302,7 +302,7 @@ a:hover {
 
 /* Blog Display Specific Styling */
 .blog-display {
-    width: 85%;
+    width: 95%;
     margin: 0 auto;
 }
 
