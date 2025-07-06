@@ -34,10 +34,9 @@
                 Published: {{ page.date | date(format="%b %d, %Y") }} {% if
                 page.taxonomies.tags %}
                 <br />
-                <i class="fa-solid fa-tags"></i> Tags: {% for tag in
-                page.taxonomies.tags %}
+                {% for tag in page.taxonomies.tags %}
                 <a href="{{ get_url(path='tags/' ~ tag) }}" class="tag"
-                    >{{ tag }}</a
+                    >#{{ tag }}</a
                 >{% if not loop.last %} {% endif %} {% endfor %} {% endif %}
             </p>
         </div>

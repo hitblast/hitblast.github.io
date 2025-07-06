@@ -16,7 +16,9 @@
     >
     <br /><br />
 
-    <h2><i class="fa-solid fa-tag"></i> {{ term.name }}</h2>
+    <h2>
+        <span class="glitched single-tag-name">#{{ term.name }}</span>
+    </h2>
     <hr />
 
     {% if term.pages | length == 0 %}
@@ -24,7 +26,7 @@
     {% else %} {% for page in term.pages %}
     <div class="blog-post">
         <div class="blog-post-left">
-            <strong>#</strong>
+            <strong>$</strong>
             <a data-tooltip="(view post)" href="{{ page.permalink | safe }}"
                 >{{ page.title }}</a
             >
@@ -36,9 +38,9 @@
         <p>{{ page.description }}</p>
         {% if page.taxonomies.tags %}
         <div class="blog-post-tags">
-            <i class="fa-solid fa-tags"></i>
             {% for tag in page.taxonomies.tags %}
-            <a href="{{ get_url(path='tags/' ~ tag) }}" class="tag">{{ tag }}</a
+            <a href="{{ get_url(path='tags/' ~ tag) }}" class="tag"
+                >#{{ tag }}</a
             >{% if not loop.last %} {% endif %} {% endfor %}
         </div>
         {% endif %}

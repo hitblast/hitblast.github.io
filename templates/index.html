@@ -19,24 +19,12 @@
         {% else %} {% for page in pages | slice(end=3) %}
         <div class="blog-post">
             <div class="blog-post-left">
-                <strong>#</strong>
+                <strong>$</strong>
                 <a href="{{ page.permalink | safe }}" data-tooltip="(view post)"
                     >{{ page.title }}</a
                 >
             </div>
-            <div class="blog-post-right">
-                Posted on {{ page.date | date(format="%b %d, %Y") }}
-            </div>
             <p>{{ page.description }}</p>
-            {% if page.taxonomies.tags %}
-            <div class="blog-post-tags">
-                <i class="fa-solid fa-tags"></i>
-                {% for tag in page.taxonomies.tags %}
-                <a href="{{ get_url(path='tags/' ~ tag) }}" class="tag"
-                    >{{ tag }}</a
-                >{% if not loop.last %} {% endif %} {% endfor %}
-            </div>
-            {% endif %}
         </div>
         {% endfor %}
 
@@ -143,7 +131,11 @@
                             methods and usage.
                         </p>
                         <h4>install script</h4>
-                        <code class="copyable">curl -fsSL https://cutlercli.github.io/scripts/install.sh | /bin/bash</code>
+                        <code class="copyable"
+                            >curl -fsSL
+                            https://cutlercli.github.io/scripts/install.sh |
+                            /bin/bash</code
+                        >
                     </article>
                 </dialog>
             </div>

@@ -251,6 +251,7 @@ a:hover {
     border-bottom-left: 3px solid black;
     border-bottom-right: 3px solid black;
 }
+
 /* Pagination and Footer */
 .pagination {
     display: flex;
@@ -276,7 +277,7 @@ a:hover {
 .blog-post {
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     text-align: left;
 }
 
@@ -287,7 +288,6 @@ a:hover {
 .blog-post-left {
     display: block;
     font-size: var(--font-size-large);
-    margin-bottom: 0.5rem;
     font-weight: 700;
 }
 .blog-post-left strong {
@@ -316,7 +316,6 @@ a:hover {
 
 .blog-display-footer {
     font-size: var(--font-size-small);
-    opacity: 0.5;
 }
 
 .blog-display-content {
@@ -330,8 +329,7 @@ a:hover {
 
 .tag {
     display: inline-block;
-    background-color: #666666;
-    color: #0e0e0e;
+    color: #fff;
     padding: 0.2rem;
     margin: 0.1rem;
     font-size: 0.7rem;
@@ -342,8 +340,13 @@ a:hover {
 }
 
 .tag:hover {
-    background-color: var(--pico-primary-hover);
-    text-decoration: none;
+    color: #fff;
+    background-color: var(--pico-background-color);
+}
+
+.single-tag-name {
+    color: #0c0c0c;
+    background-color: #d63333;
 }
 
 /* Media Queries */
