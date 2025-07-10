@@ -288,7 +288,6 @@ a:hover {
 .blog-post-left {
     display: block;
     font-size: var(--font-size-large);
-    font-weight: 700;
 }
 .blog-post-left strong {
     font-size: 1.5rem;
