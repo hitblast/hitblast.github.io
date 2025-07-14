@@ -141,6 +141,8 @@ a {
 a:hover {
     border-radius: 0px;
     background-color: #d63333;
+    font-style: italic;
+    font-weight: bold;
     color: #0c0c0c;
 }
 
@@ -281,14 +283,11 @@ a:hover {
     text-align: left;
 }
 
-.blog-post:hover {
-    cursor: pointer;
-}
-
 .blog-post-left {
     display: block;
     font-size: var(--font-size-large);
 }
+
 .blog-post-left strong {
     font-size: 1.5rem;
     font-style: italic;
