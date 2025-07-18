@@ -27,9 +27,7 @@
     <div class="blog-post">
         <div class="blog-post-left">
             <strong>$</strong>
-            <a data-tooltip="(view post)" href="{{ page.permalink | safe }}"
-                >{{ page.title }}</a
-            >
+            <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
         </div>
         <div class="blog-post-right">
             Posted on {{ page.date | date(format="%b %d, %Y") }} {% if
