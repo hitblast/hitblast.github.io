@@ -159,6 +159,10 @@ document.addEventListener("DOMContentLoaded", function () {
       container.addEventListener("click", function (e) {
         // Prevent clicks on buttons or links from triggering the dialog.
         if (e.target.closest("a") || e.target.closest("button")) return;
+
+        // Don't show dialog on mobile-sized screens
+        if (window.innerWidth <= 768) return;
+
         dialog.showModal();
       });
     }

@@ -381,4 +381,8 @@ a:hover {
     article {
         padding: 1.5rem;
     }
+
+    dialog {
+        display: none;
+    }
 }
