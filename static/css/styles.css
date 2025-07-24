@@ -125,7 +125,6 @@ dialog article {
         #0c0c0c 40px
     );
     box-shadow: 0 0 30px rgba(0, 0, 0, 1);
-    border-radius: 2rem;
 }
 dialog article header {
     background-color: #0a0a0a;
