@@ -102,10 +102,8 @@ crisis?
 
 I had two files to essentially migrate:
 
-- The `.bash_profile` file for variable initializations and `PATH` mods, and
-- The `.bashrc` file for program initializations
-
-You can [find the files mentioned here](https://github.com/hitblast/dotfiles) for reference.
+- ([Reference](https://github.com/hitblast/dotfiles/blob/102b6ed9d42dfbad4ecf379a0110bf8f386e505a/.bash_profile.old)) The `.bash_profile` file for variable initializations and `PATH` mods, and
+- ([Reference](https://github.com/hitblast/dotfiles/blob/102b6ed9d42dfbad4ecf379a0110bf8f386e505a/.bashrc.old)) The `.bashrc` file for program initializations
 
 Essentially, the `config.fish` can do both at the same time, so I needed to merge them. I quickly told my model to
 present me a migrated example, and it sent me this:
