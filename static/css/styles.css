@@ -140,7 +140,6 @@ a {
 a:hover {
     border-radius: 0px;
     background-color: #d63333;
-    font-style: italic;
     font-weight: bold;
     color: #0c0c0c;
 }
