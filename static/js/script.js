@@ -1,4 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // ---- Icon append on desktop nav item hover ----
+  function setupDesktopNavHoverIcons() {
+    const desktopNav = document.querySelector(".desktop-nav");
+    if (!desktopNav) return;
+
+    // Map li class to FontAwesome icon class
+    const iconMap = {
+      "desktop-nav-blog": "fa-solid fa-book-open",
+      "desktop-nav-rss": "fa-solid fa-rss",
+      "desktop-nav-github": "fa-brands fa-github",
+      "desktop-nav-mastodon": "fa-brands fa-mastodon",
+      "desktop-nav-linkedin": "fa-brands fa-linkedin",
+      "desktop-nav-bluesky": "fa-solid fa-cloud",
+    };
+
+    desktopNav.querySelectorAll("li > a").forEach(function (link) {
+      link.addEventListener("mouseenter", function () {
+        // Only add if not already present
+        if (!link.querySelector(".hover-icon")) {
+          // Find the parent li and its class
+          const li = link.closest("li");
+          let iconClass = "fa-solid fa-arrow-right"; // default
+          if (li) {
+            for (const cls of li.classList) {
+              if (iconMap[cls]) {
+                iconClass = iconMap[cls];
+                break;
+              }
+            }
+          }
+          const icon = document.createElement("i");
+          icon.className = iconClass + " hover-icon";
+          icon.style.marginRight = "0.4em";
+          icon.style.verticalAlign = "middle";
+          // Insert icon before the first child (usually <small>)
+          link.insertBefore(icon, link.firstChild);
+        }
+      });
+      link.addEventListener("mouseleave", function () {
+        const icon = link.querySelector(".hover-icon");
+        if (icon) {
+          icon.remove();
+        }
+      });
+    });
+  }
+
+  setupDesktopNavHoverIcons();
+
   // ---- Set dark mode as default theme ----
   document.documentElement.setAttribute("data-theme", "dark");
 
