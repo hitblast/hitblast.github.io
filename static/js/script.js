@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "desktop-nav-github": "fa-brands fa-github",
       "desktop-nav-mastodon": "fa-brands fa-mastodon",
       "desktop-nav-linkedin": "fa-brands fa-linkedin",
-      "desktop-nav-bluesky": "fa-solid fa-cloud",
+      "desktop-nav-bluesky": "fa-brands fa-bluesky",
     };
 
     desktopNav.querySelectorAll("li > a").forEach(function (link) {
