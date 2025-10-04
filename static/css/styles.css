@@ -269,7 +269,8 @@ a:hover {
     font-size: var(--font-size-small);
 }
 
-.footer p {
+.footer p,
+.before-footer {
     color: #555;
 }
 
