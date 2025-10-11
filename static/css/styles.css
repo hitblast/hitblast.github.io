@@ -248,8 +248,6 @@ a:hover {
         );
     background-blend-mode: multiply;
     border: none;
-    border-bottom-left: 3px solid black;
-    border-bottom-right: 3px solid black;
 }
 
 /* Pagination and Footer */
