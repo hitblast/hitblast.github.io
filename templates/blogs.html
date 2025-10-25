@@ -11,16 +11,16 @@
 />
 {% endblock pagetitle %} {% block content %}
 <div class="container">
-    <hr />
-    <h2 class="center glitched">my blog</h2>
-    <hr />
+    <br />
+    <h2 class="center">readables</h2>
+    <br />
 
     {% if paginator.pages|length == 0 %}
     <p class="center">No blog posts yet. Check back soon!</p>
     {% else %} {% for page in paginator.pages %}
     <div class="blog-post">
         <div class="blog-post-left">
-            <strong>$</strong>
+            <strong>{{ loop.index0 }}</strong>
             <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
         </div>
         <div class="blog-post-right">

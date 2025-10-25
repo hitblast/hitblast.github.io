@@ -1,4 +1,77 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // ---- Pixelated curtain effect ----
+  (function pixelatedCurtain() {
+    const curtain = document.getElementById("curtain");
+    if (!curtain) return;
+
+    // Only play effect if not played in this session
+    if (sessionStorage.getItem("curtainPlayed")) {
+      if (curtain && curtain.parentNode) {
+        curtain.parentNode.removeChild(curtain);
+      }
+      return;
+    }
+    sessionStorage.setItem("curtainPlayed", "true");
+
+    // Ensure curtain has red background at start
+    curtain.style.background = "var(--pico-primary)";
+
+    // Add centered FontAwesome icon
+    const icon = document.createElement("i");
+    icon.className = "fa-solid fa-hammer";
+    icon.style.position = "absolute";
+    icon.style.top = "50%";
+    icon.style.left = "50%";
+    icon.style.transform = "translate(-50%, -50%)";
+    icon.style.fontSize = "5rem";
+    icon.style.color = "#000";
+    icon.style.zIndex = "10000";
+    icon.id = "curtain-icon";
+    icon.style.opacity = "0";
+    icon.style.transition = "opacity 0.7s cubic-bezier(.42,0,.58,1)";
+    curtain.appendChild(icon);
+
+    // Fade in and out repeatedly for 3 seconds, then fade out permanently
+    let fadeState = true;
+    let fadeCycles = 0;
+    const fadeInterval = setInterval(() => {
+      fadeState = !fadeState;
+      icon.style.opacity = fadeState ? "1" : "0.4";
+      fadeCycles += 1;
+      // Each cycle is 500ms (fade in + fade out)
+      if (fadeCycles >= 7) {
+        // 3 seconds / 0.5s = 6 cycles
+        clearInterval(fadeInterval);
+        // Fade out permanently
+        icon.style.opacity = "0";
+      }
+    }, 500);
+
+    // After icon fade, start slide-to-left animation for the overlay after 1s
+    setTimeout(() => {
+      if (icon && icon.parentNode) {
+        icon.parentNode.removeChild(icon);
+      }
+
+      // Prepare for slide animation
+      curtain.style.transition = "transform 0.8s cubic-bezier(.77,0,.18,1)";
+      curtain.style.willChange = "transform";
+      curtain.style.transform = "translateY(0)";
+
+      // Start slide-to-left after 1s
+      setTimeout(() => {
+        curtain.style.transform = "translateY(100vw)";
+      }, 1000);
+
+      // Remove curtain after animation completes
+      setTimeout(() => {
+        if (curtain && curtain.parentNode) {
+          curtain.parentNode.removeChild(curtain);
+        }
+      }, 1800); // 0.8s animation + 1s delay
+    }, 4000); // 3s icon + 1s delay
+  })();
+
   // ---- Icon append on desktop nav item hover ----
   function setupDesktopNavHoverIcons() {
     const desktopNav = document.querySelector(".desktop-nav");
