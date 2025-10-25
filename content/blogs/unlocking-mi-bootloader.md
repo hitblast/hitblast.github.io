@@ -1,6 +1,6 @@
 +++
 title = "Unlocking the bootloader of Xiaomi's HyperOS (v1)"
-date = 2025-10-20
+date = 2025-10-25
 description = "How I unlocked one of the most notorious bootloaders in the phone industry with the right tooling, and how you can too."
 authors = ["hitblast"]
 
