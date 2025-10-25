@@ -54,8 +54,8 @@
     --pico-card-box-shadow: var(--pico-box-shadow);
     --pico-card-sectioning-background-color: #2a2a35;
     --pico-modal-overlay-background-color: rgba(0, 0, 0, 0.75);
-    --pico-tooltip-background-color: #000;
-    --pico-tooltip-color: #e0e0e0;
+    --pico-tooltip-background-color: #e0e0e0;
+    --pico-tooltip-color: #2a2a35;
 }
 
 /* Global Element Styling */
@@ -85,7 +85,7 @@ body {
 
 code {
     font-family: monospace;
-    box-shadow: 0 10px 0 #000000;
+    box-shadow: 0 8px 0 #000;
 }
 code.copyable {
     cursor: pointer;
@@ -293,7 +293,7 @@ a:hover {
 }
 
 .blog-post-left strong {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-style: italic;
 }
 

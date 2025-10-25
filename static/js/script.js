@@ -133,10 +133,13 @@ document.addEventListener("DOMContentLoaded", function () {
     code.addEventListener("click", () => {
       navigator.clipboard.writeText(code.dataset.original);
 
+      code.setAttribute("data-tooltip", "copied!");
       code.style.boxShadow = "none";
-      code.style.transform = "translateY(10px)";
+      code.style.transform = "translateY(8px)";
+      code.style.border = "none";
 
       setTimeout(() => {
+        code.removeAttribute("data-tooltip");
         code.style.transform = "translateY(0)";
         code.style.boxShadow = "0 10px 0 #000";
       }, 2000);
