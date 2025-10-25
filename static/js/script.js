@@ -60,7 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Start slide-to-left after 1s
       setTimeout(() => {
-        curtain.style.transform = "translateY(100vw)";
+        // Use 100vh instead of 100vw to ensure it covers the full height
+        curtain.style.transform = "translateY(100vh)";
       }, 1000);
 
       // Remove curtain after animation completes
