@@ -29,18 +29,15 @@
         <div class="blog-display-title">
             <h1>{{ page.title }}</h1>
             <p>{{ page.description }}</p>
-            <p class="blog-display-footer">
-                <i class="fa-solid fa-calendar"></i>
-                Published: {{ page.date | date(format="%b %d, %Y") }} {% if
-                page.taxonomies.tags %}
-                <br />
-                {% for tag in page.taxonomies.tags %}
-                <a href="{{ get_url(path='tags/' ~ tag) }}" class="tag"
-                    >#{{ tag }}</a
-                >{% if not loop.last %} {% endif %} {% endfor %} {% endif %}
-            </p>
         </div>
-        <br /><br />
+        <p class="blog-display-footer">
+            {{ page.date | date(format="%b %d, %Y") }}; {% if
+            page.taxonomies.tags %} {% for tag in page.taxonomies.tags %}
+            <a href="{{ get_url(path='tags/' ~ tag) }}" class="tag-name"
+                >#{{ tag }}</a
+            >{% if not loop.last %} {% endif %} {% endfor %} {% endif %}
+        </p>
+
         <div class="blog-display-content">{{ page.content | safe }}</div>
         <script
             src="https://utteranc.es/client.js"

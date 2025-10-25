@@ -147,6 +147,7 @@ a:hover {
     border-radius: 0px;
     background-color: #d63333;
     font-weight: bold;
+    text-transform: uppercase;
     color: #0c0c0c;
 }
 
@@ -199,6 +200,7 @@ a:hover {
 }
 .name a:hover {
     cursor: pointer;
+    text-transform: none;
 }
 .name a:active,
 .name a:focus {
@@ -311,11 +313,12 @@ a:hover {
     margin-top: 1rem;
     border: 1px solid var(--pico-primary);
     padding: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0;
 }
 
 .blog-display-footer {
     font-size: var(--font-size-small);
+    margin-top: 1rem;
 }
 
 .blog-display-content {
@@ -327,21 +330,12 @@ a:hover {
     font-size: var(--font-size-small);
 }
 
-.tag {
-    display: inline-block;
-    color: #fff;
-    padding: 0.2rem;
-    margin: 0.1rem;
-    font-size: 0.7rem;
-    font-weight: bold;
-    text-transform: lowercase;
-    text-decoration: none;
-    transition: background-color var(--pico-transition);
+.tag-name {
+    color: dimgray;
 }
-
-.tag:hover {
-    color: #fff;
-    background-color: var(--pico-background-color);
+.tag-name:hover {
+    background: initial;
+    color: gray;
 }
 
 .single-tag-name {
@@ -360,6 +354,7 @@ a:hover {
 
     .mobile-nav {
         display: initial;
+        align-items: right;
     }
 
     .portfolio-projects {
