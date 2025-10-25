@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add centered FontAwesome icon
     const icon = document.createElement("i");
-    icon.className = "fa-solid fa-hammer";
+    icon.className = "fa-solid fa-ghost";
     icon.style.position = "absolute";
     icon.style.top = "50%";
     icon.style.left = "50%";
