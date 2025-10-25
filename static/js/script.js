@@ -132,11 +132,13 @@ document.addEventListener("DOMContentLoaded", function () {
       '<i class="fa-regular fa-clipboard"></i> ' + code.innerHTML;
     code.addEventListener("click", () => {
       navigator.clipboard.writeText(code.dataset.original);
-      code.innerHTML =
-        '<i class="fa-regular fa-clipboard"></i> copied to clipboard!';
+
+      code.style.boxShadow = "none";
+      code.style.transform = "translateY(10px)";
+
       setTimeout(() => {
-        code.innerHTML =
-          '<i class="fa-regular fa-clipboard"></i> ' + code.dataset.original;
+        code.style.transform = "translateY(0)";
+        code.style.boxShadow = "0 10px 0 #000";
       }, 2000);
     });
   });
