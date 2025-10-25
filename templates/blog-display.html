@@ -40,9 +40,8 @@
                 >{% if not loop.last %} {% endif %} {% endfor %} {% endif %}
             </p>
         </div>
-        <hr />
+        <br /><br />
         <div class="blog-display-content">{{ page.content | safe }}</div>
-        <hr />
         <script
             src="https://utteranc.es/client.js"
             repo="hitblast/hitblast.github.io"
@@ -52,6 +51,7 @@
             crossorigin="anonymous"
             async
         ></script>
+        <br />
     </div>
 </div>
 {% endblock content %}

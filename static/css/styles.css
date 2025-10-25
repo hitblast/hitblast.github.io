@@ -85,15 +85,21 @@ body {
 
 code {
     font-family: monospace;
+    box-shadow: 0 10px 0 #000000;
 }
 code.copyable {
     cursor: pointer;
 }
 
-hr {
-    border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.8);
-    margin: 2rem 0;
+blockquote {
+    background: rgb(40, 40, 40);
+    border: none;
+    text-align: justify;
+    padding: 1.5rem;
+    margin-left: 2.5rem;
+    border-radius: 0.5rem;
+    font-style: italic;
+    box-shadow: 0 10px 0 #000000;
 }
 
 h1,
