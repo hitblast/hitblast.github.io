@@ -335,10 +335,8 @@ a:hover {
 }
 
 /* Tag Styling */
-.blog-post-tags {
-    font-size: var(--font-size-small);
-}
 .tag-name {
+    font-size: var(--font-size-small);
     color: dimgray;
 }
 .tag-name:hover {
