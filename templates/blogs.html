@@ -19,12 +19,12 @@
     <p class="center">No blog posts yet. Check back soon!</p>
     {% else %} {% for page in paginator.pages %}
     <div class="blog-post">
+        <div class="blog-post-right">
+            Posted on {{ page.date | date(format="%b %d, %Y") }}
+        </div>
         <div class="blog-post-left">
             <strong>{{ loop.index0 }}</strong>
             <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
-        </div>
-        <div class="blog-post-right">
-            Posted on {{ page.date | date(format="%b %d, %Y") }}
         </div>
         <p>{{ page.description }}</p>
     </div>

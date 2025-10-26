@@ -52,7 +52,7 @@
         <!-- CSS -->
         <link
             rel="stylesheet"
-            href="{{ get_url(path='css/pico.classless.css', trailing_slash=false, cachebust=true) | safe }}"
+            href="{{ get_url(path='css/pico.min.css', trailing_slash=false, cachebust=true) | safe }}"
         />
 
         <link
@@ -77,7 +77,7 @@
                     </li>
                 </ul>
 
-                <ul class="desktop-nav">
+                <ul>
                     <li class="desktop-nav-blog">
                         <a href="{{ get_url(path='@/blogs/_index.md') }}"
                             ><small>[blog]</small></a
@@ -114,46 +114,6 @@
                             href="https://bsky.app/profile/hitblast.github.io"
                             target="_blank"
                             ><small>[bluesky]</small></a
-                        >
-                    </li>
-                </ul>
-
-                <ul class="mobile-nav">
-                    <li>
-                        <a href="{{ get_url(path='@/blogs/_index.md') }}"
-                            ><small>[blog]</small></a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="{{ get_url(path='rss.xml', trailing_slash=false) }}"
-                            ><small>[rss]</small></a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="https://fosstodon.org/@hitblast"
-                            target="_blank"
-                            ><small>[mstd]</small></a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="https://linkedin.com/in/hitblast"
-                            target="_blank"
-                            ><small>[lnkd]</small></a
-                        >
-                    </li>
-                    <li>
-                        <a href="https://github.com/hitblast" target="_blank"
-                            ><small>[git]</small></a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="https://bsky.app/profile/hitblast.github.io"
-                            target="_blank"
-                            ><small>[bsky]</small></a
                         >
                     </li>
                 </ul>
