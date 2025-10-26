@@ -207,6 +207,18 @@ a:hover {
     outline: none;
 }
 
+/* Links section styling */
+.links i {
+    color: #f0f0f0;
+    font-size: 1rem;
+}
+.links a:hover {
+    background: none;
+}
+.links a i {
+    pointer-events: none;
+}
+
 /* Portfolio Specific Styling */
 .portfolio-projects {
     display: flex;
@@ -326,7 +338,6 @@ a:hover {
 .blog-post-tags {
     font-size: var(--font-size-small);
 }
-
 .tag-name {
     color: dimgray;
 }
@@ -334,7 +345,6 @@ a:hover {
     background: initial;
     color: gray;
 }
-
 .single-tag-name {
     color: #0c0c0c;
     background-color: #d63333;
@@ -368,10 +378,5 @@ a:hover {
 
     dialog {
         display: none;
-    }
-
-    nav {
-        display: flex;
-        align-items: center;
     }
 }
