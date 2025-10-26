@@ -291,22 +291,19 @@ a:hover {
 
 /* Blog Post Specific Styling */
 .blog-post {
-    padding-left: 2rem;
-    padding-right: 2rem;
     text-align: left;
 }
 
-.blog-post-left {
-    display: block;
-    font-size: var(--font-size-large);
-}
-
-.blog-post-left strong {
+.blog-post strong {
     font-size: 1.7rem;
     font-style: italic;
 }
 
-.blog-post-right {
+.blog-post-title {
+    font-size: var(--font-size-large);
+}
+
+.blog-post-extension {
     opacity: 0.5;
     font-size: var(--font-size-small);
 }

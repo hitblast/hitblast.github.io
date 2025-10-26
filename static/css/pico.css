@@ -804,12 +804,12 @@ section {
 }
 @media (min-width: 1024px) {
     .container {
-        max-width: 950px;
+        max-width: 800px;
     }
 }
 @media (min-width: 1280px) {
     .container {
-        max-width: 1200px;
+        max-width: 850px;
     }
 }
 @media (min-width: 1536px) {

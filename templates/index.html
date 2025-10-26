@@ -48,10 +48,10 @@
     <p>No blog posts yet. Check back soon!</p>
     {% else %} {% for page in pages | slice(end=2) %}
     <div class="blog-post">
-        <div class="blog-post-left">
-            <strong>{{ loop.index0 }}</strong>
-            <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
-        </div>
+        <strong>*{{ loop.index0 }}</strong>
+        <a class="blog-post-title" href="{{ page.permalink | safe }}"
+            >{{ page.title }}</a
+        >
         <p>{{ page.description }}</p>
     </div>
     {% endfor %}

@@ -20,18 +20,16 @@
 <p class="center">No blog posts found with this tag.</p>
 {% else %} {% for page in term.pages %}
 <div class="blog-post">
-    <div class="blog-post-right">
-        Posted on {{ page.date | date(format="%b %d, %Y") }}
-    </div>
-    <div class="blog-post-left">
-        <strong>$</strong>
-        <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+    <div>
+        <strong>{{ loop.index0 }}</strong
+        ><span class="blog-post-extension">
+            {{ page.date | date(format="%b %d, %Y") }}
+        </span>
     </div>
 
-    {{ page.description }} {% if page.taxonomies.tags %} {% for tag in
-    page.taxonomies.tags %}
-    <a class="tag-name" href="{{ get_url(path='tags/' ~ tag) }}" class="tag"
-        >#{{ tag }}</a
-    >{% if not loop.last %} {% endif %} {% endfor %} {% endif %}
+    <a class="blog-post-title" href="{{ page.permalink | safe }}"
+        >{{ page.title }}</a
+    >
+    <p>{{ page.description }}</p>
 </div>
 {% endfor %} {% endif %} {% endblock content %}

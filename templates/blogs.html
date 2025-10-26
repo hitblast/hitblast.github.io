@@ -10,43 +10,44 @@
     content="Blog entries related to programming, culture, life and more."
 />
 {% endblock pagetitle %} {% block content %}
-<div class="container">
-    <br />
-    <h2 class="center">more readables</h2>
-    <br />
+<br />
+<h2 class="center">more readables</h2>
+<br />
 
-    {% if paginator.pages|length == 0 %}
-    <p class="center">No blog posts yet. Check back soon!</p>
-    {% else %} {% for page in paginator.pages %}
-    <div class="blog-post">
-        <div class="blog-post-right">
-            Posted on {{ page.date | date(format="%b %d, %Y") }}
-        </div>
-        <div class="blog-post-left">
-            <strong>{{ loop.index0 }}</strong>
-            <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
-        </div>
-        <p>{{ page.description }}</p>
-    </div>
-    {% endfor %} {% endif %}
-
-    <div class="pagination">
-        {% if paginator.previous %}
-        <a href="{{ paginator.previous }}" class="button">&laquo; Previous</a>
-        {% endif %}
-
-        <span
-            >Page {{ paginator.current_index }} of {{ paginator.number_pagers
-            }}</span
-        >
-
-        {% if paginator.next %}
-        <a href="{{ paginator.next }}" class="button">Next &raquo;</a>
-        {% endif %}
+{% if paginator.pages|length == 0 %}
+<p class="center">No blog posts yet. Check back soon!</p>
+{% else %} {% for page in paginator.pages %}
+<div class="blog-post">
+    <div>
+        <strong>{{ loop.index0 }}</strong
+        ><span class="blog-post-extension">
+            {{ page.date | date(format="%b %d, %Y") }}
+        </span>
     </div>
 
-    <div class="center" style="margin-top: 2rem">
-        <a href="/" class="button">Back to Home</a>
-    </div>
+    <a class="blog-post-title" href="{{ page.permalink | safe }}"
+        >{{ page.title }}</a
+    >
+    <p>{{ page.description }}</p>
+</div>
+{% endfor %} {% endif %}
+
+<div class="pagination">
+    {% if paginator.previous %}
+    <a href="{{ paginator.previous }}" class="button">&laquo; Previous</a>
+    {% endif %}
+
+    <span
+        >Page {{ paginator.current_index }} of {{ paginator.number_pagers
+        }}</span
+    >
+
+    {% if paginator.next %}
+    <a href="{{ paginator.next }}" class="button">Next &raquo;</a>
+    {% endif %}
+</div>
+
+<div class="center" style="margin-top: 2rem">
+    <a href="/" class="button">Back to Home</a>
 </div>
 {% endblock content %}
