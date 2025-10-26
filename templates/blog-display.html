@@ -23,32 +23,30 @@
     content="{{ get_url(path='images/meta.png', trailing_slash=false) }}"
 />
 {% endblock pagetitle %} {% block content %}
-<div class="container">
-    <div class="blog-display">
-        <a href="/blogs">&laquo; Back to all posts</a>
-        <div class="blog-display-title">
-            <h1>{{ page.title }}</h1>
-            <p>{{ page.description }}</p>
-        </div>
-        <p class="blog-display-footer">
-            {{ page.date | date(format="%b %d, %Y") }}; {% if
-            page.taxonomies.tags %} {% for tag in page.taxonomies.tags %}
-            <a href="{{ get_url(path='tags/' ~ tag) }}" class="tag-name"
-                >#{{ tag }}</a
-            >{% if not loop.last %} {% endif %} {% endfor %} {% endif %}
-        </p>
-
-        <div class="blog-display-content">{{ page.content | safe }}</div>
-        <script
-            src="https://utteranc.es/client.js"
-            repo="hitblast/hitblast.github.io"
-            issue-term="title"
-            label="blog-entry"
-            theme="github-dark"
-            crossorigin="anonymous"
-            async
-        ></script>
-        <br />
+<div class="blog-display">
+    <a href="/blogs">&laquo; Back to all posts</a>
+    <div class="blog-display-title">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.description }}</p>
     </div>
+    <p class="blog-display-footer">
+        {{ page.date | date(format="%b %d, %Y") }}; {% if page.taxonomies.tags
+        %} {% for tag in page.taxonomies.tags %}
+        <a href="{{ get_url(path='tags/' ~ tag) }}" class="tag-name"
+            >#{{ tag }}</a
+        >{% if not loop.last %} {% endif %} {% endfor %} {% endif %}
+    </p>
+
+    <div class="blog-display-content">{{ page.content | safe }}</div>
+    <script
+        src="https://utteranc.es/client.js"
+        repo="hitblast/hitblast.github.io"
+        issue-term="title"
+        label="blog-entry"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async
+    ></script>
+    <br />
 </div>
 {% endblock content %}
