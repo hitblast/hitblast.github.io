@@ -80,7 +80,6 @@ body {
     padding: 0;
     position: relative;
     min-height: 100vh;
-    padding-bottom: 6rem;
 }
 
 code {
@@ -275,18 +274,11 @@ a:hover {
     margin: 2rem 0;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 1rem 0;
-    text-align: center;
-    font-size: var(--font-size-small);
-}
-
-.footer p,
+footer,
 .before-footer {
+    font-size: var(--font-size-small);
     color: #555;
+    text-align: center;
 }
 
 /* Blog Post Specific Styling */

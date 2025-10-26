@@ -86,15 +86,10 @@
             {% block content %} {% endblock content %}
         </main>
 
-        <footer class="footer">
-            <div class="container">
-                <p>
-                    &copy; 2025 HitBlast. All rights reserved.<br />
-                    Made with love and tons of git commits.<br />
-                    Built using Zola. | Last built on: {{ now() |
-                    date(format="%Y-%m-%d %H:%M:%S") }}.
-                </p>
-            </div>
+        <footer class="container">
+            &copy; 2025 Anindya Shiddhartha. All rights reserved.<br />
+            Made with love and tons of git commits.<br />
+            Built using Zola ({{ now() | date(format="%Y-%m-%d %H:%M:%S") }}).
         </footer>
 
         <script src="{{ get_url(path='js/script.js', trailing_slash=false, cachebust=true) | safe }}"></script>
