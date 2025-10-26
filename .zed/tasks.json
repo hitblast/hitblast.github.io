@@ -1,0 +1,16 @@
+// Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
+//
+// Example:
+[
+  {
+    "label": "serve",
+    "command": "zola serve --open",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "never",
+    "hide": "never",
+    "shell": "system",
+    "show_summary": true,
+    "show_command": true
+  }
+]
