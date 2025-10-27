@@ -43,7 +43,7 @@
 <section id="blog">
     <h1>readables</h1>
 
-    {% set blogs = get_section(path="blogs/_index.md") %} {% set pages =
+    {% set blogs = get_section(path="blog/_index.md") %} {% set pages =
     blogs.pages %} {% if pages | length == 0 %}
     <p>No blog posts yet. Check back soon!</p>
     {% else %} {% for page in pages | slice(end=2) %}
@@ -59,7 +59,7 @@
     <br />
     <div class="center">
         Care to read more?
-        <a href="{{ get_url(path='@/blogs/_index.md') }}" class="button"
+        <a href="{{ get_url(path='@/blog/_index.md') }}" class="button"
             >View the blog >></a
         >
     </div>
