@@ -84,10 +84,10 @@ body {
 
 code {
     font-family: monospace;
-    box-shadow: 0 8px 0 #000;
 }
 code.copyable {
     cursor: pointer;
+    box-shadow: 0 8px 0 #000;
 }
 
 blockquote {
