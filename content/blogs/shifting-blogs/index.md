@@ -26,7 +26,7 @@ During my first year of college, I was really not feeling like programming, doin
 
 When I was falling back to my hobbies after a period, I needed a way to channel my thoughts again - which was most definitely writing.
 
-### Writing coding blogs
+### Writing a coding blog
 
 Now a matter of fact is that I still wasn't done with functional journaling *yet* - in fact the loss of writing as a second nature led to me believing solely on functional journaling- and nothing else. Luckily, I was also starting to maintain some of my larger projects again, which includes [**avro.py**](https://github.com/hitblast/avro.py), my largest Python library project till today. It gave me some room for recalibrating my projects. I was also **quitting [Visual Studio Code](https://code.visualstudio.com)** for switching to [**Zed**](https://zed.dev) since I wanted to make the most out of my computing gear without losing precious performance to bloatware. I was also learning to use dotfiles to store all of them in a single place.
 
@@ -45,13 +45,13 @@ See: [**"Managing dotfiles using GNU Stow on macOS"**](https://dev.to/hitblast/m
 
 This was the literal revival of the habit which helped me for so long.
 
-After I had finished laying off a draft markdown for the blog, I came home and posted it. After realizing that it wasn't much from a technical standpoint, but rather a lot of background offloading that was being done by my mind- I got motivated to do more.
+After I had finished laying off a draft markdown for the entry, I came home and posted it. After realizing that it wasn't much from a technical standpoint, but rather a lot of background offloading that was being done by my mind- I got motivated to do more.
 
-Eventually I wrote down the setup procedure for my previous Zed setup in a blog too!
+Eventually I wrote down the setup procedure for my previous Zed setup in an entry too!
 
 [**"How I configured the Zed editor for daily-driving"**](https://dev.to/hitblast/how-i-configured-the-zed-editor-for-daily-driving-4k2k)
 
-Realizing the potential in combining functional journaling with actual blogs which could mean useful to a lot of other developers, I thought of creating a personal blog instead of solely depending on dev.to for it. I wanted to create a blog which would not be engaging in a prestructured way, but rather in a way that would actually mean writing was useful for both the reader and the writer.
+Realizing the potential in combining functional journaling with actual blog entries which could mean useful to a lot of other developers, I thought of creating a personal blog instead of solely depending on dev.to for it. I wanted to create a place which would not be engaging in a prestructured way, but rather in a way that would actually mean writing was useful for both the reader and the writer.
 
 ### The halt
 
@@ -63,7 +63,7 @@ Still to this day, I'm struggling to balance my will and mind to keep a good mom
 
 ### Recreating this domain
 
-"hitblast.github.io" has been my go-to personal domain from GitHub Pages for well over four years now. I'm used to constantly modifying it to my needs. I have been thinking about repurposing it as a personal x blog page in order to facilitate the need of a blog page.
+"hitblast.github.io" has been my go-to personal domain from GitHub Pages for well over four years now. I'm used to constantly modifying it to my needs. I have been thinking about repurposing it as a personal x blog page in order to facilitate the need of a blogsite.
 
 This would come with some challenges, though:
 
@@ -73,12 +73,12 @@ This would come with some challenges, though:
 
 Given the amount of hipster I am, I chose to base this website off of one of my earlier websites for my app studio "Stray Technologies". I used [this website](https://github.com/thestraytech/thestraytech.github.io) as a reference and extensively modified its styling to match my needs. To put in short, it acted as a boilerplate for the new website.
 
-I also chose to reuse the workflow ([see source code](https://github.com/hitblast/hitblast.github.io/blob/main/.github/workflows/deploy.yml)) for automatically deploying the site to GitHub Pages. It would also mean changing my repository settings from "Deploy from a branch" to "GitHub Actions" since otherwise the page would be deployed for mere seconds before shutting down again. I *tried* using generative AI for repurposing some more boilerplate, but that turned out to be a problem of its own which I might write another blog about, so I rolled back.
+I also chose to reuse the workflow ([see source code](https://github.com/hitblast/hitblast.github.io/blob/main/.github/workflows/deploy.yml)) for automatically deploying the site to GitHub Pages. It would also mean changing my repository settings from "Deploy from a branch" to "GitHub Actions" since otherwise the page would be deployed for mere seconds before shutting down again. I *tried* using generative AI for repurposing some more boilerplate, but that turned out to be a problem of its own which I might write another entry about, so I rolled back.
 
-And after all that, I finally got the website that you're reading this blog on as the end result.
+And after all that, I finally got the website that you're reading this entry on as the end result.
 
 The surprising part? All of this was done within only one-two hours of programming, and it's only now during the evening that I'm writing the first entry.
 
 ### Verdict
 
-Though this blog shouldn't have been elongated, I personally found it relaxing to share the story in a detailed way without elaborating much on the tech side. I hope you will find this read enjoyable :3 till then, see you on the next one.
+Though this entry shouldn't have been elongated, I personally found it relaxing to share the story in a detailed way without elaborating much on the tech side. I hope you will find this read enjoyable :3 till then, see you on the next one.

@@ -303,13 +303,13 @@ footer,
     font-size: var(--font-size-small);
 }
 
-/* Blog Display Specific Styling */
-.blog-display {
+/* Blog Entry-specific Styling */
+.blog-entry {
     width: 95%;
     margin: 0 auto;
 }
 
-.blog-display-title {
+.blog-entry-title {
     text-align: center;
     margin-top: 1rem;
     border: 1px solid var(--pico-primary);
@@ -317,12 +317,12 @@ footer,
     padding-bottom: 0;
 }
 
-.blog-display-footer {
+.blog-entry-footer {
     font-size: var(--font-size-small);
     margin-top: 1rem;
 }
 
-.blog-display-content {
+.blog-entry-content {
     line-height: 1.6;
 }
 
@@ -365,7 +365,7 @@ footer,
         min-width: auto;
     }
 
-    .blog-display {
+    .blog-entry {
         width: 100%;
     }
 

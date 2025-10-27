@@ -149,7 +149,7 @@ That was two years ago...
 
 The last time I used the most common pomodoro technique spread across the entire internet.
 
-Now at the time of me writing this blog, my next and final board exam is supposedly 1 month and 2 days away from kicking off.
+Now at the time of me writing this entry, my next and final board exam is supposedly 1 month and 2 days away from kicking off.
 I still haven't covered a lot of the study materials I'm supposed to complete. However, as any other person would do, I thought
 of researching more about how to study by searching across the internet. I wasn't really disappointed.
 
@@ -158,7 +158,7 @@ our minds can't really stay focused on one thing for more than 90 minutes (reach
 after not studying for months will be dumbfounded if they want to start now.
 
 Yeah, it *is* technically possible, but with some strategy. Again, following my previous point, **don't create a routine, yet!** The dopamine would reset everything you've read so far in this
-blog with instant gratification you're not really supposed to get right now.
+blog entry with instant gratification you're not really supposed to get right now.
 
 Okay so, the strategy...
 
@@ -229,7 +229,7 @@ You must already think you are one. No strings attached.
 
 ### Verdict
 
-Some of the things I shared in this blog are totally out of my own experience dealing with procrastination and productivity issues
+Some of the things I shared in this blog entry are totally out of my own experience dealing with procrastination and productivity issues
 over the years. But, I think I've finally striked a balance between guilt-free laziness and exhaustion-free work.
 
 I hope this article may turn into a good resource for you :3
