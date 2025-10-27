@@ -326,6 +326,18 @@ footer,
     line-height: 1.6;
 }
 
+/* Bini */
+#bini-image {
+    margin-left: 1rem;
+}
+#useless-bullet img {
+    width: 120px;
+    height: auto;
+}
+#useless-bullet:hover {
+    background: none;
+}
+
 /* Tag Styling */
 .tag-name {
     font-size: var(--font-size-small);
