@@ -57,14 +57,13 @@
 
         <link
             rel="stylesheet"
-            href="{{ get_url(path='css/styles.css', trailing_slash=false, cachebust=true) | safe }}"
+            href="{{ get_url(path='css/all.min.css', trailing_slash=false, cachebust=true) | safe }}"
         />
 
-        <!-- Scripts -->
-        <script
-            src="https://kit.fontawesome.com/4f5ece0701.js"
-            crossorigin="anonymous"
-        ></script>
+        <link
+            rel="stylesheet"
+            href="{{ get_url(path='css/styles.css', trailing_slash=false, cachebust=true) | safe }}"
+        />
     </head>
     <body>
         <header class="container">
