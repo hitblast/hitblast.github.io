@@ -55,11 +55,13 @@ document.addEventListener("DOMContentLoaded", function () {
       code.style.boxShadow = "none";
       code.style.transform = "translateY(8px)";
       code.style.border = "none";
+      code.style.backgroundColor = "#22222280";
 
       setTimeout(() => {
         code.removeAttribute("data-tooltip");
         code.style.transform = "translateY(0)";
         code.style.boxShadow = "0 10px 0 #000";
+        code.style.backgroundColor = "#222";
       }, 2000);
     });
   });

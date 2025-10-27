@@ -218,6 +218,24 @@ a:hover {
     pointer-events: none;
 }
 
+/* Blogs button styling */
+
+.blogs-button-container {
+    position: relative;
+}
+.blogs-button {
+    display: inline-block;
+}
+.blogs-button-anchor {
+    position: absolute;
+    top: -1rem;
+    pointer-events: none;
+    width: 120px;
+    height: auto;
+    rotate: 180deg;
+    z-index: -100;
+}
+
 /* Portfolio Specific Styling */
 .portfolio-projects {
     display: flex;
@@ -233,10 +251,13 @@ a:hover {
     border-radius: var(--pico-border-radius);
     flex: 1 1 calc(50% - 0.75rem);
     min-width: 300px;
+    outline: 8px solid #22222220;
+    outline-offset: -8px;
 }
 
 .project-card:hover {
     cursor: pointer;
+    outline: 8px solid #22222230;
     transform: translateY(-8px);
 }
 

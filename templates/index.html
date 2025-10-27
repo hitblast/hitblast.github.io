@@ -48,7 +48,7 @@
     <p>No blog posts yet. Check back soon!</p>
     {% else %} {% for page in pages | slice(end=2) %}
     <div class="blog-post">
-        <strong>*{{ loop.index0 }}</strong>
+        <strong>{{ loop.index0 }}</strong>
         <a class="blog-post-title" href="{{ page.permalink | safe }}"
             >{{ page.title }}</a
         >
@@ -57,11 +57,15 @@
     {% endfor %}
 
     <br />
-    <div class="center">
+    <div class="blogs-button-container center">
         Care to read more?
-        <a href="{{ get_url(path='@/blogs/_index.md') }}" class="button"
-            >View all >>></a
+        <a href="{{ get_url(path='@/blogs/_index.md') }}" class="blogs-button"
+            >View the blog!</a
         >
+        <img
+            src="{{ get_url(path='images/blogs-button-anchor.png') }}"
+            class="blogs-button-anchor"
+        />
     </div>
     {% endif %}
 </section>
@@ -82,7 +86,7 @@
 
 <section id="portfolio">
     <h3 class="section-title">
-        <i class="fa-solid fa-mug-hot"></i> featured stuff
+        <i class="fa-solid fa-mug-saucer"></i> featured stuff
     </h3>
 
     <div class="portfolio-projects">
