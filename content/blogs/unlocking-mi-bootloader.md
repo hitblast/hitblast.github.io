@@ -48,8 +48,8 @@ $ brew install git
 
 Follow these steps in order:
 
-1. Go to the **Settings** app > **"About Phone"**.
-2. **Press on** the HyperOS logo / specs option.
+1. Go to the Settings app > **"About Phone"**.
+2. Press on the HyperOS logo for specs.
 3. Keep tapping on **OS Version (not Android version)** until you see this message: "You are now a developer!"
 4. Come back to the Settings homepage and scroll down, then press on **"Advanced features"**.
 5. Go to **Developer options** and toggle the **"USB Debugging"** option. This may show a warning, but accept it anyway.
