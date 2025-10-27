@@ -1112,6 +1112,7 @@ button,
 [type="submit"],
 [type="reset"],
 [type="button"] {
+    appearance: button;
     -webkit-appearance: button;
 }
 
@@ -1565,6 +1566,7 @@ textarea {
 }
 
 [type="search"] {
+    appearance: textfield;
     -webkit-appearance: textfield;
     outline-offset: -2px;
 }
@@ -2198,6 +2200,7 @@ input:not(
         transform var(--pico-transition);
 }
 [type="range"]::-moz-range-thumb {
+    appearance: none;
     -webkit-appearance: none;
     width: 1.25rem;
     height: 1.25rem;
@@ -2214,6 +2217,7 @@ input:not(
         transform var(--pico-transition);
 }
 [type="range"]::-ms-thumb {
+    appearance: none;
     -webkit-appearance: none;
     width: 1.25rem;
     height: 1.25rem;
@@ -3264,6 +3268,7 @@ select,
 summary,
 textarea,
 [tabindex] {
+    touch-action: manipulation;
     -ms-touch-action: manipulation;
 }
 
