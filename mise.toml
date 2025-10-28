@@ -4,3 +4,24 @@ zola = "latest"
 [tasks.serve]
 description = "Serves the webpage using Zola."
 run = "zola serve --open"
+
+[tasks.create]
+description = "Creates a new blog entry."
+usage = '''
+arg "<name>" help="Filename"
+arg "<title>" help="Entry title"
+arg "<desc>" help="Entry description"
+'''
+run = """
+# copy path first
+cp .blog.template .now
+
+# get date and export to new path
+export today=$(date +"%Y-%m-%d")
+sed -i '' "s/yyyy-mm-dd/$(echo $today)/g" .now
+sed -i '' "s/blog-title/${usage_title?}/g" .now
+sed -i '' "s/blog-desc/${usage_desc?}/g" .now
+
+# move locations
+mv .now content/blog/${usage_name?}.md
+"""
