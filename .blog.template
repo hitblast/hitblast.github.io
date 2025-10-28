@@ -5,7 +5,7 @@ description = "blog-desc"
 authors = ["hitblast"]
 
 [taxonomies]
-tags = [""]
+tags = ["experiences"]
 +++
 
 ## Backstory
