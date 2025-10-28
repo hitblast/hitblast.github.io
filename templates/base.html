@@ -68,7 +68,7 @@
     <body>
         <header class="container">
             <nav>
-                <ul class="name">
+                <ul>
                     <li>
                         <a href="{{ get_url(path='/') }}"
                             >anindya shiddhartha</a
@@ -76,7 +76,17 @@
                     </li>
                 </ul>
                 <ul>
-                    <li>#EndSudanBlackout</li>
+                    <li>
+                        <a
+                            style="
+                                text-decoration-line: underline;
+                                text-decoration-style: wavy;
+                                text-decoration-color: inherit;
+                            "
+                            href="https://www.sudancoup.com"
+                            >#EndSudanBlackout</a
+                        >
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -86,6 +96,9 @@
         </main>
 
         <footer class="container">
+            <a href="https://github.com/hitblast/hitblast.github.io"
+                >View Page Source</a
+            ><br />
             &copy; 2025 Anindya Shiddhartha. All rights reserved.<br />
             Made with love and tons of git commits.<br />
             Built using Zola ({{ now() | date(format="%Y-%m-%d %H:%M:%S") }}).
