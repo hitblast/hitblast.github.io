@@ -313,12 +313,16 @@ footer,
 #bini-image {
     margin-left: 1rem;
 }
+#useless-bullet {
+    opacity: 0.6;
+}
 #useless-bullet img {
     width: 120px;
     height: auto;
 }
 #useless-bullet:hover {
     background: none;
+    opacity: 1;
 }
 
 /* Tag Styling */
