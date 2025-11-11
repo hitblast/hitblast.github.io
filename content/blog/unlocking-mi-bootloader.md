@@ -80,7 +80,7 @@ We'll use [HyperSploit](https://github.com/TheAirBlow/HyperSploit) for this job.
     $ cd Downloads && chmod +x ./HyperSploit-MacOS
 
     # remove quarantine since macOS blocks the execution of
-    # third party softwares most of the time
+    # third party software most of the time
     $ xattr -d com.apple.quarantine HyperSploit-MacOS
     ```
 4. Run the program: `$ ./HyperSploit-MacOS`
