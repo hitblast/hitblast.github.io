@@ -21,4 +21,6 @@ sed -i '' "s/blog-title/${usage_title?}/g" .now
 sed -i '' "s/blog-desc/${usage_desc?}/g" .now
 
 mv .now content/blog/${usage_name?}.md
+
+$EDITOR content/blog/${usage_name?}.md
 """
