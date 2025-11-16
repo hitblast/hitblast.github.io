@@ -10,7 +10,7 @@ tags = ["experiences"]
 
 ## Yapping
 
-So, today, I was looking at that one building from our balcony, which is seen the tallest, and is especially beautiful during the sunsets. I was thinking about numerous stuff and suddenly that one thing felt beautiful - and I found myself, thinking in mind, maybe there's an intergalactic space, or less likely, a star, sitting at exactly the angle I was looking at the building in. 
+So, today, I was looking at that one building from our balcony, which is seen the tallest, and is especially beautiful during the sunsets. I was thinking about numerous stuff and suddenly that one thing felt beautiful - and I found myself, thinking in mind, maybe there's an intergalactic space, or less likely, a star, sitting at exactly the angle I was looking at the building in.
 
 Regardless.
 
@@ -18,7 +18,7 @@ That's one of the many random thoughts I have during the day, and even though at
 
 Speaking of extending - I actually learnt how to extend a `HashMap` when I was working on [defaults-rs](https://github.com/machlit/defaults-rs) for my Mac tooling/apps company. It's fairly easy -
 
-- Prepare the existing hashmap, or maybe if you're in a function, get a mutable reference to it, so assuming if the variable was `some_map`, you'd have to do: `fn merge(&mut some_map) -> HashMap<String, PrefValue> {...}`.
+- Prepare the existing hashmap, or maybe if you're in a function, get a mutable reference to it, so assuming if the variable was `some_map`, you'd have to do: `fn merge(&mut some_map) -> HashMap<String, PrefValue> {...}` (here `PrefValue` is the enum I use for separating types in a CoreFoundation value).
 - Prepare the *other* hashmap. That's what I'd do *inside* the function.
 - Call: `some_map.extend(new_map.clone())`
 
@@ -36,7 +36,7 @@ Quitting my phone has been fairly easy so far. I'm studying for entrance, and ev
 
 Let me remind you that these are the same algorithms which feed on your data for their survival and keep you engaged. Maybe you won't even find a toddler nowadays who wouldn't eat without TikTok sitting right in front of his underdeveloped eyes.
 
-Anyways, 
+Anyways,
 
 Let's return to **open-talk**. What happens after you *do* leave your phone for good?
 
@@ -58,7 +58,7 @@ Umm..
 
 Well, let's talk about something else for now.
 
-I've written this blog entry without too much markdown because it gives me the creative liberty/space I need for my brain to stretch the vocabularies out into something meaningful. I got this habit from minimalizing my desktop setup. I've done the following: 
+I've written this blog entry without too much markdown because it gives me the creative liberty/space I need for my brain to stretch the vocabularies out into something meaningful. I got this habit from minimalizing my desktop setup. I've done the following:
 
 - Plain window management (caps-lock as the **hyper key**).
 - Very minimal Neovim (although I've been writing stuff in Zed which is specifically for programming). I do love to keep the raw completions and LSP just in case I do decide to write some code, though.
@@ -78,11 +78,10 @@ What it really gave me is, I got the transparency to show up not just in my proj
 
 Have some real conversation. With the people you love.
 
-~~ 
+~~
 
 The art of believing that life's fixable is what I believe to be a genuine form of mental art. I don't think its too much to yap about, but life actually fixes itself if you just allow the small, incremental changes to happen. What I really meant by representing these three tiny aspects is that, even though the descriptions might be regulated to small terms, these issues actually add up, and often scale to millions of people. It's like we're at the brink of selling melancholy, quite literally.
 
 But, by displaying these aspects, I also wanted to share my take on how they can easily be removed
 
 That's a lot of yapping. See you next time!
-
