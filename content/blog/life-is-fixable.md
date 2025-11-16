@@ -18,7 +18,7 @@ That's one of the many random thoughts I have during the day, and even though at
 
 Speaking of extending - I actually learnt how to extend a `HashMap` when I was working on [defaults-rs](https://github.com/machlit/defaults-rs) for my Mac tooling/apps company. It's fairly easy -
 
-- Prepare the existing hashmap, or maybe if you're in a function, get a mutable reference to it, so assuming if the variable was `some_map`, you'd have to do: `fn merge(&mut some_map) -> HashMap<String, PrefValue> {...}` (here `PrefValue` is the enum I use for separating types in a CoreFoundation value).
+- Prepare the existing hashmap, or maybe if you're in a function, get a mutable reference to it, so assuming if the variable was `some_map`, you'd have to do: `fn merge(&mut some_map) -> HashMap<String, PrefValue> {...}` (here `PrefValue` is the enum used for separating types in a CoreFoundation value).
 - Prepare the *other* hashmap. That's what I'd do *inside* the function.
 - Call: `some_map.extend(new_map.clone())`
 
