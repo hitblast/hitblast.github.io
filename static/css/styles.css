@@ -85,10 +85,6 @@ body {
 code {
     font-family: monospace;
 }
-code.copyable {
-    cursor: pointer;
-    box-shadow: 0 8px 0 #000;
-}
 
 blockquote {
     background: rgb(40, 40, 40);
@@ -177,9 +173,9 @@ a:hover {
     background-color: #d63333;
 }
 
-.pretty-highlight {
-    color: #0c0c0c;
-    background-color: var(--pico-color);
+.pretty {
+    color: var(--pico-color);
+    font-style: italic;
 }
 
 /* Top-Name Styling */

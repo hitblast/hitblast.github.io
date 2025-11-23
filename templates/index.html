@@ -66,20 +66,6 @@
     {% endif %}
 </section>
 
-<section id="config">
-    <h3 class="center faded">
-        <i class="fa-solid fa-wrench"></i> machine config
-    </h3>
-    <p class="center">
-        <code class="copyable">
-            git clone https://github.com/hitblast/dotfiles.git
-        </code>
-        <br /><br />
-        or,
-        <a href="https://github.com/hitblast/dotfiles">view on GitHub</a>
-    </p>
-</section>
-
 <section id="portfolio">
     <h3 class="section-title">
         <i class="fa-solid fa-mug-hot"></i> featured stuff
@@ -87,7 +73,7 @@
 
     <div class="portfolio-projects">
         <div class="project-card">
-            <h4><i class="fa-brands fa-rust"></i> cutler</h4>
+            <h4>cutler</h4>
             <p>
                 A powerful, declarative setup automation CLI for your Mac.
                 Inspired by the Nix & chezmoi.
@@ -96,48 +82,13 @@
             <a href="https://github.com/machlit/cutler" class="button"
                 >View Project</a
             >
-            <dialog>
-                <article>
-                    <header>
-                        <button
-                            class="close-dialog"
-                            aria-label="Close"
-                            rel="prev"
-                        ></button>
-                        <p>
-                            <strong>quick-install.md</strong>
-                        </p>
-                    </header>
-                    <p>
-                        One of my favorite hobby projects with
-                        <a href="https://crates.io/crates/cutler"
-                            >50,000+ downloads on crates.io</a
-                        >. Try it out by simply typing one of these commands
-                        below. <br /><br />You can also check out
-                        <a href="https://machlit.github.io/cutler"
-                            >"The cutler Cookbook"</a
-                        >
-                        for in-depth documentation on more installation methods
-                        and usage.
-                    </p>
-                    <h4>install script</h4>
-                    <code class="copyable"
-                        >curl -fsSL
-                        https://machlit.github.io/scripts/install-cutler.sh |
-                        /bin/bash</code
-                    >
-                </article>
-            </dialog>
         </div>
 
         <div class="project-card">
-            <h4>
-                <i class="fa-brands fa-python"></i>
-                avro.py
-            </h4>
+            <h4>avro.py</h4>
             <p>
                 A modern
-                <span class="pretty-highlight">Pythonic</span>
+                <span class="pretty">Pythonic</span>
                 implementation of the popular Bengali phonetic-typing software
                 Avro Phonetic.
             </p>
@@ -145,78 +96,23 @@
             <a href="https://github.com/hitblast/avro.py" class="button"
                 >View Project</a
             >
-            <dialog>
-                <article>
-                    <header>
-                        <button
-                            class="close-dialog"
-                            aria-label="Close"
-                            rel="prev"
-                        ></button>
-                        <p>
-                            <strong>quick-install.md</strong>
-                        </p>
-                    </header>
-                    <p>
-                        My
-                        <span class="pretty-highlight"
-                            >largest Python library</span
-                        >
-                        project yet, having over
-                        <a href="https://pepy.tech/project/avro-py"
-                            >280,000+ downloads on PyPI</a
-                        >. You can also install it using:
-                    </p>
-                    <h4>pip</h4>
-                    <code class="copyable">pip install avro.py</code>
-                    <h4>uv (add to project)</h4>
-                    <code class="copyable">uv add avro.py</code>
-                </article>
-            </dialog>
         </div>
 
         <div class="project-card">
-            <h4><i class="fa-brands fa-rust"></i> defaults-rs</h4>
+            <h4>defaults-rs</h4>
             <p>
                 A near drop-in replacement for the macOS
-                <span class="pretty-highlight">defaults</span> CLI with API
-                bindings for Rust.
+                <span class="pretty">defaults</span> CLI with API bindings for
+                Rust.
             </p>
             <p class="faded">"Rust with syscalls."</p>
             <a href="https://github.com/machlit/defaults-rs" class="button"
                 >View Project</a
             >
-            <dialog>
-                <article>
-                    <header>
-                        <button
-                            class="close-dialog"
-                            aria-label="Close"
-                            rel="prev"
-                        ></button>
-                        <p>
-                            <strong>quick-install.md</strong>
-                        </p>
-                    </header>
-                    <p>
-                        One of the complementary projects which I had to make in
-                        order to support
-                        <a href="https://github.com/hitblast/cutler">cutler</a>.
-                        This library is used to provide the system preferences
-                        backend functionality for the project.
-                    </p>
-                    <h4>homebrew</h4>
-                    <code class="copyable">brew install machlit/tap/drs</code>
-                    <h4>cargo</h4>
-                    <code class="copyable">cargo install defaults-rs</code>
-                    <h4>mise</h4>
-                    <code class="copyable">mise use -g cargo:defaults-rs</code>
-                </article>
-            </dialog>
         </div>
 
         <div class="project-card">
-            <h4><i class="fa-brands fa-flutter"></i> Alter</h4>
+            <h4>Alter</h4>
             <p>
                 Alter is a minimal macOS app which can be used to customize your
                 app icons with ease.
@@ -225,38 +121,10 @@
             <a href="https://hitblast.github.io/Alter/" class="button"
                 >View Project</a
             >
-            <dialog>
-                <article>
-                    <header>
-                        <button
-                            class="close-dialog"
-                            aria-label="Close"
-                            rel="prev"
-                        ></button>
-                        <p>
-                            <strong>quick-install.md</strong>
-                        </p>
-                    </header>
-                    <p>
-                        My
-                        <span class="pretty-highlight">first macOS app</span>
-                        which taught me about plenty of things like altering
-                        <code>defaults</code>, System Integrity Protection,
-                        CFBundle attributes, all while I tried to make a
-                        <span class="pretty-highlight">business logic</span>
-                        for changing other app icons. <br /><br />
-                        Install it using:
-                    </p>
-                    <h4>homebrew</h4>
-                    <code class="copyable"
-                        >brew install --cask hitblast/tap/alter</code
-                    >
-                </article>
-            </dialog>
         </div>
 
         <div class="project-card">
-            <h4><i class="fa-brands fa-rust"></i> hookman</h4>
+            <h4>hookman</h4>
             <p>Add hooks to your Git repository using a TOML file.</p>
             <p class="faded">Being even lazier and skipping shell commands.</p>
             <a href="https://github.com/hitblast/hookman" class="button"
@@ -265,22 +133,13 @@
         </div>
 
         <div class="project-card">
-            <h4><i class="fa-brands fa-python"></i> IgKnite</h4>
+            <h4>IgKnite</h4>
             <p>Unified, swiss-grade moderation & music bot for Discord.</p>
             <p class="faded">My first "idea" of a proper Python project.</p>
             <a href="https://github.com/hitblast/IgKnite" class="button"
                 >View Project</a
             >
         </div>
-    </div>
-</section>
-
-<section id="homebrew-tap">
-    <h3 class="center faded">
-        <i class="fa-solid fa-cube"></i> homebrew apps/tools
-    </h3>
-    <div class="center">
-        <code class="copyable">brew tap hitblast/tap</code>
     </div>
 </section>
 
