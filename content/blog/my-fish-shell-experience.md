@@ -8,7 +8,7 @@ authors = ["hitblast"]
 tags = ["command-line", "experiences", "fish-shell", "tips"]
 +++
 
-### The title seems misleading, right?
+### a misleading title
 
 Well, fish is indeed a good shell (I'm not foreshadowing at all, totally... maybe?) for those who prefer scripting in a simple language, and some modern features like on-the-fly autocompletion and more. And, at the time of writing
 this entry, I'm still using fish on my Mac.
@@ -36,7 +36,7 @@ languages and the compiler really helps out at even the silliest of optimization
 
 However... does it deliver in the terminal?
 
-### For most tools, I'd say... yes!
+### thing is, it does.
 
 Rust's speed along with its concurrency features, if coupled with `tokio` for async, or `rayon` for multithreading, can
 lead to major performance bumps which can also be seen in literal desktop apps too! The edge CLIs deliver over desktop apps is
@@ -45,7 +45,7 @@ fanboy.
 
 So, after judging all of this, I decided to give a Rust-based shell a try.
 
-### Installing fish
+### let's install
 
 I installed the shell with this command:
 ```bash
@@ -66,7 +66,7 @@ I ran into a few difficulties at first:
 -  I still needed to setup vim keybindings with fish later on since I'm used to having `h j k l` for moving around.
 - All of the commands showed up perfectly during auto-suggestions, *but they didn't work.*
 
-### Solving the configuration crisis
+### solving the config crisis
 
 So, after running into the difficulties, I had to figure out how to configure fish on my laptop. I have a dotfiles
 repository which [you can find here](https://github.com/hitblast/dotfiles), or in the homepage of this website. I use this
@@ -251,7 +251,7 @@ zoxide init --cmd cd fish | source
 
 This was after probably thirty minutes of debugging of the config file. I am pretty satisfied with how it turned, now moving on...
 
-### Initializing keybinds
+### getting them keybinds running
 
 In my original `.bashrc` file, I did this to enable `h j k l` and other Vim keybindings:
 
@@ -270,7 +270,7 @@ fish_vi_key_bindings
 Running this command would essentially modify `~/.config/fish/fish_variables` to include the Vim keybindings option. And now I could
 finally use it like I use bash!
 
-### The lovely things about fish
+### the lovely things about fish
 
 I've noticed a couple of major pros:
 
@@ -280,7 +280,7 @@ I've noticed a couple of major pros:
 
 For the hipsters out there, fish can actually be an excellent choice for manipulating data within shell, and just using it for general shell commands can also be a delightful experience.
 
-### And... the cons...
+### and uh, the cons..
 
 Okay so, remember how I mentioned my typing speed early on in this entry? Well..
 
@@ -300,7 +300,7 @@ Finally, fish, for the most part, **is slower than bash**. This might come as a 
 language and can often deliver the fastest, no-bloat terminal experience. However, since we spend most of our time inside
 terminal applications and not shells, it should not be that big of a deal.
 
-### Verdict
+### hmm so~
 
 Depending on your personal scope of usage, fish can be a really great alternative to bash. I personally find bash "enough" for the things
 I do - run code, do light data manipulation and just generally enjoy the terminal side of things. It may be different for

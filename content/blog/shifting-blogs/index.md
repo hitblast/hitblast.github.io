@@ -8,7 +8,7 @@ authors = ["hitblast"]
 tags = ["web-dev", "experiences"]
 +++
 
-### A little bit of backstory
+### backstory
 
 So, to kick things off, I'd really like to mention that I like writing a lot aside of programming.
 
@@ -26,7 +26,7 @@ During my first year of college, I was really not feeling like programming, doin
 
 When I was falling back to my hobbies after a period, I needed a way to channel my thoughts again - which was most definitely writing.
 
-### Writing a coding blog
+### writing a blog for code
 
 Now a matter of fact is that I still wasn't done with functional journaling *yet* - in fact the loss of writing as a second nature led to me believing solely on functional journaling- and nothing else. Luckily, I was also starting to maintain some of my larger projects again, which includes [**avro.py**](https://github.com/hitblast/avro.py), my largest Python library project till today. It gave me some room for recalibrating my projects. I was also **quitting [Visual Studio Code](https://code.visualstudio.com)** for switching to [**Zed**](https://zed.dev) since I wanted to make the most out of my computing gear without losing precious performance to bloatware. I was also learning to use dotfiles to store all of them in a single place.
 
@@ -53,7 +53,7 @@ Eventually I wrote down the setup procedure for my previous Zed setup in an entr
 
 Realizing the potential in combining functional journaling with actual blog entries which could mean useful to a lot of other developers, I thought of creating a personal blog instead of solely depending on dev.to for it. I wanted to create a place which would not be engaging in a prestructured way, but rather in a way that would actually mean writing was useful for both the reader and the writer.
 
-### The halt
+### some halting factors
 
 Eventually though, my second year came without a proper notice, and I was left with little space to think about what I'd write. Instead, I was busy teaching others about different programming concepts, theories, and just generally busy juggling between cultural festivals and procrastinating.
 
@@ -61,7 +61,7 @@ I was that same, dull situation, all over again, except that I wasn't really fre
 
 Still to this day, I'm struggling to balance my will and mind to keep a good momentum in both work and my studies.
 
-### Recreating this domain
+### recreation
 
 "hitblast.github.io" has been my go-to personal domain from GitHub Pages for well over four years now. I'm used to constantly modifying it to my needs. I have been thinking about repurposing it as a personal x blog page in order to facilitate the need of a blogsite.
 
@@ -79,6 +79,6 @@ And after all that, I finally got the website that you're reading this entry on 
 
 The surprising part? All of this was done within only one-two hours of programming, and it's only now during the evening that I'm writing the first entry.
 
-### Verdict
+### verdict
 
 Though this entry shouldn't have been elongated, I personally found it relaxing to share the story in a detailed way without elaborating much on the tech side. I hope you will find this read enjoyable :3 till then, see you on the next one.

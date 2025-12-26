@@ -8,7 +8,7 @@ authors = ["hitblast"]
 tags = ["experiences"]
 +++
 
-## Backstory
+### a little context
 
 So I was working on one of the projects under [Machlit](https://machlit.github.io) and I noticed something - my Rust workflows were failing. I usually double-check what I'm doing and always verify refactoring practices before committing, but the very same workflow that double-checked for me was failing. This usually doesn't happen, so I looked deeper into it, and found out it was erroring at the registry caching step:
 
@@ -18,7 +18,7 @@ Error: The template is not valid. .github/workflows/refactor.yml (Line: 47, Col:
 
 Turns out Cargo.lock simply wasn't a reliable hashing method for cache keys anymore, so I had to resort to a simpler solution.
 
-## Creating a new workflow
+### skeleton design
 
 In order to create the new refactoring workflow, I first started with a minimal template:
 
@@ -69,7 +69,7 @@ concurrency:
 
 This separates the job into particular named groups for easy cancellation in the event of multiple commits overlapping in time.
 
-## Writing the jobs
+### toolchain & deps
 
 Since I was working with a macOS project, I had selected the runner to be `macos-latest`. You can choose it to be `ubuntu-latest`, and possibly even `windows-latest` but that might be conflicting with parts of the workflow. Windows just isn't that reliable.
 
@@ -98,7 +98,7 @@ Some optional components which I've also added:
 - `clippy`: Might not be needed explicitly unless you're working with lints and/or formatting fixes.
 - `rustfmt`: Same as above - optional.
 
-## Applying the cache!
+### cache job
 
 Let's add two new steps inside our `tests` job:
 
@@ -106,8 +106,9 @@ Let's add two new steps inside our `tests` job:
       - uses: Swatinem/rust-cache@v2
       - uses: mozilla-actions/sccache-action@v0.0.9
 
-      # show sccache stats for cache hits/misses
-      # optional; you can remove it if you don't need but it pretty-prints!
+      # we'll put our workflows in this section
+      # later, we can show stats after execution
+
       - run: sccache --show-stats || true
 ```
 
@@ -118,7 +119,7 @@ Here:
 
 The reason why I've used `Swatinem/rust-cache@v2` for caching registries instead of manually storing it in my previous workflow is because its much more convenient to save and restore keys using static names based on the workflow instead of hashes, and this dependency does that without fuzz.
 
-Now to finish, we'll add our different lint/formatting checks:
+As a dummy pipeline, we'll go ahead and put this in the section I specified.
 
 ```yaml
       - name: Run clippy
@@ -169,12 +170,14 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - uses: mozilla-actions/sccache-action@v0.0.9
 
-      - run: sccache --show-stats || true
-
       - run: cargo clippy --all-targets --no-deps -v -- -D warnings
       - run: cargo fmt --all -- --check
+
+      - run: sccache --show-stats || true
 ```
 
-## Summing it up
+### final notes
 
-There you have it - a nice and tidy GitHub Actions workflow which you can directly place into your code for optimized compile-time performance using a simple caching method. This is very easily movable to a more larger workflow like making production builds, with only minor adjustments to the components being used.
+There you have it!
+
+I believe this workflow is directly placeable in any Rust project. I might make an improved version of it as time goes and needs grow. Till then, stay tuned.
