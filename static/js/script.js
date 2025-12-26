@@ -26,19 +26,54 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!img) return;
 
     let clickable = true;
-    // Use the data-happy-src attribute for the happy image URL
     const happySrc = img.getAttribute("data-happy-src");
     img.addEventListener("click", function () {
       if (!clickable) return;
       clickable = false;
       const originalSrc = img.src;
-      if (happySrc) {
-        img.src = happySrc;
-      }
+      if (happySrc) img.src = happySrc;
       setTimeout(function () {
         img.src = originalSrc;
         clickable = true;
       }, 2000);
     });
+  })();
+
+  // ---- Equalize Project Card Heights ----
+  (function () {
+    function debounce(fn, wait = 120) {
+      let t;
+      return (...a) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn(...a), wait);
+      };
+    }
+
+    function equalizeProjectCards() {
+      const cards = document.querySelectorAll(".project-card");
+      if (!cards.length) return;
+
+      cards.forEach((c) => (c.style.minHeight = ""));
+      let max = 0;
+      cards.forEach((c) => {
+        max = Math.max(max, c.getBoundingClientRect().height);
+      });
+      cards.forEach((c) => (c.style.minHeight = `${Math.ceil(max)}px`));
+    }
+
+    function whenImagesLoaded(cb) {
+      const imgs = Array.from(document.images);
+      if (!imgs.length) return cb();
+      Promise.all(
+        imgs.map((img) =>
+          img.complete
+            ? Promise.resolve()
+            : new Promise((r) => (img.onload = img.onerror = r)),
+        ),
+      ).then(cb);
+    }
+
+    whenImagesLoaded(equalizeProjectCards);
+    window.addEventListener("resize", debounce(equalizeProjectCards));
   })();
 });
