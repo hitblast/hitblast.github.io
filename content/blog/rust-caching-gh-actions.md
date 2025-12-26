@@ -129,7 +129,7 @@ As a dummy pipeline, we'll go ahead and put this in the section I specified.
         run: cargo fmt --all -- --check
 ```
 
-## Complete workflow
+## complete workflow
 
 Once you've followed all the steps above, you'll have a workflow which looks something like this:
 
