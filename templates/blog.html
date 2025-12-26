@@ -10,14 +10,17 @@
     content="Blog entries related to programming, culture, life and more."
 />
 {% endblock pagetitle %} {% block content %}
-<br />
-ABOUT_BLOG.md
-<br /><br />
-<div style="text-align: justify">
-    I write about experiences, guides and much more here. Do keep in mind that
-    some content might not align with everyone's tastes. I might also write tech
-    content which may be experimental in nature. Hopefully you'll have a good
-    time reading ^w^.
+<div class="faded">
+    <code>
+        <span class="faded">$ cat ABOUT_BLOG.md</span>
+        <br /><br />
+        I write about experiences, guides and much more here. Do keep in mind
+        that some content might not align with everyone's tastes. I might also
+        write tech content which may be experimental in nature. Hopefully you'll
+        have a good time reading ^w^.
+        <br /><br />
+        <<<<<< EOF
+    </code>
 </div>
 <br />
 ---
@@ -28,8 +31,8 @@ ABOUT_BLOG.md
 {% else %} {% for page in paginator.pages %}
 <div class="blog-post">
     <div>
-        <strong>{{ loop.index0 }}</strong
-        ><span class="blog-post-extension">
+        {{ loop.index0 }}.
+        <span class="blog-post-extension">
             {{ page.date | date(format="%b %d, %Y") }}
         </span>
     </div>
@@ -43,7 +46,7 @@ ABOUT_BLOG.md
 
 <div class="pagination">
     {% if paginator.previous %}
-    <a href="{{ paginator.previous }}" class="button">&laquo; Previous</a>
+    <a href="{{ paginator.previous }}">&laquo; Previous</a>
     {% endif %}
 
     <span
@@ -52,11 +55,11 @@ ABOUT_BLOG.md
     >
 
     {% if paginator.next %}
-    <a href="{{ paginator.next }}" class="button">Next &raquo;</a>
+    <a href="{{ paginator.next }}">Next &raquo;</a>
     {% endif %}
 </div>
 
 <div class="center" style="margin-top: 2rem">
-    <a href="/" class="button">Back to Home</a>
+    <a href="/">Back to Home</a>
 </div>
 {% endblock content %}

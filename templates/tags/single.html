@@ -21,8 +21,8 @@
 {% else %} {% for page in term.pages %}
 <div class="blog-post">
     <div>
-        <strong>{{ loop.index0 }}</strong
-        ><span class="blog-post-extension">
+        {{ loop.index0 }}.
+        <span class="blog-post-extension">
             {{ page.date | date(format="%b %d, %Y") }}
         </span>
     </div>

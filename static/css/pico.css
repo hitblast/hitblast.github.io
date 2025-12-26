@@ -22,8 +22,8 @@
     --pico-font-weight: 400;
     --pico-font-size: 100%;
     --pico-text-underline-offset: 0.1rem;
-    --pico-border-radius: 0.25rem;
-    --pico-border-width: 0.0625rem;
+    --pico-border-radius: 0;
+    --pico-border-width: 0.0125rem;
     --pico-outline-width: 0.125rem;
     --pico-transition: 0.2s ease-in-out;
     --pico-spacing: 1rem;
@@ -1370,11 +1370,12 @@ button:is([aria-current]:not([aria-current="false"])):focus,
     border-collapse: collapse;
     border-spacing: 0;
     text-indent: 0;
+    border: var(--pico-border-width) solid var(--pico-table-border-color);
 }
 
 th,
 td {
-    padding: calc(var(--pico-spacing) / 2) var(--pico-spacing);
+    padding: calc(var(--pico-spacing) / 3) var(--pico-spacing);
     border-bottom: var(--pico-border-width) solid var(--pico-table-border-color);
     background-color: var(--pico-background-color);
     color: var(--pico-color);
@@ -1478,7 +1479,6 @@ pre {
 pre > code,
 pre > samp {
     display: block;
-    padding: var(--pico-spacing);
     background: none;
     line-height: var(--pico-line-height);
 }

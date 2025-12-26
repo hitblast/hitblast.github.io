@@ -48,6 +48,7 @@ So, after judging all of this, I decided to give a Rust-based shell a try.
 ### let's install
 
 I installed the shell with this command:
+
 ```bash
 brew install fish
 
@@ -300,7 +301,7 @@ Finally, fish, for the most part, **is slower than bash**. This might come as a 
 language and can often deliver the fastest, no-bloat terminal experience. However, since we spend most of our time inside
 terminal applications and not shells, it should not be that big of a deal.
 
-### hmm so~
+### so, final verdict
 
 Depending on your personal scope of usage, fish can be a really great alternative to bash. I personally find bash "enough" for the things
 I do - run code, do light data manipulation and just generally enjoy the terminal side of things. It may be different for

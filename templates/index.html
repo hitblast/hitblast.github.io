@@ -48,7 +48,7 @@
     <p>No blog posts yet. Check back soon!</p>
     {% else %} {% for page in pages | slice(end=2) %}
     <div class="blog-post">
-        <strong>{{ loop.index0 }}</strong>
+        *
         <a class="blog-post-title" href="{{ page.permalink | safe }}"
             >{{ page.title }}</a
         >
@@ -59,29 +59,27 @@
     <br />
     <div class="center">
         Care to read more?
-        <a href="{{ get_url(path='@/blog/_index.md') }}" class="button"
-            >View the blog >></a
-        >
+        <a href="{{ get_url(path='@/blog/_index.md') }}">View the blog >></a>
     </div>
     {% endif %}
 </section>
 
 <section id="portfolio">
-    <h1>curated slop</h1>
-    <p>- since everyone believes AI causes x% efficiency gains.</p>
-    <p>(these aren't AI projects)</p>
+    <h1>curated slop,</h1>
+    <p>since everyone believes AI gives them x% efficiency gains.</p>
+    <p class="faded">(these aren't AI projects)</p>
 
     <div class="portfolio-projects">
         <div class="project-card">
             <h4>cutler</h4>
             <p>
-                A powerful, declarative setup automation CLI for your Mac.
-                Inspired by the Nix & chezmoi.
+                A powerful, declarative setup automation tool for your Mac.
+                Inspired by Nix & chezmoi.
             </p>
             <p class="faded">Why be mouthfed if you can automate?</p>
-            <a href="https://github.com/machlit/cutler" class="button"
-                >View Project</a
-            >
+            <a href="https://machlit.github.io/cutler">Docs</a> |
+            <a href="https://github.com/machlit/cutler">Repository</a>
+            | <a href="https://docs.rs/cutler">API Ref.</a>
         </div>
 
         <div class="project-card">
@@ -92,10 +90,8 @@
                 implementation of the popular Bengali phonetic-typing software
                 Avro Phonetic.
             </p>
-            <p class="faded">A pure Python project.</p>
-            <a href="https://github.com/hitblast/avro.py" class="button"
-                >View Project</a
-            >
+            <p class="faded">Made in pure Python.</p>
+            <a href="https://github.com/hitblast/avro.py">Repository</a>
         </div>
 
         <div class="project-card">
@@ -105,10 +101,11 @@
                 <span class="pretty">defaults</span> CLI with API bindings for
                 Rust.
             </p>
-            <p class="faded">"Rust with syscalls."</p>
-            <a href="https://github.com/machlit/defaults-rs" class="button"
-                >View Project</a
-            >
+            <p class="faded">
+                > Ended up stealing my time and in turn got matured into a CLI.
+            </p>
+            <a href="https://github.com/machlit/defaults-rs">Repository</a>
+            | <a href="https://docs.rs/defaults-rs">API Reference</a>
         </div>
 
         <div class="project-card">
@@ -118,18 +115,29 @@
                 app icons with ease.
             </p>
             <p class="faded">Could've rewritten in Rust.</p>
-            <a href="https://hitblast.github.io/Alter/" class="button"
-                >View Project</a
-            >
+            <a href="https://hitblast.github.io/Alter/">Website</a>
+            |
+            <a href="https://github.com/hitblast/Alter/">Repository</a>
+        </div>
+
+        <div class="project-card">
+            <h4>cornelli</h4>
+            <p>Write to your <span class="pretty">future</span> self.</p>
+            <p class="faded">
+                Got a whole blog entry on this one; maybe you should check that
+                out ^w^.
+            </p>
+            <a href="https://github.com/hitblast/cornelli">Repository</a>
         </div>
 
         <div class="project-card">
             <h4>IgKnite</h4>
             <p>Unified, swiss-grade moderation & music bot for Discord.</p>
-            <p class="faded">My first "idea" of a proper Python project.</p>
-            <a href="https://github.com/hitblast/IgKnite" class="button"
-                >View Project</a
-            >
+            <p class="faded">
+                First proper project, ever. Lost all the stars in a repo
+                deletion though.
+            </p>
+            <a href="https://github.com/hitblast/IgKnite">Repository</a>
         </div>
     </div>
 </section>
