@@ -207,11 +207,10 @@ header a:hover {
     flex-direction: column;
     border: 3px solid #000;
     background-color: #0f0f0f;
-    padding: 1.5rem;
+    padding: 1.3rem;
     border-radius: var(--pico-border-radius);
     flex: 1 1 calc(50% - 0.75rem);
     min-width: 300px;
-    min-height: 16rem;
     outline: 8px solid #22222220;
     outline-offset: -8px;
 }
@@ -221,10 +220,8 @@ header a:hover {
 }
 
 .project-card .project-card-footer {
-    margin-top: auto; /* pushes to bottom */
     display: flex;
-    align-items: center;
-    justify-content: flex-start; /* or gap */
+    justify-content: flex-start;
     gap: 1rem;
 }
 
