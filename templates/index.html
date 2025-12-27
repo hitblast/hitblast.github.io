@@ -254,7 +254,7 @@
     />
     <button
         id="postcard"
-        onclick="navigator.clipboard.writeText('<a target=\'_blank\' rel=\'hitblast\' href=\'{{ config.base_url }}\'><img src=\'{{ get_url(path='button.png')}}\'></a>'); alert('Copied! Paste this in your website.')"
+        onclick="navigator.clipboard.writeText('<a target=\'_blank\' rel=\'hitblast\' href=\'{{ config.base_url }}\'><img src=\'{{ get_url(path='button.png')}}\'></a>'); alert('Code copied! Now paste it into your website.')"
     >
         <img
             src="{{ get_url(path='button.png', cachebust=true) }}"
