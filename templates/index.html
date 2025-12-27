@@ -252,11 +252,20 @@
         data-happy-src="{{ get_url(path='images/bini.gif') }}"
         width="150px"
     />
-
+    <button
+        id="postcard"
+        onclick="navigator.clipboard.writeText('<a target=\'_blank\' rel=\'hitblast\' href=\'{{ config.base_url }}\'><img src=\'{{ get_url(path='button.png')}}\'></a>'); alert('Copied! Paste this in your website.')"
+    >
+        <img
+            src="{{ get_url(path='button.png') }}"
+            style="image-rendering: pixelated; scale: 150%"
+        />
+    </button>
     <br /><br />
     <div class="before-footer">
         This is bini.<br />
-        You can't pat bini (she's allergic).<br />
+        You can't pat bini (she's allergic). <br />Share the GPU next to her to
+        add me as a neighbor.<br />
     </div>
 </center>
 {% endblock content %}

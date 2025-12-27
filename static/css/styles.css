@@ -128,8 +128,13 @@ a:hover {
     color: #0c0c0c;
 }
 
-/* Utility IDs */
+button,
+button:hover {
+    background-color: unset;
+    border: unset;
+}
 
+/* Utility IDs */
 #blep-image:hover {
     cursor: grab;
 }
@@ -288,11 +293,6 @@ footer,
 
 .blog-entry-content {
     line-height: 1.6;
-}
-
-/* Bini */
-#bini-image {
-    margin-left: 1rem;
 }
 
 /* Tag Styling */
