@@ -31,6 +31,7 @@
     --pico-muted-border-color: #3a3f44;
     --pico-primary: #ec6964;
     --pico-primary-background: #ec6964;
+    --pico-secondary: #9664ec;
     --pico-primary-border: var(--pico-primary-background);
     --pico-primary-hover: #ec9664;
     --pico-primary-hover-background: #ec9664;
@@ -114,28 +115,6 @@ section {
     margin-bottom: 4rem;
 }
 
-dialog {
-    background-color: transparent;
-    cursor: default;
-    overflow: hidden;
-}
-dialog article {
-    background: repeating-linear-gradient(
-        45deg,
-        var(--pico-background-color),
-        var(--pico-background-color) 20px,
-        #0c0c0c 20px,
-        #0c0c0c 40px
-    );
-    box-shadow: 0 0 30px rgba(0, 0, 0, 1);
-}
-dialog article header {
-    background-color: #0a0a0a;
-}
-dialog article h4 {
-    margin-top: 1rem;
-}
-
 a {
     cursor: pointer;
     text-decoration: none;
@@ -162,11 +141,6 @@ a:hover {
 
 .faded {
     opacity: 0.7;
-}
-
-.pretty {
-    color: var(--pico-color);
-    font-style: italic;
 }
 
 /* Top-Name Styling */
@@ -302,7 +276,7 @@ footer,
 .blog-entry-title {
     text-align: center;
     margin-top: 1rem;
-    border: 1px solid var(--pico-primary);
+    border: 1px solid #9664ec;
     padding: 2rem;
     padding-bottom: 0;
 }
