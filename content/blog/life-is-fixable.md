@@ -76,7 +76,7 @@ I regularly talk in places with E2E encryption enabled. One cool option is Whats
 
 What it really gave me is, I got the transparency to show up not just in my projects, but also in my social profiles. It helps me present the originality I really want to produce, and hopefully you will too.
 
-Have some real conversation. With the people you love.
+Have some real conversations. With the people you love.
 
 ~~
 
