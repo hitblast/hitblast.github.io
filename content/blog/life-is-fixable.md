@@ -82,6 +82,6 @@ Have some real conversations. With the people you love.
 
 The art of believing that life's fixable is what I believe to be a genuine form of mental art. I don't think its too much to yap about, but life actually fixes itself if you just allow the small, incremental changes to happen. What I really meant by representing these three tiny aspects is that, even though the descriptions might be regulated to small terms, these issues actually add up, and often scale to millions of people. It's like we're at the brink of selling melancholy, quite literally.
 
-But, by displaying these aspects, I also wanted to share my take on how they can easily be removed
+But, by displaying these aspects, I also wanted to share my take on how they can easily be removed.
 
 That's a lot of yapping. See you next time!
