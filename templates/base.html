@@ -93,10 +93,16 @@
         <footer class="container">
             <a href="https://github.com/hitblast/hitblast.github.io"
                 >View Page Source</a
+            >
+            or
+            <a
+                href="https://github.com/hitblast/hitblast.github.io/blob/master/CREDITS.md"
+                >View Credits</a
             ><br />
             &copy; 2025 Anindya Shiddhartha. All rights reserved.<br />
             Made with love and tons of git commits.<br />
-            Built using Zola ({{ now() | date(format="%Y-%m-%d %H:%M:%S") }}).
+            Built using Zola ({{ now() | date(format="%Y-%m-%d %H:%M:%S")
+            }}).<br />
         </footer>
 
         <script src="{{ get_url(path='js/script.js', trailing_slash=false, cachebust=true) | safe }}"></script>

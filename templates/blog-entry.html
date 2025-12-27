@@ -25,7 +25,17 @@
 {% endblock pagetitle %} {% block content %}
 <a href="/blog">&laquo; Back to all posts</a>
 <div class="blog-entry-title">
-    <h1>{{ page.title }}</h1>
+    <h1>
+        <span
+            class="icon"
+            data-src="{{ get_url(path='svg/quote-left.svg') }}"
+        ></span>
+        {{ page.title }}
+        <span
+            class="icon"
+            data-src="{{ get_url(path='svg/quote-right.svg') }}"
+        ></span>
+    </h1>
     <p>{{ page.description }}</p>
 </div>
 <p class="blog-entry-footer">
