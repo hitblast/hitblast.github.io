@@ -42,7 +42,7 @@ jobs:
   # todo
 ```
 
-The workflow, as you can see, will only work on `push`/`pull_request` events to the `master` branch. To start off, let's setup our environment variables:'
+The workflow, as you can see, will only work on `push`/`pull_request` events to the `master` branch. To start off, let's setup our environment variables:
 
 ```yaml
 env:
@@ -59,7 +59,7 @@ Here:
 3. `SCCACHE_CACHE_SIZE` sets the size limit of your cache. The free plan of GitHub Actions includes 10G of cache storage, but I've set it to 2G just for minimal caching.
 4. `RUSTC_WRAPPER` sets `sccache` as the primary wrapper for linking during the compilation process.
 
-We'll also now setup the concurrency regulations:
+We'll also now set up the concurrency regulations:
 
 ```yaml
 concurrency:
@@ -71,7 +71,7 @@ This separates the job into particular named groups for easy cancellation in the
 
 ### toolchain & deps
 
-Since I was working with a macOS project, I had selected the runner to be `macos-latest`. You can choose it to be `ubuntu-latest`, and possibly even `windows-latest` but that might be conflicting with parts of the workflow. Windows just isn't that reliable.
+Since I was working with a macOS project, I had selected the runner to be `macos-latest`. You can choose it to be `ubuntu-latest`, and possibly even `windows-latest`, but that might be conflicting with parts of the workflow. Windows just isn't that reliable.
 
 Now let's write the next part of the file:
 
@@ -91,7 +91,7 @@ jobs:
           components: clippy, rustfmt
 ```
 
-This workflow uses the minimal stable variant of the Rust toolchain. I recommend using this once since this requires less headroom in your runner instance and is probably faster to setup.
+This workflow uses the minimal stable variant of the Rust toolchain. I recommend using this once since this requires less headroom in your runner instance and is probably faster to set up.
 
 Some optional components which I've also added:
 
@@ -117,7 +117,7 @@ Here:
 - The first dependency here ensures that the compile-time artifacts such as registry, build artifacts and other jargon are properly cached.
 - The second dependency is specifically for `sccache`. Remember how I said we'll use an arbitrary environment variable to enable wrapping with `sccache`? Well here it is.
 
-The reason why I've used `Swatinem/rust-cache@v2` for caching registries instead of manually storing it in my previous workflow is because its much more convenient to save and restore keys using static names based on the workflow instead of hashes, and this dependency does that without fuzz.
+The reason why I've used `Swatinem/rust-cache@v2` for caching registries instead of manually storing it in my previous workflow is because it's much more convenient to save and restore keys using static names based on the workflow instead of hashes, and this dependency does that without fuzz.
 
 As a dummy pipeline, we'll go ahead and put this in the section I specified.
 
@@ -129,7 +129,7 @@ As a dummy pipeline, we'll go ahead and put this in the section I specified.
         run: cargo fmt --all -- --check
 ```
 
-## complete workflow
+### complete workflow
 
 Once you've followed all the steps above, you'll have a workflow which looks something like this:
 
@@ -180,4 +180,4 @@ jobs:
 
 There you have it!
 
-I believe this workflow is directly placeable in any Rust project. I might make an improved version of it as time goes and needs grow. Till then, stay tuned.
+I believe this workflow is directly placeable in any Rust project. I might make an improved version of it as time goes and my needs grow. Till then, stay tuned.

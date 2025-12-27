@@ -30,9 +30,9 @@
     --pico-muted-color: #a0a0a0;
     --pico-muted-border-color: #3a3f44;
     --pico-primary: #ec6964;
-    --pico-primary-background: #ec9664;
+    --pico-primary-background: #ec6964;
     --pico-primary-border: var(--pico-primary-background);
-    --pico-primary-hover: #ec6964;
+    --pico-primary-hover: #ec9664;
     --pico-primary-hover-background: #ec9664;
     --pico-primary-hover-border: var(--pico-primary-hover-background);
     --pico-primary-hover-underline: var(--pico-primary-hover);
@@ -181,16 +181,23 @@ header a:hover {
     text-transform: none;
 }
 
-/* Links section styling */
-.links i {
-    color: #f0f0f0;
-    font-size: 1rem;
+/* Icons styling */
+.icon svg {
+    width: 24px;
+    height: 24px;
+    color: white;
 }
-.links a:hover {
-    background: none;
+
+.icon svg path {
+    fill: currentColor;
 }
-.links a i {
-    pointer-events: none;
+
+.icon-link:hover {
+    background-color: unset;
+}
+
+.icon-link:hover .icon svg {
+    color: var(--pico-primary-hover);
 }
 
 /* Portfolio Specific Styling */

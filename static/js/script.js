@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // ---- Icon loader ----
+  document.querySelectorAll(".icon").forEach((el) => {
+    fetch(el.dataset.src)
+      .then((r) => r.text())
+      .then((svg) => (el.innerHTML = svg));
+  });
+
   // ---- Random Message for Blep Section ----
   (function () {
     const messages = [
