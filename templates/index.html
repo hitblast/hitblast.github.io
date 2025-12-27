@@ -257,7 +257,7 @@
         onclick="navigator.clipboard.writeText('<a target=\'_blank\' rel=\'hitblast\' href=\'{{ config.base_url }}\'><img src=\'{{ get_url(path='button.png')}}\'></a>'); alert('Copied! Paste this in your website.')"
     >
         <img
-            src="{{ get_url(path='button.png') }}"
+            src="{{ get_url(path='button.png', cachebust=true) }}"
             style="image-rendering: pixelated; scale: 150%"
         />
     </button>
