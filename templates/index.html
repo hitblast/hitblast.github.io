@@ -88,7 +88,9 @@
     <br />
     <div class="center">
         Care to read more?
-        <a href="{{ get_url(path='@/blog/_index.md') }}">View the blog >></a>
+        <a href="{{ get_url(path='@/blog/_index.md', trailing_slash=false) }}"
+            >View the blog >></a
+        >
     </div>
     {% endif %}
 </section>
@@ -98,7 +100,7 @@
         <h1>
             <span
                 class="icon"
-                data-src="{{ get_url(path='svg/sparkles.svg') }}"
+                data-src="{{ get_url(path='svg/sparkles.svg', trailing_slash=false) }}"
             ></span>
             curated slop,
         </h1>
