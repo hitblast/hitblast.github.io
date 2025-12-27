@@ -332,7 +332,7 @@ footer,
 }
 .single-tag-name {
     color: #0c0c0c;
-    background-color: var(--pico-primary-background);
+    background-color: var(--pico-primary-hover);
 }
 
 @media (max-width: 768px) {
