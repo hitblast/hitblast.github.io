@@ -48,7 +48,7 @@ Maybe I got that part covered. Let's talk about a different aspect.
 
 How about, umm... **enforcement of thoughts**? Okay this one's good..
 
-I'd like to believe in the fact that most problems we think of everyday, including the overestimation of goals, are created by ourselves.We simply overcalculate things we have not even reached. I'd also like to believe that this is a clear indication of escalated overthinking. I mean, most people don't even get to start that one initiative they thought was groundbreaking, just because they had enforced the thought in their neural pathways that it simply was too far-reaching.
+I'd like to believe in the fact that most problems we think of everyday, including the overestimation of goals, are created by just us. We simply overcalculate things we have not even reached. I'd also like to believe that this is a clear indication of escalated overthinking. I mean, most people don't even get to start that one initiative they thought was groundbreaking, just because they had enforced the thought in their neural pathways that it simply was too far-reaching.
 
 My take? You have no risk of failure (except its something different which I'm not covering here), so there's no risk in trying to succeed in something. Enforcement will only get you so far - and possibly even lock you into your own demise.
 
