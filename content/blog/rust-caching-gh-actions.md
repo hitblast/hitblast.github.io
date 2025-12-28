@@ -1,7 +1,7 @@
 +++
-title = "Building a simple Rust caching workflow in GitHub Actions"
+title = "Building a caching workflow for Rust in GitHub Actions"
 date = 2025-11-23
-description = "This is a simple walkthrough on how to create a small workflow for storing compile-time artifacts and the Cargo registry for Rust projects."
+description = "A simple walkthrough of GitHub Actions and sccache on creating a workflow for caching compile-time artifacts produced by the Rust compiler."
 authors = ["hitblast"]
 
 [taxonomies]

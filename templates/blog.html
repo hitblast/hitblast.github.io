@@ -27,7 +27,9 @@
 <br />
 
 {% if paginator.pages|length == 0 %}
-<p class="center">No blog posts yet. Check back soon!</p>
+<center>
+    <p>No blog posts yet. Check back soon!</p>
+</center>
 {% else %} {% for page in paginator.pages %}
 <div class="blog-post">
     <div>
@@ -59,7 +61,9 @@
     {% endif %}
 </div>
 
-<div class="center" style="margin-top: 2rem">
-    <a href="/">Back to Home</a>
-</div>
+<center>
+    <div style="margin-top: 2rem">
+        <a href="/">Back to Home</a>
+    </div>
+</center>
 {% endblock content %}

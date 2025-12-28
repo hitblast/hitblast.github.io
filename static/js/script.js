@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ---- Blep Image Toggle Code ----
   (function () {
-    const img = document.getElementById("blep-image");
+    const img = document.getElementById("blep");
     if (!img) return;
 
     let clickable = true;

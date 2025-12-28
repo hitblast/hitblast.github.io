@@ -82,12 +82,22 @@ html {
 
 body {
     font-size: var(--font-size-base);
-    line-height: 1.5;
-    width: 64%;
     margin: 0 auto;
     padding: 0;
     position: relative;
     min-height: 100vh;
+    background-image:
+        linear-gradient(135deg, #0e0e0e 25%, transparent 25%),
+        linear-gradient(225deg, #0e0e0e 25%, transparent 25%),
+        linear-gradient(45deg, #0e0e0e 25%, transparent 25%),
+        linear-gradient(315deg, #0e0e0e 25%, transparent 25%);
+    background-position:
+        10px 0,
+        10px 0,
+        0 0,
+        0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
 }
 
 blockquote {
@@ -134,8 +144,24 @@ button:hover {
     border: unset;
 }
 
-/* Utility IDs */
-#blep-image:hover {
+/* Pixelated images */
+#blep,
+#bini,
+#postcard {
+    image-rendering: pixelated;
+}
+
+#blep,
+#bini {
+    width: 150px;
+}
+
+#postcard {
+    scale: 130%;
+    margin-left: 0.2rem;
+}
+
+#blep:hover {
     cursor: grab;
 }
 

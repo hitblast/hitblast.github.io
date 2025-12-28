@@ -1,12 +1,11 @@
 {% extends "base.html" %} {% block content %}
-<section id="blep">
+<section id="intro-with-blep">
     <center>
         <span id="random-message"></span>
         <img
-            id="blep-image"
+            id="blep"
             src="{{ get_url(path='images/blep.gif') }}"
             data-happy-src="{{ get_url(path='images/blep_happy.gif') }}"
-            width="150px"
         />
     </center>
 
@@ -123,12 +122,12 @@
     {% endfor %}
 
     <br />
-    <div class="center">
+    <center>
         Care to read more?
         <a href="{{ get_url(path='@/blog/_index.md', trailing_slash=false) }}"
             >View the blog >></a
         >
-    </div>
+    </center>
     {% endif %}
 </section>
 
@@ -246,19 +245,19 @@
 </section>
 
 <center>
-    <img
-        id="bini-image"
-        src="{{ get_url(path='images/bini.gif') }}"
-        data-happy-src="{{ get_url(path='images/bini.gif') }}"
-        width="150px"
-    />
+    <img id="bini" src="{{ get_url(path='images/bini.gif') }}" />
     <button
         id="postcard"
-        onclick="navigator.clipboard.writeText('<a target=\'_blank\' rel=\'hitblast\' href=\'{{ config.base_url }}\'><img src=\'{{ get_url(path='button.png')}}\' style=\'image-rendering: pixelated\'/></a>'); alert('Code copied! Now paste it into your website.')"
+        onclick="
+            navigator.clipboard.writeText(
+                '<a target=\'_blank\' rel=\'hitblast\' href=\'https://hitblast.github.io/\'><img src=\'hitblast.github.io/postcard.png\' style=\'image-rendering: pixelated\'/></a>',
+            );
+            alert('Code copied! Now paste it into your website.');
+        "
     >
         <img
-            src="{{ get_url(path='button.png', cachebust=true) }}"
-            style="image-rendering: pixelated; scale: 150%"
+            id="postcard"
+            src="{{ get_url(path='postcard.png', cachebust=true) }}"
         />
     </button>
     <br /><br />

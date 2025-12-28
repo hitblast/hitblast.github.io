@@ -17,7 +17,9 @@
 <hr />
 
 {% if term.pages | length == 0 %}
-<p class="center">No blog posts found with this tag.</p>
+<center>
+    <p>No blog posts found with this tag.</p>
+</center>
 {% else %} {% for page in term.pages %}
 <div class="blog-post">
     <div>
