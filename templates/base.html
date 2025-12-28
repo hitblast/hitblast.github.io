@@ -59,6 +59,58 @@
             rel="stylesheet"
             href="{{ get_url(path='css/styles.css', trailing_slash=false, cachebust=true) | safe }}"
         />
+
+        <!-- Preload Items -->
+        <link
+            rel="preload"
+            as="image"
+            href="{{ get_url(path='images/blep.gif') }}"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="{{ get_url(path='images/blep_happy.gif') }}"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="{{ get_url(path='svg/bluesky.svg') }}"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="{{ get_url(path='svg/github.svg') }}"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="{{ get_url(path='svg/linkedin.svg') }}"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="{{ get_url(path='svg/mastodon.svg') }}"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="{{ get_url(path='svg/quote-left.svg') }}"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="{{ get_url(path='svg/quote-right.svg') }}"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="{{ get_url(path='svg/rss.svg') }}"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="{{ get_url(path='svg/sparkles.svg') }}"
+        />
     </head>
     <body>
         <header class="container">
