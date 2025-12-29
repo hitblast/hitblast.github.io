@@ -319,6 +319,6 @@ And with that, we got ourselves two new projects.
 - [cornelli](https://github.com/hitblast/cornelli): Write to your future self.
 - [Shomoy](https://github.com/Itsmemonzu/Shomoy): A time capsule for your terminal.
 
-I'm very thankful that I agreed to do this challenge, as this was close to a teeny-tiny hackathon for both of us. Hmm, maybe I could continue this with my friends?
+I'm very thankful that I had agreed to do this challenge, as this was close to a teeny-tiny hackathon for both of us. Hmm, maybe I could continue this with my friends?
 
 Till then, thanks for reading this entry <3 signing off.
