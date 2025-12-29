@@ -314,10 +314,10 @@ On the flip side, Monzu faced criticism for the following things:
 
 ### verdict, overall
 
-And with that, we get two new projects.
+And with that, we got ourselves two new projects.
 
-[cornelli](https://github.com/hitblast/cornelli): Write to your future self.
-[Shomoy](https://github.com/Itsmemonzu/Shomoy): A time capsule for your terminal.
+- [cornelli](https://github.com/hitblast/cornelli): Write to your future self.
+- [Shomoy](https://github.com/Itsmemonzu/Shomoy): A time capsule for your terminal.
 
 I'm very thankful that I agreed to do this challenge, as this was close to a teeny-tiny hackathon for both of us. Hmm, maybe I could continue this with my friends?
 
