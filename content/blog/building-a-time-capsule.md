@@ -281,7 +281,7 @@ We had another bit of coding leftover. Monzu was closing in on the finish line, 
 
 Once Monzu was finished, we were counting down for the CI builds. He was pretty much off with the Python interpreter and the `pyinstaller` library for packaging. My builds actually failed once since I had kept the old bin names from where I had gotten the workflows (one of my previous projects), so I had to restart it with freshly. After that, we both submitted.
 
-## the release
+### the release
 
 At this point of writing the blog entry, I'm pretty burnt out from the 3AM fatigue, but to summarize, the release was a lot more entertaining.
 
@@ -301,7 +301,7 @@ I won't take the courtesy of the overall review. That goes to the judges.
 
 Wolverton had left a massive review for both of the projects. He rated in four categories: documentation, installation, the actual program and overall. On the contrary, furti left a huge almost-40-minute review on both of the projects, which is private so I won't be sharing it here.
 
-### verdict by judges
+### verdict by the judges
 
 Even though the overall result was biasing towards different things, both Monzu and I faced criticism and questions for our design choices. For example, the `CORNELLI_PASS` pattern I was using got questioned by furti since in the v1 release, it wasn't behaving well at all for some mailbox entries. We ended up fixing it later on.
 
