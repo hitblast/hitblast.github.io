@@ -169,7 +169,7 @@ He still hadn't handled the encryption layer, but I picked good old `AES` as the
 
 The code is too long for me to include here, so I'll just include the primary algorithms here. Rest will be linked.
 
-For checking whether a `Capsule` should be deciphered, I had created this:
+For checking whether a `Capsule` should be deciphered, this method inside the struct is used:
 
 ```rust
 // yes I used serde for the whole store
