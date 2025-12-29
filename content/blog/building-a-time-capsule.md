@@ -37,7 +37,7 @@ We were connected to the same Podium VC we initialized with for the entirety of 
 |-----------|----------|
 | Good old Python as usual. | Rust for me. |
 | The [Rich](https://github.com/Textualize/rich) frameworks. Great for TUI/UX. He wanted his CLI to be fully interactive. | [clap](https://github.com/clap-rs/clap) for me since I didn't want my iteration to be interactive at all for saving some time. |
-| [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html) as the database, since he was already fluent enough working with JSON tokens. | I wanted to build my own database for the work, hence I created [ChristmasDB](#) |
+| [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html) as the database, since he was already fluent enough working with JSON tokens. | I wanted to build my own database for the work, hence I'll be creating [ChristmasDB](#). |
 
 Now let's discuss the initial concept of a *time capsule*. As our friend Rem had described it:
 
@@ -55,11 +55,11 @@ And, based on what I heard from Monzu:
 - He wanted to use the least amount of commands so that his CLI was fully usable by just the press of a few keys (except for typing the actual text).
 - He also wanted to take advantage of Python's dynamically-typed ecosystem to reduce code as much as possible.
 
-And, based off of the sentence Rem told us (the other friend, if I haven't shared it with you already), we'd have to create a way to actually "put the text away from the user", so that it is not accessible before the time the user allocates, so we'd need a way to **encrypt the text** and make it undetectable without some sort of deciphering mechanism.
+And, based off of the sentence Rem had told us, we'd have to create a way to actually "put the text away from the user", so that it is not accessible before the time the user allocates, so we'd need a way to **encrypt the text** and make it undetectable without some sort of deciphering mechanism.
 
 ### ignition!
 
-We started discussing about our common stuff at first. He (and eventually I too) decided to call each input of the user a "capsule", which has the following fields attached to it:
+We had started by discussing about our common stuff at first. He (and eventually I too) had decided to call each input of the user a "capsule", which had the following fields attached to it:
 
 1. The actual text, but ciphered.
 2. The datetime indicating the exact moment the text was ciphered away.
@@ -73,7 +73,7 @@ He first thought of running a background job to provide real-time insight of the
 
 #### the route monzu took (algo)
 
-After all of the yapping about the initial brainstorm phase, we were finally ready to start working. While I was entirely focused on the `ChristmasDB` layer, Monzu was honestly making some pretty good strides. He started off by creating his input layer which was composed of numbers, and occasionally, some text. Primitive in nature, but works.
+After all of the yapping about the initial brainstorm phase, we were finally ready to start working. While I was entirely focused on the `ChristmasDB` layer, Monzu was honestly making some pretty good strides. He had started off by creating his input layer which was composed of numbers, and occasionally, some text. Primitive in nature, but works.
 
 He was also streaming for me to help with some of his stuff so I had a sneak peek at his input strategy:
 
@@ -131,7 +131,7 @@ def checkCapsule():
 ```
 [(online snippet's here)](https://github.com/Itsmemonzu/Shomoy/blob/fa69132a001c2d3f3b2c7371c847c562a01bc725/main.py#L27-L43)
 
-For some weird reason, he ended up implementing the same algorithm twice in two different places. I mean, okay, that's what *functions* exists for. But, have a look yourself:
+For some weird reason, he ended up implementing the same algorithm twice in two different places. I mean, okay, that's why *functions* exist. But, have a look yourself:
 
 ```python
     elif action == "2":
