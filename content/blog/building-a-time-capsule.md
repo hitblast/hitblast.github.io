@@ -37,7 +37,7 @@ We were connected to the same Podium VC we initialized with for the entirety of 
 |-----------|----------|
 | Good old Python as usual. | Rust for me. |
 | The [Rich](https://github.com/Textualize/rich) frameworks. Great for TUI/UX. He wanted his CLI to be fully interactive. | [clap](https://github.com/clap-rs/clap) for me since I didn't want my iteration to be interactive at all for saving some time. |
-| [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html) as the database, since he was already fluent enough working with JSON tokens. | I wanted to build my own database for the work, hence I'll be creating [ChristmasDB](#). |
+| [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html) as the database, since he was already fluent enough working with JSON tokens. | I wanted to build my own database for the work, hence I'll be creating [ChristmasDB](https://github.com/hitblast/cornelli/blob/master/src/core/database.rs). |
 
 Now let's discuss the initial concept of a *time capsule*. As our friend Rem had described it:
 
