@@ -1,3 +1,4 @@
+/* Font Faces */
 @font-face {
     font-family: "Departure";
     src: url("/webfonts/DepartureMono-Regular.woff2") format("woff2");
@@ -67,7 +68,13 @@
     --pico-tooltip-color: #2a2a35;
 }
 
-/* Global Element Styling */
+/* Property Overrides (Pico CSS) */
+[data-tooltip]::before,
+[data-tooltip]::after {
+    font-weight: bold;
+}
+
+/* Global Element */
 html {
     scroll-behavior: smooth;
 }
@@ -141,7 +148,7 @@ button:hover {
     border: unset;
 }
 
-/* Pixelated images */
+/* Pixelated Images */
 #blep,
 #bini,
 #postcard {
@@ -151,6 +158,9 @@ button:hover {
 #blep,
 #bini {
     width: 150px;
+}
+#blep:hover {
+    cursor: grab;
 }
 
 #postcard {
@@ -168,20 +178,12 @@ button:hover {
     scale: 170%;
 }
 
-#blep:hover {
-    cursor: grab;
-}
-
 /* Utility Classes */
-.center {
-    text-align: center;
-}
-
 .faded {
     opacity: 0.7;
 }
 
-/* Top-Name Styling */
+/* Header (Top Name) */
 header a {
     color: inherit;
 }
@@ -193,7 +195,7 @@ header a:hover {
     text-transform: none;
 }
 
-/* Icons styling */
+/* Icons */
 .icon svg {
     width: 24px;
     height: 24px;
@@ -217,7 +219,7 @@ header a:hover {
     color: var(--pico-primary-hover);
 }
 
-/* Portfolio Specific Styling */
+/* Portfolio Projects */
 .portfolio-projects {
     display: flex;
     flex-wrap: wrap;
@@ -296,7 +298,7 @@ footer,
     text-align: center;
 }
 
-/* Blog Post Specific Styling */
+/* Blog Posts */
 .blog-post {
     text-align: left;
 }
@@ -315,7 +317,7 @@ footer,
     font-size: var(--font-size-small);
 }
 
-/* Blog Entry-specific Styling */
+/* Blog Entry */
 .blog-entry-title {
     text-align: center;
     margin-top: 1rem;
@@ -333,7 +335,7 @@ footer,
     line-height: 1.6;
 }
 
-/* Tag Styling */
+/* Tag Names */
 .tag-name {
     font-size: var(--font-size-small);
     color: dimgray;
@@ -347,6 +349,7 @@ footer,
     background-color: var(--pico-primary-hover);
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     body {
         width: 100%;
