@@ -5,7 +5,7 @@ description = "My experience with setting up fish from the ground-up, annotating
 authors = ["hitblast"]
 
 [taxonomies]
-tags = ["command-line", "experiences", "fish-shell", "tips"]
+tags = ["command-line", "experiences"]
 +++
 
 ### a misleading title

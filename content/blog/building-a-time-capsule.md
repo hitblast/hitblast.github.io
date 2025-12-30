@@ -5,7 +5,7 @@ description = "How a friend and I hopped in on a challenge to create two tiny pr
 authors = ["hitblast"]
 
 [taxonomies]
-tags = ["experiences", "projects"]
+tags = ["experiences", "projects", "yap"]
 +++
 
 ### pre-context

@@ -11,13 +11,13 @@
 </section>
 
 <div class="links">
-    <a
-        class="icon-link"
-        target="_blank"
-        href="{{ get_url(path='rss.xml', trailing_slash=false) }}"
-    >
-        <span class="icon" data-src="{{ get_url(path='svg/rss.svg') }}"></span>
-    </a>
+    <span
+        id="copy-btn"
+        data-copyable="{{ get_url(path='rss.xml', trailing_slash=false )}}"
+        class="icon"
+        data-src="{{ get_url(path='svg/rss.svg') }}"
+    ></span>
+
     <a class="icon-link" target="_blank" href="https://github.com/hitblast">
         <span
             class="icon"

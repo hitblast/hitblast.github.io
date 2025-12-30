@@ -5,7 +5,7 @@ description = "A brief look at why I made this website, my take on blogging as a
 authors = ["hitblast"]
 
 [taxonomies]
-tags = ["web-dev", "experiences"]
+tags = ["experiences"]
 +++
 
 ### backstory

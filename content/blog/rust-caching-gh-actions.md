@@ -5,7 +5,7 @@ description = "A simple walkthrough of GitHub Actions and sccache on creating a 
 authors = ["hitblast"]
 
 [taxonomies]
-tags = ["experiences"]
+tags = ["experiences", "how-to"]
 +++
 
 ### a little context

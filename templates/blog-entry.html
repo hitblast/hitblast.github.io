@@ -24,17 +24,11 @@
 <p class="blog-entry-footer">
     {{ page.date | date(format="%b %d, %Y") }};
     <span
-        id="copy-link-for-blog-entry"
+        id="copy-btn"
+        data-copyable="{{ current_url | safe }}"
         class="icon"
         data-src="{{ get_url(path='svg/link.svg') }}"
     ></span>
-    <script>
-        const copyIcon = document.getElementById("copy-link-for-blog-entry");
-        copyIcon.addEventListener("click", () => {
-            navigator.clipboard.writeText("{{ current_url | safe }}");
-            copyIcon.classList.toggle("faded");
-        });
-    </script>
     {% if page.taxonomies.tags %} {% for tag in page.taxonomies.tags %}
     <a href="{{ get_url(path='tags/' ~ tag) }}" class="tag-name">#{{ tag }}</a
     >{% if not loop.last %} {% endif %} {% endfor %} {% endif %}

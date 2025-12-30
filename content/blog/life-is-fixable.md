@@ -5,7 +5,7 @@ description = "My little take on how we artificially create our own burdens and 
 authors = ["hitblast"]
 
 [taxonomies]
-tags = ["thoughts"]
+tags = ["thoughts", "yap"]
 +++
 
 ### yapping

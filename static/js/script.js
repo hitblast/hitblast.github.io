@@ -6,6 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((svg) => (el.innerHTML = svg));
   });
 
+  // ---- Copy button ----
+  document.querySelectorAll("#copy-btn").forEach((el) => {
+    el.addEventListener("click", () => {
+      let attr = el.getAttribute("data-copyable");
+      el.setAttribute("data-tooltip", "Copied!");
+      navigator.clipboard.writeText(attr);
+
+      setTimeout(() => {
+        el.removeAttribute("data-tooltip");
+      }, 2000);
+    });
+  });
+
   // ---- Random Message for Blep Section ----
   (function () {
     const messages = [
