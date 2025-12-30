@@ -10,12 +10,15 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("#copy-btn").forEach((el) => {
     el.addEventListener("click", () => {
       let attr = el.getAttribute("data-copyable");
-      el.setAttribute("data-tooltip", "Copied!");
+      el.setAttribute(
+        "data-tooltip",
+        el.getAttribute("data-copynotif") || "copied!",
+      );
       navigator.clipboard.writeText(attr);
 
       setTimeout(() => {
         el.removeAttribute("data-tooltip");
-      }, 2000);
+      }, 4000);
     });
   });
 

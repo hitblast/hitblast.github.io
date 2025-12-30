@@ -14,6 +14,7 @@
     <span
         id="copy-btn"
         data-copyable="{{ get_url(path='rss.xml', trailing_slash=false )}}"
+        data-copynotif="copied feed URL!"
         class="icon"
         data-src="{{ get_url(path='svg/rss.svg') }}"
     ></span>
@@ -209,13 +210,9 @@
 <center>
     <img id="bini" src="{{ get_url(path='images/bini.gif') }}" />
     <button
-        id="postcard"
-        onclick="
-            navigator.clipboard.writeText(
-                '<a target=\'_blank\' rel=\'hitblast\' href=\'https://hitblast.github.io/\'><img src=\'https://hitblast.github.io/postcard.png\' style=\'image-rendering: pixelated\'/></a>',
-            );
-            alert('Code copied! Now paste it into your website.');
-        "
+        id="copy-btn"
+        data-copynotif="copied! paste it in your website now."
+        data-copyable="<a target='_blank' rel='hitblast' href='https://hitblast.github.io/'><img src='https://hitblast.github.io/postcard.png' style='image-rendering: pixelated'/></a>"
     >
         <img
             id="postcard"

@@ -3218,7 +3218,7 @@ progress::-moz-progress-bar {
     content: attr(data-tooltip);
     color: var(--pico-tooltip-color);
     font-style: normal;
-    font-weight: var(--pico-font-weight);
+    font-weight: bold;
     font-size: 0.875rem;
     text-decoration: none;
     text-overflow: ellipsis;
