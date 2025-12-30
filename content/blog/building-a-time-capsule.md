@@ -66,7 +66,7 @@ We had started by discussing about the common stuff at first. He (and eventually
 He first thought of running a background job to give real-time insight of the datetime to the program, but I had a simpler solution in mind since spawning workers for a project like this was blatant overengineering. So, seeing him mess up his core analogy of the program we were about to make, we decided to share our algorithm. It was pretty simple:
 
 1. The program would *only* work when executed - not in the background, so that's one axed thing.
-2. Since we're already tracking two time-tracing fields (2 and 3 above), it'd be very easy to calculate the approximate time of "unlock" for the capsule.
+2. Since we're already tracking two time-tracing fields (2 and 3 above), it'd be very easy to calculate `future_time` (in this case, the approximate time when a particular capsule should be unlocked). This would work by incrementing the user's given duration as a timedelta to the time when the capsule was created.
 3. If the user wanted to check whether a capsule was unlockable, it'd just check a condition: `if (future_time < present_time) {... # do unlock stuff}`
 
 #### the route monzu took (algo)
@@ -160,13 +160,13 @@ He still hadn't handled the encryption layer, but I picked the good old `AES` en
   1. Prepare the cipher. This includes generating a new `iv` for each text powered by `rand::rngs::OsRng`, which'd later be used to create a cipher by attaching with the `key` created beforehand.
   2. Applying a keystream to the text so that it gets ciphered.
   3. Store it within a `capsules` variable within the store.
-- One for autosaving the database, since I'm too lazy to setup manual CRUD operations along the way.
+- One for autosaving the database, since I'm too lazy to setup manual CRUD operations along the way. I'd use `autosave()` after the inner logic of the `add_new_capsule()` and `remove()` commands to write the instance to disk automatically.
 - One for decrypting a `Capsule` object (yes, I used structs for capsules too).
 - And finally, one to remove a capsule instance from the store.
 
 The code is too long for me to include here, so I'll just include the primary algorithms here. Rest will be linked.
 
-For checking whether a `Capsule` should be deciphered, this method inside the struct is used:
+For checking whether a `Capsule` should be deciphered, the `is_awaiting_decryption()` method had been implemented by me as such:
 
 ```rust
 // yes I used serde for the whole store
@@ -191,7 +191,7 @@ impl Capsule {
 }
 ```
 
-I will also include the `decrypt` function for you to have a sneak peek:
+I will also include the `decrypt()` function for you to have a sneak peek:
 
 ```rust
     pub fn decrypt(&self, cap: &Capsule) -> Result<(String, usize)> {
@@ -231,15 +231,15 @@ Oh and, I'd only create *two* commands:
 
 I was kind of envious of his interface, that he managed to at least get a primitive solution up and running that fast. I was being very lazy to pass a mutable string variable to an `io::stdin()` call, so much so that I had to compensate with even harder `clap` arguments.
 
-Though, I had previously created [rust-cli-template](https://github.com/hitblast/rust-cli-template) for my personal projects, so that came in handy. I had just cloned and deleted the `.git` folder to gain a headstart. This was *before* all of the algorithmic lore described above. By now, Monzu was getting into the encryption part of things, and I was just starting off with the UX.
+Anyhow, I had previously created [rust-cli-template](https://github.com/hitblast/rust-cli-template) for my personal projects, so that came in handy. I had just cloned and deleted the `.git` folder to gain a headstart. This was *before* all of the algorithmic lore described above. By now, Monzu was getting into the encryption part of things, and I was just starting off with the UX.
 
-I implemented the storymode-like interface for `mailbox`. Also, something different also started happening while I was doing that.
+I implemented the storymode-like interface for `mailbox`. Also, something different had also started happening while I was doing that.
 
-By the time they had joined, it was almost 6 hours that Monzu and I were talking in the channel for, and they found us in completely different states. I had spend a ludicrous amount of time optimizing the database, so I was pretty much clear for UX. I had also yoinked the duration-parsing (`1h2m1s`-style) from [trimsec](https://github.com/hitblast/trimsec) to get some boost. On the other hand, Monzu was only just getting into duration parsing. Frantically enough, he started seeking help from both furti and wolverton.
+By the time they had joined, it was almost 6 hours that Monzu and I were talking in the channel for, and they found us in completely different states. I had spend a ludicrous amount of time optimizing the database, so I was pretty much clear for UX. I had also yoinked the duration-parsing (`1h2m1s`-style) from [trimsec](https://github.com/hitblast/trimsec) to get some boost. On the other hand, Monzu was only just getting into duration parsing. Frantically enough, he started seeking help from both furti and wolverton regarding some other topics.
 
-Aren't they supposed to be judges?
+Wait, aren't they supposed to be judges?
 
-Anyways, he also had asked me about duration-parsing before. At first I thought only doing it by the day would be cheap enough for the project, but upon looking at the actual problem, neither programs would've been able to track the correct decryption time if we had done that, so I skipped over the simplification idea. Turns out, Monzu didn't get the clarification and he had implemented a days-only parser.
+Anyways, he had also asked me about duration-parsing beforehand. At first we concluded that only doing it by the day would be cheap enough for the project, but upon looking at the actual problem, neither programs would've been able to track the correct decryption time if we had done that, so I skipped over the simplification idea. Turns out, Monzu didn't get the clarification and he had implemented a days-only parser.
 
 I was seeing an unreasonable amount of panic within - I bet he could've *hardened his runtime for comfort* (no pun intended).
 
