@@ -152,12 +152,12 @@ I hope you clearly see the minor details I've pointed out in front of you. The c
 
 Now, not to brag or anything about code - in fact I actually write pretty bad Rust, and considering the fact that other, more knowledgable people use the stack with lifetime specifiers, generics and whatnot for simple data parsing like this, I truly am new to this. However, I took a different approach to the same problem he took upon.
 
-He still hadn't handled the encryption layer, but I picked good old `AES` as the encryption method. I was also learning about its implementation at the same time since I had never implemented it to date on a CLI project. Within the `ChristmasDB` layer, I implemented a few functions which did the following:
+He still hadn't handled the encryption layer, but I picked the good old `AES` encryption method as my staple. I was also learning about its implementation at the same time since I had never implemented it to date on a CLI project. Within the `ChristmasDB` layer, I also implemented a few functions which did the following:
 
 - One function for comparing `now_time` and `future_time`.
 - One for generating a new `ChristmasDB` instance with a user-defined `password`. This would generate a `[0u8; 32]` key unique to the particular password.
 - One function for generating a new capsule from a given text. This one did the following in order:
-  1. Prepare the cipher. This includes generating a new `iv` for each text powered by `OsRng`, which'd later be used to create a cipher by attaching with the `key` created beforehand.
+  1. Prepare the cipher. This includes generating a new `iv` for each text powered by `rand::rngs::OsRng`, which'd later be used to create a cipher by attaching with the `key` created beforehand.
   2. Applying a keystream to the text so that it gets ciphered.
   3. Store it within a `capsules` variable within the store.
 - One for autosaving the database, since I'm too lazy to setup manual CRUD operations along the way.
