@@ -1,24 +1,11 @@
-{% extends "base.html" %} {% block pagetitle %}
+{% extends "base.html" %} {% block metadesc %}
 <title>{{ page.title }}</title>
 <meta name="description" content="{{ page.description }}" />
-
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="{{ current_url | safe }}" />
-<meta property="og:type" content="article" />
 <meta property="og:title" content="{{ page.title }}" />
 <meta property="og:description" content="{{ page.description }}" />
-<meta
-    property="og:image"
-    content="{{ get_url(path='images/meta.png', trailing_slash=false) }}"
-/>
-
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:domain" content="hitblast.github.io" />
-<meta property="twitter:url" content="{{ current_url | safe }}" />
 <meta name="twitter:title" content="{{ page.title }}" />
 <meta name="twitter:description" content="{{ page.description }}" />
-{% endblock pagetitle %} {% block content %}
+{% endblock metadesc %} {% block content %}
 <a href="/blog/">&laquo; Back to all posts</a>
 <div class="blog-entry-title">
     <h1>

@@ -5,38 +5,33 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- HTML Meta Tags -->
-        {% block pagetitle %}
-        <title>Anindya Shiddhartha</title>
-        {% endblock pagetitle %}
+        <meta
+            property="og:image"
+            content="{{ get_url(path='images/meta.png', trailing_slash=false, cachebust=true) }}"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="twitter:domain" content="hitblast.github.io" />
+        <meta property="og:url" content="{{ current_url | safe }}" />
+        <meta property="twitter:url" content="{{ current_url | safe }}" />
+        <meta name="twitter:card" content="summary_large_image" />
 
+        {% block metadesc %}
+        <title>Anindya Shiddhartha</title>
         <meta
             name="description"
             content="My personal website and blog. No strings attached."
         />
-
-        <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://hitblast.github.io" />
-        <meta property="og:type" content="website" />
         <meta property="og:title" content="Anindya Shiddhartha" />
         <meta
             property="og:description"
             content="My personal website and blog. No strings attached."
         />
-        <meta
-            property="og:image"
-            content="{{ get_url(path='images/meta.png', trailing_slash=false, cachebust=true) }}"
-        />
-
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="hitblast.github.io" />
-        <meta property="twitter:url" content="https://hitblast.github.io" />
         <meta name="twitter:title" content="Anindya Shiddhartha" />
         <meta
             name="twitter:description"
             content="My personal website and blog. No strings attached."
         />
+        {% endblock metadesc %}
 
         <!-- Icon -->
         <link
