@@ -11,27 +11,25 @@ tags = ["experiences", "projects"]
 ### pre-context
  During the afternoon of 25th December, I was just casually hopping around Discord in search of what to do. I randomly joined a voice channel on my Minecraft team's server, and one of my friends also (luckily) hopped in. <[@Itsmemonzu](https://github.com/Itsmemonzu)>, turns out, was also looking for something to do; and a second friend joined to aid him with his idea shortage.
 
-Previously, his urge led him to install [Zed](https://zed.dev) on his beefy machine (after I told him about how it uses layers of GPU optimization in the process of rendering his code), and somehow all of a sudden he wanted to do all-things Zed. The second friend, in the meantime, suggested him that he makes a *time capsule program*. I'll return to this in a bit.
+Previously, his urge led him to install [Zed](https://zed.dev) on his beefy machine (after I told him about how it uses the GPU for rendering his code), and somehow all of a sudden he wanted to do all-things Zed only. The second friend, in the meantime, suggested him that he makes a *time capsule program*. I'll return to this in a bit.
 
-Now as a matter of fact, the size-to-functionality ratio of his previous application was pretty unrealistic - say, 64 megabytes for doing a GET request to the [Minecraft Server Status API](https://mcsrvstat.us/), and my futile attempts to motivate him back to use C# for his desktop apps were all turning to vain. He eventually turned to *Python* for this one.
+Now as a matter of fact, the size-to-functionality ratio of his previous applications were pretty unrealistic - say, 64 megabytes for doing a GET request to the [Minecraft Server Status API](https://mcsrvstat.us/), and after he himself recognizing the problem, my futile attempts to motivate him back to use C# for his desktop apps were all turning to vain. He eventually turned to *Python* for this one.
 
-Then suddenly he asked - how about we do a programming challenge over this?
+Then suddenly he had asked - "how about we do a programming challenge over this?"
 
 Hmm, not a bad idea!
 
-I haven't had a programming battle with someone ever since the prehistoric days of HackSquad 2022, so doing this was going to be fun, and Monzu's new-learning nature was also going to be interesting to analyze within the challenge. We eventually agreed on a few things:
+I hadn't had a programming battle with someone ever since the prehistoric days of HackSquad 2022, so doing this was going to be fun, and Monzu's learning nature was also going to be interesting to analyze within the challenge. We eventually agreed on a few things:
 
 - Different stacks. Obviously. He'd be using **Python** while I'll do the same program in **Rust**.
 - We'd both be using a shared algorithm for determining (but this has some lore to it, so be alert while reading).
 - We'd have to finish it within the Christmas Eve - a fully working copy of our projects, that is.
 
-I'll be attaching more context along the way with this entry.
-
-Till then, the game was officially on for both of us!
+I'll be attaching more context along the way with this entry. Till then, the game was officially on for both of us!
 
 ### intermediate planning
 
-We were connected to the same Podium VC we initialized with for the entirety of the challenge, and while VC-ing, we both discussed some common frameworks for our program:
+We were connected to the same Podium VC we initialized with for the entirety of the challenge, and while talking, we both discussed some common frameworks for our programs:
 
 | His stack | My stack |
 |-----------|----------|
@@ -39,7 +37,7 @@ We were connected to the same Podium VC we initialized with for the entirety of 
 | The [Rich](https://github.com/Textualize/rich) frameworks. Great for TUI/UX. He wanted his CLI to be fully interactive. | [clap](https://github.com/clap-rs/clap) for me since I didn't want my iteration to be interactive at all for saving some time. |
 | [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html) as the database, since he was already fluent enough working with JSON tokens. | I wanted to build my own database for the work, hence I'll be creating [ChristmasDB](https://github.com/hitblast/cornelli/blob/master/src/core/database.rs). |
 
-Now let's discuss the initial concept of a *time capsule*. As our friend Rem had described it:
+Now let's discuss the initial concept of a *time capsule*. As our friend Rem had described it, a time capsule is:
 
 > "A program that saves a text and keeps it away, and finally returns it after a certain time."
 
@@ -59,13 +57,13 @@ And, based off of the sentence Rem had told us, we'd have to create a way to act
 
 ### ignition!
 
-We had started by discussing about our common stuff at first. He (and eventually I too) had decided to call each input of the user a "capsule", which had the following fields attached to it:
+We had started by discussing about the common stuff at first. He (and eventually I too) had decided to call each input of the user a "capsule", which had the following fields attached to it:
 
 1. The actual text, but ciphered.
 2. The datetime indicating the exact moment the text was ciphered away.
 3. The lifetime of the text. Things can't be permanent, just as in life.
 
-He first thought of running a background job to provide real-time insight of the datetime to the program, but I had a simpler solution in mind, so seeing him mess up his core insight about how the program would work, we decided to share our algorithm. It was pretty simple:
+He first thought of running a background job to give real-time insight of the datetime to the program, but I had a simpler solution in mind since spawning workers for a project like this was blatant overengineering. So, seeing him mess up his core analogy of the program we were about to make, we decided to share our algorithm. It was pretty simple:
 
 1. The program would *only* work when executed - not in the background, so that's one axed thing.
 2. Since we're already tracking two time-tracing fields (2 and 3 above), it'd be very easy to calculate the approximate time of "unlock" for the capsule.
@@ -104,7 +102,7 @@ I also asked him regarding his backend logic and whatnot. He was busy handling `
 
 I'll provide some entirely personal comments from here onwards (and some sweet, sweet lore).
 
-Going into the snippet, I can do nothing about getting flabbergasted by the inconventional naming conventions (even though the code's working perfectly). The unreliable parsing from `parse[num]["time_limit"]` might also seem a little vague at first, since there isn't a strict schema being enforced due to Python's core json implementation being dynamic in nature.
+Going into the snippet, I could do nothing but get flabbergasted by the inconventional naming conventions (even though the code's working perfectly). The unreliable parsing from `parse[num]["time_limit"]` might also seem a little vague at first, since there isn't a strict schema being enforced due to Python's core json implementation being dynamic in nature.
 
 As a matter of fact, during the primary (and late-game) stages, Monzu himself ended up parsing the `time_limit` field as integers rather than `datetime` instances, and even when he did end up parsing correctly, he passed `datetime` objects directly into the schema for reflecting back. *\*confused Monzu noises in the background wondering why it ain't behaving like Rust\**
 
@@ -112,13 +110,12 @@ As of the shared algorithm we were talking about implementing, his way of implem
 
 ```python
 def checkCapsule():
-    # Check current time
     now_time = datetime.now().timestamp()
 
-    # Accessing JSON Data
+    # full database init here
+    # I removed all comments except this one
     parse = database.all()
 
-    # Check the dictionary for possible unlockable capsules using a loop
     for i, unlock in enumerate(parse, start=0):
         unlock_time = float(parse[i]["time_limit"])
         if now_time >= unlock_time:
@@ -139,7 +136,7 @@ For some weird reason, he ended up implementing the same algorithm twice in two 
         time.sleep(5)
     elif action == "3":
         print("[white][bold]Which capsule do you want to unlock?[/][/]")
-        num = int(input(":")) - 1  # de-facto imputs.
+        num = int(input(":")) - 1  # de-facto inputs
 
         now_time = datetime.now().timestamp()
 
@@ -149,11 +146,11 @@ For some weird reason, he ended up implementing the same algorithm twice in two 
 ```
 [(online snippet's here)](https://github.com/Itsmemonzu/Shomoy/blob/fa69132a001c2d3f3b2c7371c847c562a01bc725/main.py#L88-L100)
 
-I hope you clearly see the minor details I've pointed out in front. The code works nicely, no comments regarding that. It'd break with one algorithmic change, however (saying just for the name of explanation).
+I hope you clearly see the minor details I've pointed out in front of you. The code works nicely, no comments regarding that. But, it'd just break with one algorithmic change (saying just for the name of explanation).
 
 #### the route I took (algo + monzu's entry)
 
-Now, not to brag or anything about code - in fact I actually write pretty shit Rust, and considering the fact that other, more knowledgable people use the stack with lifetime specifiers, generics and whatnot for simple data parsing like this, I truly am new to this. However, I took a different approach to the same problem he took upon.
+Now, not to brag or anything about code - in fact I actually write pretty bad Rust, and considering the fact that other, more knowledgable people use the stack with lifetime specifiers, generics and whatnot for simple data parsing like this, I truly am new to this. However, I took a different approach to the same problem he took upon.
 
 He still hadn't handled the encryption layer, but I picked good old `AES` as the encryption method. I was also learning about its implementation at the same time since I had never implemented it to date on a CLI project. Within the `ChristmasDB` layer, I implemented a few functions which did the following:
 
