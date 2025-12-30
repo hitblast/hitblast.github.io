@@ -198,6 +198,11 @@ header a:hover {
     width: 24px;
     height: 24px;
     color: white;
+    image-rendering: pixelated;
+}
+
+.icon:hover {
+    cursor: pointer;
 }
 
 .icon svg path {
