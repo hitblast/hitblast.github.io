@@ -306,7 +306,7 @@ header a:hover {
     background-color: var(--pico-secondary);
     margin-bottom: 0;
     position: absolute;
-    width: 15%;
+    min-width: 15%;
     font-weight: bold;
 }
 
