@@ -296,7 +296,8 @@ header a:hover {
 
 .neighbour-card img {
     image-rendering: pixelated;
-    scale: 150%;
+    width: 100%;
+    height: 100%;
     display: block;
 }
 
@@ -305,8 +306,7 @@ header a:hover {
     text-align: center;
     background-color: var(--pico-secondary);
     margin-bottom: 0;
-    position: absolute;
-    min-width: 15%;
+    width: 30%;
     font-weight: bold;
 }
 
@@ -318,7 +318,7 @@ header a:hover {
 }
 
 .neighbour-card {
-    padding: 2rem;
+    object-fit: contain;
     border: 1px solid var(--pico-secondary);
 }
 
