@@ -5,7 +5,7 @@
         <img
             id="blep"
             src="{{ get_url(path='images/blep.gif') }}"
-            data-happy-src="{{ get_url(path='images/blep_happy.gif') }}"
+            data-happy-src="{{ get_url(path='images/blep_happy.gif', trailing_slash=false, cachebust=true) }}"
         />
     </center>
 </section>
@@ -13,16 +13,16 @@
 <div class="links">
     <span
         id="copy-btn"
-        data-copyable="{{ get_url(path='rss.xml', trailing_slash=false )}}"
+        data-copyable="{{ get_url(path='rss.xml', trailing_slash=false)}}"
         data-copynotif="copied feed URL!"
         class="icon"
-        data-src="{{ get_url(path='svg/rss.svg') }}"
+        data-src="{{ get_url(path='svg/rss.svg', trailing_slash=false, cachebust=true) }}"
     ></span>
 
     <a class="icon-link" target="_blank" href="https://github.com/hitblast">
         <span
             class="icon"
-            data-src="{{ get_url(path='svg/github.svg') }}"
+            data-src="{{ get_url(path='svg/github.svg', trailing_slash=false, cachebust=true) }}"
         ></span>
     </a>
     <a
@@ -33,7 +33,7 @@
     >
         <span
             class="icon"
-            data-src="{{ get_url(path='svg/mastodon.svg') }}"
+            data-src="{{ get_url(path='svg/mastodon.svg', trailing_slash=false, cachebust=true) }}"
         ></span>
     </a>
     <a
@@ -43,7 +43,7 @@
     >
         <span
             class="icon"
-            data-src="{{ get_url(path='svg/linkedin.svg') }}"
+            data-src="{{ get_url(path='svg/linkedin.svg', trailing_slash=false, cachebust=true) }}"
         ></span>
     </a>
     <a
@@ -53,7 +53,7 @@
     >
         <span
             class="icon"
-            data-src="{{ get_url(path='svg/bluesky.svg') }}"
+            data-src="{{ get_url(path='svg/bluesky.svg', trailing_slash=false, cachebust=true) }}"
         ></span>
     </a>
     <a
@@ -63,7 +63,7 @@
     >
         <span
             class="icon"
-            data-src="{{ get_url(path='svg/steam.svg') }}"
+            data-src="{{ get_url(path='svg/steam.svg', trailing_slash=false, cachebust=true) }}"
         ></span>
     </a>
 </div>
@@ -99,7 +99,7 @@
         <h1>
             <span
                 class="icon"
-                data-src="{{ get_url(path='svg/sparkles.svg') }}"
+                data-src="{{ get_url(path='svg/sparkles.svg', trailing_slash=false, cachebust=true) }}"
             ></span>
             curated slop,
         </h1>
@@ -211,7 +211,7 @@
     <h3>
         <span
             class="icon"
-            data-src="{{ get_url(path='svg/people.svg') }}"
+            data-src="{{ get_url(path='svg/people.svg', trailing_slash=false, cachebust=true) }}"
         ></span>
         social coleslaw
     </h3>
@@ -245,7 +245,10 @@
 </section>
 
 <center>
-    <img id="bini" src="{{ get_url(path='images/bini.gif') }}" />
+    <img
+        id="bini"
+        src="{{ get_url(path='images/bini.gif', trailing_slash=false, cachebust=true) }}"
+    />
     <button
         id="copy-btn"
         data-copynotif="copied! paste it in your website now."
@@ -253,7 +256,7 @@
     >
         <img
             id="postcard"
-            src="{{ get_url(path='postcard.png', cachebust=true) }}"
+            src="{{ get_url(path='postcard.png', trailing_slash=false, cachebust=true) }}"
         />
     </button>
     <br /><br />

@@ -11,12 +11,12 @@
     <h1>
         <span
             class="icon"
-            data-src="{{ get_url(path='svg/quote-left.svg') }}"
+            data-src="{{ get_url(path='svg/quote-left.svg', trailing_slash=false, cachebust=true) }}"
         ></span>
         {{ page.title }}
         <span
             class="icon"
-            data-src="{{ get_url(path='svg/quote-right.svg') }}"
+            data-src="{{ get_url(path='svg/quote-right.svg', trailing_slash=false, cachebust=true) }}"
         ></span>
     </h1>
     <p>{{ page.description }}</p>
@@ -27,7 +27,7 @@
         id="copy-btn"
         data-copyable="{{ current_url | safe }}"
         class="icon"
-        data-src="{{ get_url(path='svg/link.svg') }}"
+        data-src="{{ get_url(path='svg/link.svg', trailing_slash=false, cachebust=true) }}"
     ></span>
     {% if page.taxonomies.tags %} {% for tag in page.taxonomies.tags %}
     <a href="{{ get_url(path='tags/' ~ tag) }}" class="tag-name">#{{ tag }}</a

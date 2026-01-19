@@ -1,18 +1,21 @@
 {% extends "base.html" %} {% block pagetitle %}
 <meta
     http-equiv="refresh"
-    content="0; url={{ get_url(path='@/blog/_index.md') }}"
+    content="0; url={{ get_url(path='@/blog/_index.md', trailing_slash=false) }}"
 />
 {% endblock pagetitle %} {% block content %}
 <div class="container">
     <center>
         <h1>Redirecting to Blog...</h1>
         <p>Tags are now integrated directly into the blog posts.</p>
-        <a href="{{ get_url(path='@/blog/_index.md') }}">Go to Blog</a>
+        <a href="{{ get_url(path='@/blog/_index.md', trailing_slash=false) }}"
+            >Go to Blog</a
+        >
     </center>
 </div>
 
 <script>
-    window.location.href = "{{ get_url(path='@/blog/_index.md') }}";
+    window.location.href =
+        "{{ get_url(path='@/blog/_index.md', trailing_slash=false) }}";
 </script>
 {% endblock content %}

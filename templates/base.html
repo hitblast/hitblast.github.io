@@ -55,73 +55,73 @@
         <link
             rel="preload"
             as="image"
-            href="{{ get_url(path='images/blep.gif') }}"
+            href="{{ get_url(path='images/blep.gif', trailing_slash=false, cachebust=true) }}"
         />
         <link
             rel="preload"
             as="image"
-            href="{{ get_url(path='images/blep_happy.gif') }}"
+            href="{{ get_url(path='images/blep_happy.gif', trailing_slash=false, cachebust=true) }}"
         />
 
         <link
             rel="preload"
             as="image"
-            href="{{ get_url(path='svg/steam.svg') }}"
+            href="{{ get_url(path='svg/steam.svg', trailing_slash=false, cachebust=true) }}"
         />
         <link
             rel="preload"
             as="image"
-            href="{{ get_url(path='svg/bluesky.svg') }}"
+            href="{{ get_url(path='svg/bluesky.svg', trailing_slash=false, cachebust=true) }}"
         />
         <link
             rel="preload"
             as="image"
-            href="{{ get_url(path='svg/github.svg') }}"
+            href="{{ get_url(path='svg/github.svg', trailing_slash=false, cachebust=true) }}"
         />
         <link
             rel="preload"
             as="image"
-            href="{{ get_url(path='svg/linkedin.svg') }}"
+            href="{{ get_url(path='svg/linkedin.svg', trailing_slash=false, cachebust=true) }}"
         />
         <link
             rel="preload"
             as="image"
-            href="{{ get_url(path='svg/mastodon.svg') }}"
+            href="{{ get_url(path='svg/mastodon.svg', trailing_slash=false, cachebust=true) }}"
         />
         <link
             rel="preload"
             as="image"
-            href="{{ get_url(path='svg/quote-left.svg') }}"
+            href="{{ get_url(path='svg/quote-left.svg', trailing_slash=false, cachebust=true) }}"
         />
         <link
             rel="preload"
             as="image"
-            href="{{ get_url(path='svg/quote-right.svg') }}"
+            href="{{ get_url(path='svg/quote-right.svg', trailing_slash=false, cachebust=true) }}"
         />
         <link
             rel="preload"
             as="image"
-            href="{{ get_url(path='svg/rss.svg') }}"
+            href="{{ get_url(path='svg/rss.svg', trailing_slash=false, cachebust=true) }}"
         />
         <link
             rel="preload"
             as="image"
-            href="{{ get_url(path='svg/sparkles.svg') }}"
+            href="{{ get_url(path='svg/sparkles.svg', trailing_slash=false, cachebust=true) }}"
         />
         <link
             rel="preload"
             as="image"
-            href="{{ get_url(path='svg/cat.svg') }}"
+            href="{{ get_url(path='svg/cat.svg', trailing_slash=false, cachebust=true) }}"
         />
         <link
             rel="preload"
             as="image"
-            href="{{ get_url(path='svg/link.svg') }}"
+            href="{{ get_url(path='svg/link.svg', trailing_slash=false, cachebust=true) }}"
         />
         <link
             rel="preload"
             as="image"
-            href="{{ get_url(path='svg/people.svg') }}"
+            href="{{ get_url(path='svg/people.svg', trailing_slash=false, cachebust=true) }}"
         />
     </head>
     <body>
@@ -129,7 +129,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="{{ get_url(path='/') }}"
+                        <a href="{{ get_url(path='/', trailing_slash=false) }}"
                             >anindya shiddhartha</a
                         >
                     </li>
@@ -163,7 +163,7 @@
                 href="https://github.com/hitblast/hitblast.github.io/blob/master/CREDITS.md"
                 >view font/icon credits</a
             ><br />
-            Copyright &copy 2025 Anindya Shiddhartha<br />
+            Copyright &copy 2025 Anindya Shiddhartha.<br />
             Built using Zola ({{ now() | date(format="%Y-%m-%d %H:%M:%S")
             }}).<br />
         </footer>

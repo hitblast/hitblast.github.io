@@ -11,7 +11,10 @@
 />
 {% endblock pagetitle %} {% block content %}
 <div class="faded">
-    <span class="icon" data-src="{{ get_url(path='svg/cat.svg') }}"></span>
+    <span
+        class="icon"
+        data-src="{{ get_url(path='svg/cat.svg', trailing_slash=false, cachebust=true) }}"
+    ></span>
     <sup>...</sup>
     <code>
         <span class="faded">$ cat ABOUT_BLOG.md</span>
