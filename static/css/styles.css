@@ -418,6 +418,10 @@ footer,
         min-width: auto;
     }
 
+    .neighbour-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .blog-entry {
         width: 100%;
     }
