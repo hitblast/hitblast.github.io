@@ -298,6 +298,7 @@ header a:hover {
     image-rendering: pixelated;
     width: 100%;
     height: 100%;
+    border: 1px solid var(--pico-secondary);
     display: block;
 }
 
@@ -314,7 +315,7 @@ header a:hover {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0;
-    border: 3px solid var(--pico-secondary);
+    border: 1px solid var(--pico-secondary);
 }
 
 .neighbour-card {
