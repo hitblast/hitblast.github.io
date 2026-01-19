@@ -314,12 +314,12 @@ header a:hover {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0;
-    border: 1px solid var(--pico-secondary);
+    border: 3px solid var(--pico-secondary);
 }
 
 .neighbour-card {
     object-fit: contain;
-    border: 1px solid var(--pico-secondary);
+    border: 1ipx solid var(--pico-secondary);
 }
 
 .neighbour-cards a:hover {
@@ -367,6 +367,10 @@ footer,
     border: 1px solid var(--pico-secondary);
     padding: 2rem;
     padding-bottom: 0;
+}
+
+.blog-entry-title * {
+    color: var(--pico-secondary);
 }
 
 .blog-entry-footer {
