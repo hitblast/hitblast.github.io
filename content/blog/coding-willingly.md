@@ -23,7 +23,7 @@ Programming, however, is a different story.
 I have frequent ideas on various topics. Some are good, some are problematic. By "problematic", I define two things here:
 
 - *The idea is complex to solve at the moment.* As I've covered a few years (7 years, according to GitHub) of programming lately, this is much less of an issue nowadays, but yeah, software is all about learning consistently and you never learn consistently.
-- *The urge to complete an idea is scarce.* I have a project which I've been working on and whcih is specific to macOS, but I constantly need to replenish my motivation. This is a seemingly bad thing which I've identified.
+- *The urge to complete the idea is scarce.* I have a project which I've been working on and whcih is specific to macOS, but I constantly need to replenish my motivation. This is a seemingly bad thing which I've identified.
 
 I need to fix these two. And, what is my plan exactly?
 
