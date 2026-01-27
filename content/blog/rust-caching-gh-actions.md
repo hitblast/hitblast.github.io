@@ -18,7 +18,7 @@ Error: The template is not valid. .github/workflows/refactor.yml (Line: 47, Col:
 
 Turns out Cargo.lock simply wasn't a reliable hashing method for cache keys anymore, so I had to resort to a simpler solution.
 
-### skeleton design
+### workflow skeleton
 
 In order to create the new refactoring workflow, I first started with a minimal template:
 

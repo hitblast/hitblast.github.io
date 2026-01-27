@@ -34,9 +34,9 @@ And in the process of using them, I have actually created some of my own, simple
 Rust is really an awesome language for the developers of the 21st century in my opinion. It's safer, faster than most
 languages and the compiler really helps out at even the silliest of optimization mismatches.
 
-However... does it deliver in the terminal?
+### does it deliver?
 
-### thing is, it does.
+Thing is, it does.
 
 Rust's speed along with its concurrency features, if coupled with `tokio` for async, or `rayon` for multithreading, can
 lead to major performance bumps which can also be seen in literal desktop apps too! The edge CLIs deliver over desktop apps is
@@ -45,7 +45,7 @@ fanboy.
 
 So, after judging all of this, I decided to give a Rust-based shell a try.
 
-### let's install
+### getting hands dirty I suppose
 
 I installed the shell with this command:
 
@@ -281,7 +281,7 @@ I've noticed a couple of major pros:
 
 For the hipsters out there, fish can actually be an excellent choice for manipulating data within shell, and just using it for general shell commands can also be a delightful experience.
 
-### and uh, the cons..
+### and, the cons
 
 Okay so, remember how I mentioned my typing speed early on in this entry? Well..
 
