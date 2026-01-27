@@ -176,7 +176,7 @@ jobs:
       - run: sccache --show-stats || true
 ```
 
-### final notes
+~~
 
 There you have it!
 

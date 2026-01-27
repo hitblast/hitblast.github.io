@@ -79,6 +79,6 @@ And after all that, I finally got the website that you're reading this entry on 
 
 The surprising part? All of this was done within only one-two hours of programming, and it's only now during the evening that I'm writing the first entry.
 
-### verdict
+~~
 
 Though this entry shouldn't have been elongated, I personally found it relaxing to share the story in a detailed way without elaborating much on the tech side. I hope you will find this read enjoyable :3 till then, see you on the next one.

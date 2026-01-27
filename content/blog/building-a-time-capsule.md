@@ -309,7 +309,7 @@ On the flip side, Monzu faced criticism for the following things:
 - Changing the codebase at the time of the review and telling judges to download the latest source.
 - Having several dependencies.
 
-### verdict, overall
+~~
 
 And with that, we got ourselves two new projects.
 
