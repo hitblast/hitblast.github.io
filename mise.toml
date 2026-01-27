@@ -8,7 +8,7 @@ run = "zola serve --open"
 [tasks.create]
 description = "Creates a new blog entry."
 usage = '''
-arg "<name>" help="Filename"
+arg "<filename>" help="Filename"
 arg "<title>" help="Entry title"
 arg "<desc>" help="Entry description"
 '''
@@ -20,7 +20,7 @@ sed -i '' "s/yyyy-mm-dd/$(echo $today)/g" .now
 sed -i '' "s/blog-title/${usage_title?}/g" .now
 sed -i '' "s/blog-desc/${usage_desc?}/g" .now
 
-mv .now content/blog/${usage_name?}.md
+mv .now content/blog/${usage_filename?}.md
 
-$EDITOR content/blog/${usage_name?}.md
+$EDITOR content/blog/${usage_filename?}.md
 """
