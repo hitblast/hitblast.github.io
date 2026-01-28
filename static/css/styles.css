@@ -112,7 +112,10 @@ blockquote {
     margin-left: 20%;
     text-align: justify;
     font-style: italic;
-    color: dimgray;
+}
+
+blockquote * {
+    color: gray;
 }
 
 h1,

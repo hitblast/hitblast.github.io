@@ -8,7 +8,10 @@ authors = ["hitblast"]
 tags = ["experiences", "projects", "yap"]
 +++
 
+> foreshadowing: this is future me looking back at this post, and feel like I skipped a lot of code explanations which would've been a great addition. regardless, this was written within a strict timeframe so, hopefully you'll grant my mistakes while reading :3
+
 ### pre-context
+
  During the afternoon of 25th December, I was just casually hopping around Discord in search of what to do. I randomly joined a voice channel on my Minecraft team's server, and one of my friends also (luckily) hopped in. <[@Itsmemonzu](https://github.com/Itsmemonzu)>, turns out, was also looking for something to do; and a second friend joined to aid him with his idea shortage.
 
 Previously, his urge led him to install [Zed](https://zed.dev) on his beefy machine (after I told him about how it uses the GPU for rendering his code), and somehow all of a sudden he wanted to do all-things Zed only. The second friend, in the meantime, suggested him that he makes a *time capsule program*. I'll return to this in a bit.
@@ -55,7 +58,7 @@ And, based on what I heard from Monzu:
 
 And, based off of the sentence Rem had told us, we'd have to create a way to actually "put the text away from the user", so that it is not accessible before the time the user allocates, so we'd need a way to **encrypt the text** and make it undetectable without some sort of deciphering mechanism.
 
-### ignition!
+### ignition
 
 We had started by discussing about the common stuff at first. He (and eventually I too) had decided to call each input of the user a "capsule", which had the following fields attached to it:
 
@@ -69,7 +72,7 @@ He first thought of running a background job to give real-time insight of the da
 2. Since we're already tracking two time-tracing fields (2 and 3 above), it'd be very easy to calculate `future_time` (in this case, the approximate time when a particular capsule should be unlocked). This would work by incrementing the user's given duration as a timedelta to the time when the capsule was created.
 3. If the user wanted to check whether a capsule was unlockable, it'd just check a condition: `if (future_time < present_time) {... # do unlock stuff}`
 
-#### the route monzu took (algo)
+### monzu's route (algorithm)
 
 After all of the yapping about the initial brainstorm phase, we were finally ready to start working. While I was entirely focused on the `ChristmasDB` layer, Monzu was honestly making some pretty good strides. He had started off by creating his input layer which was composed of numbers, and occasionally, some text. Primitive in nature, but works.
 
@@ -148,7 +151,7 @@ For some weird reason, he ended up implementing the same algorithm twice in two 
 
 I hope you clearly see the minor details I've pointed out in front of you. The code works nicely, no comments regarding that. But, it'd just break with one algorithmic change (saying just for the name of explanation).
 
-#### the route I took (algo + monzu's entry)
+### my route (algorithm)
 
 Now, not to brag or anything about code - in fact I actually write pretty bad Rust, and considering the fact that other, more knowledgable people use the stack with lifetime specifiers, generics and whatnot for simple data parsing like this, I truly am new to this. However, I took a different approach to the same problem he took upon.
 
@@ -227,9 +230,9 @@ Oh and, I'd only create *two* commands:
 - `keep "anytext" <duration>`: *Keeps* a capsule and keeps it away till the set duration.
 - `mailbox`: Gives you a surprise Stardew Valley-style view at the messages you're meant to see at the moment, probably left by your past self.
 
-### two interfaces
+### two new interfaces
 
-I was kind of envious of his interface, that he managed to at least get a primitive solution up and running that fast. I was being very lazy to pass a mutable string variable to an `io::stdin()` call, so much so that I had to compensate with even harder `clap` arguments.
+I was kind of envious of his implementation, for that he managed to at least get a primitive solution up and running that fast. I was being very lazy to pass a mutable string variable to an `io::stdin()` call, so much so that I had to compensate with even harder `clap` arguments.
 
 Anyhow, I had previously created [rust-cli-template](https://github.com/hitblast/rust-cli-template) for my personal projects, so that came in handy. I had just cloned and deleted the `.git` folder to gain a headstart. This was *before* all of the algorithmic lore described above. By now, Monzu was getting into the encryption part of things, and I was just starting off with the UX.
 
@@ -268,7 +271,7 @@ He ended up adding a positional parsing method for the duration (`x hours, x min
 ```
 [(original snippet's here)](https://github.com/Itsmemonzu/Shomoy/blob/fa69132a001c2d3f3b2c7371c847c562a01bc725/main.py#L66C12-L85C1)
 
-### release timer
+### a chaotic release
 
 Seeing Monzu's unreasonable panic, furti gave him an additional 10 minutes (which ended up scaling to 30 minutes since Monzu was ignoring that). We also saw some late-game failures in his code. Remember the `datetime` and `timedelta` objects we were talking about? Turns out he was parsing them wrong again, and this time he was fully yelling in the voice channel.
 
@@ -278,11 +281,9 @@ We had another bit of coding leftover. Monzu was closing in on the finish line, 
 
 Once Monzu was finished, we were counting down for the CI builds. He was pretty much off with the Python interpreter and the `pyinstaller` library for packaging. My builds actually failed once since I had kept the old bin names from where I had gotten the workflows (one of my previous projects), so I had to restart it with freshly. After that, we both submitted.
 
-### the release
+And then, we made both of the projects public.
 
-At this point of writing the blog entry, I'm pretty burnt out from the 3AM fatigue, but to summarize, the release was a lot more entertaining.
-
-I released the repository with the name "cornelli", and Monzu released his by the name "Shomoy", which means time in Bengali.
+I released the repository with the name "cornelli", and Monzu released his by the name "Shomoy", which means "time" in Bengali.
 
 Both furti and wolverton were checking out our repositories. My project was first tried out by wolverton, which he cleared without hesitation (and also gave me a nice rating, thanks wolverton if you're reading this). While reading the documentation, he had also asked for some alignment with the setup procedure, since I didn't include the particular setup procedure for PowerShell/`cmd`, and setting `CORNELLI_PASS` failed inside that particular Windows environment. I'm pretty glad I could fix that by just changing `export` to `set` inside the command.
 

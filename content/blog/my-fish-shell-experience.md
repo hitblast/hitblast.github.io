@@ -45,7 +45,7 @@ fanboy.
 
 So, after judging all of this, I decided to give a Rust-based shell a try.
 
-### getting hands dirty I suppose
+### getting my hands dirty
 
 I installed the shell with this command:
 
@@ -281,7 +281,7 @@ I've noticed a couple of major pros:
 
 For the hipsters out there, fish can actually be an excellent choice for manipulating data within shell, and just using it for general shell commands can also be a delightful experience.
 
-### and, the cons
+### and, the cons for me
 
 Okay so, remember how I mentioned my typing speed early on in this entry? Well..
 
