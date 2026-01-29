@@ -10,9 +10,7 @@ tags = ["experiences", "projects", "yap"]
 
 > foreshadowing: this is future me looking back at this post, and feel like I skipped a lot of code explanations which would've been a great addition. regardless, this was written within a strict timeframe so, hopefully you'll grant my mistakes while reading :3
 
-### pre-context
-
- During the afternoon of 25th December, I was just casually hopping around Discord in search of what to do. I randomly joined a voice channel on my Minecraft team's server, and one of my friends also (luckily) hopped in. <[@Itsmemonzu](https://github.com/Itsmemonzu)>, turns out, was also looking for something to do; and a second friend joined to aid him with his idea shortage.
+During the afternoon of 25th December, I was just casually hopping around Discord in search of what to do. I randomly joined a voice channel on my Minecraft team's server, and one of my friends also (luckily) hopped in. <[@Itsmemonzu](https://github.com/Itsmemonzu)>, turns out, was also looking for something to do; and a second friend joined to aid him with his idea shortage.
 
 Previously, his urge led him to install [Zed](https://zed.dev) on his beefy machine (after I told him about how it uses the GPU for rendering his code), and somehow all of a sudden he wanted to do all-things Zed only. The second friend, in the meantime, suggested him that he makes a *time capsule program*. I'll return to this in a bit.
 
