@@ -24,7 +24,7 @@ Both of the videos are by [Species | Documenting AGI](https://www.youtube.com/@A
 Don't get me wrong but, I hate cliffhangers which feel more like a delayed but consistent jolt in your mindset, rather than consistent,
 balanced-out surprises which could pique your interest but at the same time, provide you with a sense of plateau.
 
-I have seen this pattern emerge with AI-related YouTube doomers which I'm seeming coming across more nowadays, really, and I kind of not like at the trajectory of it.
+I have seen this pattern emerge with AI-related YouTube doomers which I'm seeming coming across more nowadays, really, and I kind of not like the trajectory of it.
 
 In a world where software quality is substantially declining by folds of ten, every, single, day, in my opinion, AI is probably one of the things which I believe humanity really needs to regulate in general. If you ask me personally, I'd not be surprised by how delusional the community has become over time with all these Qwen, GPT, LLaMa, Grok or even Claude (especially Claude) models overriding their sense of judgement.
 
