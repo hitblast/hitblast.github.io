@@ -244,6 +244,10 @@ header a:hover {
     outline-offset: -8px;
 }
 
+.project-card-content h4 * {
+    color: #ecc364;
+}
+
 .project-card .project-card-content {
     flex: 1;
 }
