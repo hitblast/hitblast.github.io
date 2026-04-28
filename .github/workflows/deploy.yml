@@ -32,6 +32,7 @@ jobs:
           tag: v0.21.0
       - name: Build site
         run: zola build
+      - run: mv ./certifications.pdf ./public/certifications.pdf
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
