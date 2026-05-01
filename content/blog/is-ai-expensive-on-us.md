@@ -44,7 +44,7 @@ On an even more serious note, someone had said this:
 
 > By giving AI, you've effectively granted stupid people to be egotistical about the creativity they don't have.
 
-I, personally, like predictability. I, personally also think that even if I had graduated from linguistics, I wouldn't just fire up Claude Code one day and decided that I want to be a programming languages designer and design an entire language without guilt in my head - that I'm skipping the cognition required to make that very object exist, without depending on external audit.
+I, personally, like predictability. I, personally, also think that even if I had graduated from linguistics, I wouldn't just fire up Claude Code one day and decided that I want to be a programming languages designer and design an entire language without guilt in my head - that I'm skipping the cognition required to make that very object exist, without depending on external audit.
 
 Have we really degraded that much?
 
