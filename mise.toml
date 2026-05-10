@@ -1,5 +1,3 @@
-[tools]
-zola = "latest"
 
 [tasks.serve]
 description = "Serves the webpage using Zola."
