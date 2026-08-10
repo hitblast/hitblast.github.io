@@ -1,5 +1,5 @@
 +++
-title = "My fish shell experience, and why I might not need it"
+title = "my fish shell experience, and why I might not need it"
 date = 2025-05-25
 description = "My experience with setting up fish from the ground-up, annotating the differences and whether fish can (or not) be a good choice for you."
 authors = ["hitblast"]
@@ -24,7 +24,7 @@ I've been using Rust-based tools for quite a while, including:
 - [zoxide](https://github.com/ajeetdsouza/zoxide) - a replacement for `cd`
 - [eza](https://github.com/eza-community/eza) - a replacement for `ls`
 - [mise](https://github.com/jdx/mise) - my personal favorite; a replacement for `asdf` for managing toolchains
-... and many others
+  ... and many others
 
 And in the process of using them, I have actually created some of my own, simple tools:
 
@@ -64,8 +64,8 @@ I honestly got surprised with the out-of-the-box experience of fish. It automati
 I ran into a few difficulties at first:
 
 - My **typing speed** wasn't really syncing with the completions (a crucial detail we'll get back to later on).
--  I still needed to setup vim keybindings with fish later on since I'm used to having `h j k l` for moving around.
-- All of the commands showed up perfectly during auto-suggestions, *but they didn't work.*
+- I still needed to setup vim keybindings with fish later on since I'm used to having `h j k l` for moving around.
+- All of the commands showed up perfectly during auto-suggestions, _but they didn't work._
 
 ### solving the config crisis
 
@@ -178,7 +178,9 @@ it comes to using fish. I can do something like:
 ```fish
 starship init fish | source
 ```
+
 ... to replace the following:
+
 ```bash
 eval (starship init fish)
 ```
@@ -286,7 +288,7 @@ For the hipsters out there, fish can actually be an excellent choice for manipul
 Okay so, remember how I mentioned my typing speed early on in this entry? Well..
 
 Typing around 130-150wpm obsoletes the need for an autocompletion setup, assuming you have a muscle memory for typing
-commands, which I essentially do. I use shell commands *everywhere*, from self-hosting services on cloud to
+commands, which I essentially do. I use shell commands _everywhere_, from self-hosting services on cloud to
 `ssh`-ing into other devices. And after years of typing commands, autocompletion is a feature which has essentially been
 "wiped out" of my memory. Why need an autocomplete if your brain does it for you?
 

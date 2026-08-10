@@ -1,5 +1,5 @@
 +++
-title = "The art of believing that life's \"fixable\""
+title = "the art of believing that life's \"fixable\""
 date = 2025-11-14
 description = "My little take on how we artificially create our own burdens and why we enforce our minds with false-positives, instead of harsh truths and face them."
 authors = ["hitblast"]
@@ -17,7 +17,7 @@ That's one of the many random thoughts I have during the day, and even though at
 Speaking of extending - I actually learnt how to extend a `HashMap` when I was working on [defaults-rs](https://github.com/machlit/defaults-rs) for my Mac tooling/apps company. It's fairly easy -
 
 - Prepare the existing hashmap, or maybe if you're in a function, get a mutable reference to it, so assuming if the variable was `some_map`, you'd have to do: `fn merge(&mut some_map) -> HashMap<String, PrefValue> {...}` (here `PrefValue` is the enum used for separating types in a CoreFoundation value).
-- Prepare the *other* hashmap. That's what I'd do *inside* the function.
+- Prepare the _other_ hashmap. That's what I'd do _inside_ the function.
 - Call: `some_map.extend(new_map.clone())`
 
 I just wrote a raw representation of what I'd do in Rust (that I learnt today). I don't even know if this would make `clippy` happy, but you get the point. I like sharing, and I don't know, maybe you like reading :D or do you? :eyes:
@@ -36,7 +36,7 @@ Let me remind you that these are the same algorithms which feed on your data for
 
 Anyways,
 
-Let's return to **open-talk**. What happens after you *do* leave your phone for good?
+Let's return to **open-talk**. What happens after you _do_ leave your phone for good?
 
 I mean this article surely wasn't about phones or AI or even that hashmap merger I previously mentioned. I'm just trying to get you on flow with my thoughts of the preface here - it's just harder to explain without it. Open-talk is significantly undervalued in our society. In a world where you can get your answers from a non-emotional reasoning artifact, its generally costly to do so. But it does preserve one critical aspect. Organic conversations.
 

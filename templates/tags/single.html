@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block pagetitle %}
+{% extends "base.html" %} {% block metadesc %}
 <title>{{ term.name | title }} Tag | HitBlast's Blog</title>
 <meta
     property="og:title"
@@ -9,7 +9,7 @@
     content="Blog posts tagged with {{ term.name }}"
 />
 <meta name="description" content="Blog posts tagged with {{ term.name }}" />
-{% endblock pagetitle %} {% block content %}
+{% endblock metadesc %} {% block content %}
 <a href="{{ get_url(path='@/blog/_index.md', trailing_slash=false) }}"
     >&laquo; Back to all posts</a
 >

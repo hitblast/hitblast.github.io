@@ -1,5 +1,5 @@
 +++
-title = "Christmas Eve and a battle to create a time capsule"
+title = "christmas eve, and a battle to create a time capsule"
 date = 2025-12-30
 description = "How a friend and I hopped in on a challenge to create two tiny programs as our future mailboxes, and how they turned out."
 authors = ["hitblast"]
@@ -12,9 +12,9 @@ tags = ["experiences", "projects", "yap"]
 
 During the afternoon of 25th December, I was just casually hopping around Discord in search of what to do. I randomly joined a voice channel on my Minecraft team's server, and one of my friends also (luckily) hopped in. <[@Itsmemonzu](https://github.com/Itsmemonzu)>, turns out, was also looking for something to do; and a second friend joined to aid him with his idea shortage.
 
-Previously, his urge led him to install [Zed](https://zed.dev) on his beefy machine (after I told him about how it uses the GPU for rendering his code), and somehow all of a sudden he wanted to do all-things Zed only. The second friend, in the meantime, suggested him that he makes a *time capsule program*. I'll return to this in a bit.
+Previously, his urge led him to install [Zed](https://zed.dev) on his beefy machine (after I told him about how it uses the GPU for rendering his code), and somehow all of a sudden he wanted to do all-things Zed only. The second friend, in the meantime, suggested him that he makes a _time capsule program_. I'll return to this in a bit.
 
-Now as a matter of fact, the size-to-functionality ratio of his previous applications were pretty unrealistic - say, 64 megabytes for doing a GET request to the [Minecraft Server Status API](https://mcsrvstat.us/), and after he himself recognizing the problem, my futile attempts to motivate him back to use C# for his desktop apps were all turning to vain. He eventually turned to *Python* for this one.
+Now as a matter of fact, the size-to-functionality ratio of his previous applications were pretty unrealistic - say, 64 megabytes for doing a GET request to the [Minecraft Server Status API](https://mcsrvstat.us/), and after he himself recognizing the problem, my futile attempts to motivate him back to use C# for his desktop apps were all turning to vain. He eventually turned to _Python_ for this one.
 
 Then suddenly he had asked - "how about we do a programming challenge over this?"
 
@@ -32,13 +32,13 @@ I'll be attaching more context along the way with this entry. Till then, the gam
 
 We were connected to the same Podium VC we initialized with for the entirety of the challenge, and while talking, we both discussed some common frameworks for our programs:
 
-| His stack | My stack |
-|-----------|----------|
-| Good old Python as usual. | Rust for me. |
-| The [Rich](https://github.com/Textualize/rich) frameworks. Great for TUI/UX. He wanted his CLI to be fully interactive. | [clap](https://github.com/clap-rs/clap) for me since I didn't want my iteration to be interactive at all for saving some time. |
+| His stack                                                                                                                                  | My stack                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Good old Python as usual.                                                                                                                  | Rust for me.                                                                                                                                                 |
+| The [Rich](https://github.com/Textualize/rich) frameworks. Great for TUI/UX. He wanted his CLI to be fully interactive.                    | [clap](https://github.com/clap-rs/clap) for me since I didn't want my iteration to be interactive at all for saving some time.                               |
 | [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html) as the database, since he was already fluent enough working with JSON tokens. | I wanted to build my own database for the work, hence I'll be creating [ChristmasDB](https://github.com/hitblast/cornelli/blob/master/src/core/database.rs). |
 
-Now let's discuss the initial concept of a *time capsule*. As our friend Rem had described it, a time capsule is:
+Now let's discuss the initial concept of a _time capsule_. As our friend Rem had described it, a time capsule is:
 
 > "A program that saves a text and keeps it away, and finally returns it after a certain time."
 
@@ -46,7 +46,7 @@ Here's a bit of my thinking process:
 
 My first thoughts after seeing his idea was - bootstrapping such a simple concept into a CLI and not making others bored would be a difficult task. I had to think of something which Monzu wasn't planning about. I'd have to ensure two things:
 
-- Make the code *insanely* simple to use. That'd consume more of "my" time, but it'd ensure that the entire thing works on all the three major desktop platforms I'd be targeting.
+- Make the code _insanely_ simple to use. That'd consume more of "my" time, but it'd ensure that the entire thing works on all the three major desktop platforms I'd be targeting.
 - I'd have to wrap everything in just the `ChristmasDB` layer so that commands are only hardcoded iterations of the stuff I want to do.
 
 And, based on what I heard from Monzu:
@@ -66,7 +66,7 @@ We had started by discussing about the common stuff at first. He (and eventually
 
 He first thought of running a background job to give real-time insight of the datetime to the program, but I had a simpler solution in mind since spawning workers for a project like this was blatant overengineering. So, seeing him mess up his core analogy of the program we were about to make, we decided to share our algorithm. It was pretty simple:
 
-1. The program would *only* work when executed - not in the background, so that's one axed thing.
+1. The program would _only_ work when executed - not in the background, so that's one axed thing.
 2. Since we're already tracking two time-tracing fields (2 and 3 above), it'd be very easy to calculate `future_time` (in this case, the approximate time when a particular capsule should be unlocked). This would work by incrementing the user's given duration as a timedelta to the time when the capsule was created.
 3. If the user wanted to check whether a capsule was unlockable, it'd just check a condition: `if (future_time < present_time) {... # do unlock stuff}`
 
@@ -99,13 +99,14 @@ I also asked him regarding his backend logic and whatnot. He was busy handling `
         parse = database.all()
         unlock_time = float(parse[num]["time_limit"])
 ```
+
 [(online snippet's here)](https://github.com/Itsmemonzu/Shomoy/blob/fa69132a001c2d3f3b2c7371c847c562a01bc725/main.py#L91C8-L99C58)
 
 I'll provide some entirely personal comments from here onwards (and some sweet, sweet lore).
 
 Going into the snippet, I could do nothing but get flabbergasted by the inconventional naming conventions (even though the code's working perfectly). The unreliable parsing from `parse[num]["time_limit"]` might also seem a little vague at first, since there isn't a strict schema being enforced due to Python's core json implementation being dynamic in nature.
 
-As a matter of fact, during the primary (and late-game) stages, Monzu himself ended up parsing the `time_limit` field as integers rather than `datetime` instances, and even when he did end up parsing correctly, he passed `datetime` objects directly into the schema for reflecting back. *\*confused Monzu noises in the background wondering why it ain't behaving like Rust\**
+As a matter of fact, during the primary (and late-game) stages, Monzu himself ended up parsing the `time_limit` field as integers rather than `datetime` instances, and even when he did end up parsing correctly, he passed `datetime` objects directly into the schema for reflecting back. _\*confused Monzu noises in the background wondering why it ain't behaving like Rust\*_
 
 As of the shared algorithm we were talking about implementing, his way of implementation was, again, using the `time_limit` field. The snippet is this:
 
@@ -127,9 +128,10 @@ def checkCapsule():
                 + f" {i + 1} [red][bold]is not unlockable yet.[/][/]"
             )
 ```
+
 [(online snippet's here)](https://github.com/Itsmemonzu/Shomoy/blob/fa69132a001c2d3f3b2c7371c847c562a01bc725/main.py#L27-L43)
 
-For some weird reason, he ended up implementing the same algorithm twice in two different places. I mean, okay, that's why *functions* exist. But, have a look yourself:
+For some weird reason, he ended up implementing the same algorithm twice in two different places. I mean, okay, that's why _functions_ exist. But, have a look yourself:
 
 ```python
     elif action == "2":
@@ -145,6 +147,7 @@ For some weird reason, he ended up implementing the same algorithm twice in two 
         unlock_time = float(parse[num]["time_limit"])  # recall here
         if now_time >= unlock_time:  # also recall here
 ```
+
 [(online snippet's here)](https://github.com/Itsmemonzu/Shomoy/blob/fa69132a001c2d3f3b2c7371c847c562a01bc725/main.py#L88-L100)
 
 I hope you clearly see the minor details I've pointed out in front of you. The code works nicely, no comments regarding that. But, it'd just break with one algorithmic change (saying just for the name of explanation).
@@ -223,16 +226,16 @@ I had a lot of fun making this work.
 
 Returning to the original lore, I also implemented `CORNELLI_PASS` as an environment variable through which the user would apply to set a password. I looked at Monzu's iteration, and I couldn't find a password. Seems like he stole the password side of things from the user and entirely put it on the hands of his own program; which is, I don't know whether to call clever, but the solution kind of works, but then again it becomes pointless.
 
-Oh and, I'd only create *two* commands:
+Oh and, I'd only create _two_ commands:
 
-- `keep "anytext" <duration>`: *Keeps* a capsule and keeps it away till the set duration.
+- `keep "anytext" <duration>`: _Keeps_ a capsule and keeps it away till the set duration.
 - `mailbox`: Gives you a surprise Stardew Valley-style view at the messages you're meant to see at the moment, probably left by your past self.
 
 ### two new interfaces
 
 I was kind of envious of his implementation, for that he managed to at least get a primitive solution up and running that fast. I was being very lazy to pass a mutable string variable to an `io::stdin()` call, so much so that I had to compensate with even harder `clap` arguments.
 
-Anyhow, I had previously created [rust-cli-template](https://github.com/hitblast/rust-cli-template) for my personal projects, so that came in handy. I had just cloned and deleted the `.git` folder to gain a headstart. This was *before* all of the algorithmic lore described above. By now, Monzu was getting into the encryption part of things, and I was just starting off with the UX.
+Anyhow, I had previously created [rust-cli-template](https://github.com/hitblast/rust-cli-template) for my personal projects, so that came in handy. I had just cloned and deleted the `.git` folder to gain a headstart. This was _before_ all of the algorithmic lore described above. By now, Monzu was getting into the encryption part of things, and I was just starting off with the UX.
 
 I implemented the storymode-like interface for `mailbox`. Also, something different had also started happening while I was doing that.
 
@@ -242,7 +245,7 @@ Wait, aren't they supposed to be judges?
 
 Anyways, he had also asked me about duration-parsing beforehand. At first we concluded that only doing it by the day would be cheap enough for the project, but upon looking at the actual problem, neither programs would've been able to track the correct decryption time if we had done that, so I skipped over the simplification idea. Turns out, Monzu didn't get the clarification and he had implemented a days-only parser.
 
-I was seeing an unreasonable amount of panic within - I bet he could've *hardened his runtime for comfort* (no pun intended).
+I was seeing an unreasonable amount of panic within - I bet he could've _hardened his runtime for comfort_ (no pun intended).
 
 He ended up adding a positional parsing method for the duration (`x hours, x minutes, x seconds`, non-comma-separated). Having a look at his source, we can see exactly that alongside his self-password mechanism:
 
@@ -267,6 +270,7 @@ He ended up adding a positional parsing method for the duration (`x hours, x min
                )
                print("[red][bold]Your message has been capsulized!")
 ```
+
 [(original snippet's here)](https://github.com/Itsmemonzu/Shomoy/blob/fa69132a001c2d3f3b2c7371c847c562a01bc725/main.py#L66C12-L85C1)
 
 ### a chaotic release

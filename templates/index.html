@@ -78,7 +78,7 @@ I also like
     {% set blogs = get_section(path="blog/_index.md") %} {% set pages =
     blogs.pages %} {% if pages | length == 0 %}
     <p>No blog posts yet. Check back soon!</p>
-    {% else %} {% for page in pages | slice(end=2) %}
+    {% else %} {% for page in pages %} {% if loop.index <= 2%}
     <div class="blog-post">
         *
         <a class="blog-post-title" href="{{ page.permalink | safe }}"
@@ -86,7 +86,7 @@ I also like
         >
         <p>{{ page.description }}</p>
     </div>
-    {% endfor %}
+    {% endif %} {% endfor %}
 
     <br />
     <center>

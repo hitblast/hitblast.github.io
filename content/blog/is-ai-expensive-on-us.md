@@ -1,5 +1,5 @@
 +++
-title = "Is AI expensive on us?"
+title = "is AI expensive on us?"
 date = 2026-03-12
 description = "My unsorted, fundamental thoughts on how the current trends keep showing AI as bullish whilst knowing the consequences."
 authors = ["hitblast"]
@@ -32,7 +32,7 @@ There used to be a time where software was insanely predictable, and even though
 
 We've lost originality in music, and I don't think its unjustified for me to say this. I had to quit Spotify because of the amount of saturation I was getting from all the repeated AI music plus my playlist which has been degenerating itself through all the recommendations I get.
 
-I think it'd be pretty sad if you told someone from the 1900s that we've now lost originality, *in music*.
+I think it'd be pretty sad if you told someone from the 1900s that we've now lost originality, _in music_.
 
 And,
 
@@ -50,7 +50,7 @@ Have we really degraded that much?
 
 Earlier this week, I was in a conversation with one of my friends on Discord - he's probably three years senior, but it very much surprises me that CS majors in my country don't know the fundamentals for building a simple web-based WireGuard/OpenVPN client. They just vibecoded the entire thing, with Antigravity, while not taking agency of their code, and calling it a day.
 
-Now if you really like these tools, I'd not blame you. They're excellent at *some* things in particular. But guess what they're not excellent in?
+Now if you really like these tools, I'd not blame you. They're excellent at _some_ things in particular. But guess what they're not excellent in?
 
 Keeping your cognition alive.
 
@@ -64,7 +64,7 @@ Software used to have QA. Even Anthropic's own deployments don't pass three nine
 
 Rust's core motives are awesome. Do you know what's not awesome? People proudly naming their 0-1 employees LinkedIn/GitHub organization after a Rust acronym and pushing AI slop as it engulfs more of the corporate-controlled minds which are already pretty bullish on a tech we don't fully understand the effects of.
 
-*Phew..*
+_Phew.._
 
 Well, I don't know how well of a content-defined chugging of hate towards the world we're headed for I did right there, but I'd just like to ask you two, simple questions.
 
