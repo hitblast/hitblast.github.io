@@ -66,6 +66,7 @@ However, finally, in the _third_ iteration, things become apparent as now we don
 
 <br>
 
-This was no CS-lesson. I just wanted to rant about myself a bit. I don't really know _how_ this happened, but maybe it had to do something with me getting too excited for hearing back from Mongol-Tori after submitting the form.
+Regardless, this was no CS-lesson. I just wanted to rant about myself a bit. I don't really know _how_ this happened, but maybe it had to do something with me getting too excited for hearing back from Mongol-Tori after submitting the form.
 
-Anyways, thanks for tuning into my blog, long time no see - hopefully I'll see you in the next entry! :3
+Thanks for tuning into my blog - long time no see, hopefully I'll see you in the next entry! :3
+
